@@ -17,32 +17,31 @@
 <div class="container">
     <div class="row">
         <div class="col-sm">
-        <h1>Sección de consulta</h1>
+        <h1>Articulos</h1>
     </div>
     <div class="row">
         <div class="col-sm">
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">descripcion</th>
-                    <th scope="col">Apellido</th>
+
+                    <th scope="col">Nombre</th>
+
                     <th scope="col">Precio</th>
-                    <th scope="col">fecha</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+
+                    <th scope="col">Año</th>
+
                 </tr>
                 </thead>
                 <tbody>
                 <?php
 
-foreach ($this->articulos as $row) {
-    $articulo = new Alumno();
+// Se cargan los articulos en la tabla, se traen del objeto articulo
+foreach ($this->articulos as $row) { // se recorre el array articulos con foreach
     $articulo = $row;?>
                 <tr id="filaart-<?php echo $articulo->id; ?>">
-                    <td><?php echo $articulo->id; ?></td>
-                    <td><?php echo $articulo->codigo; ?></td>
-                    <td><?php echo $articulo->descripcion; ?></td>
+
+                    <td><?php echo $articulo->nombre; ?></td>
                     <td><?php echo $articulo->precio; ?></td>
                     <td><?php echo $articulo->fecha; ?></td>
                     <td><a class="btn btn-warning" href="<?php echo constant('URL') . 'articulos/verArticulo/' . $articulo->id; ?>">Actualizar</a></td>
