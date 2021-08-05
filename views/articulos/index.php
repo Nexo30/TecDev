@@ -14,14 +14,14 @@
     <?php include_once 'entidades/alumno.php';?>
 <input type="hidden" value="<?php echo constant('URL'); ?>" id="url">
 <!--hidden -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
+<div>
+    <div>
+        <div>
         <h1>Articulos</h1>
     </div>
-    <div class="row">
-        <div class="col-sm">
-            <table class="table">
+    <div>
+        <div>
+            <table>
                 <thead>
                 <tr>
 
@@ -44,8 +44,8 @@ foreach ($this->articulos as $row) { // se recorre el array articulos con foreac
                     <td><?php echo $articulo->nombre; ?></td>
                     <td><?php echo $articulo->precio; ?></td>
                     <td><?php echo $articulo->fecha; ?></td>
-                    <td><a class="btn btn-warning" href="<?php echo constant('URL') . 'articulos/verArticulo/' . $articulo->id; ?>">Actualizar</a></td>
-                    <td><button class="btn btn-danger btnEliminar" data-alumno="<?php echo $articulo->id; ?>"
+                    <td><a href="<?php echo constant('URL') . 'articulos/verArticulo/' . $articulo->id; ?>">Actualizar</a></td>
+                    <td><button  data-alumno="<?php echo $articulo->id; ?>"
                     id="art<?php echo $articulo->id; ?>">Eliminar</button></td>
                 </tr>
                 <?php }?>

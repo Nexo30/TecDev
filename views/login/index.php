@@ -11,19 +11,19 @@
 </head>
 <body>
     <?php require 'views/header2.php';?>
-    <div class="container">
-    <div class="row">
-        <div class="col-sm">
+    <div>
+    <div>
+        <div>
             <h1>Login</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm">
+    <div>
+        <div>
             <h1><?php echo $this->resultadoLogin; ?></h1>
         </div>
     </div>
-        <form class="row" action="<?php echo constant('URL'); ?>login/ingresar" method="post">
-        <div class="col-lg-4 col-md-6 col-sm-12">
+        <form action="<?php echo constant('URL'); ?>login/ingresar" method="post">
+        <div>
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="text"
             class="form-control"

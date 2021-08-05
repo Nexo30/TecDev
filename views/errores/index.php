@@ -12,7 +12,7 @@
     <?php require 'views/header4log.php';?>
 
     <div id="main">
-        <h1 class="center error">
+        <h1>
         <?php echo $this->mensaje; ?>
         </h1>
     </div>

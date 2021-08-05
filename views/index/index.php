@@ -14,9 +14,9 @@
     <?php include_once 'entidades/alumno.php';?>
 <input type="hidden" value="<?php echo constant('URL'); ?>" id="url">
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
+<div >
+    <div>
+        <div>
         <h1>Sección Incial</h1>
     </div>
 

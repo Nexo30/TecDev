@@ -11,9 +11,9 @@
 </head>
 <body>
     <?php require 'views/header4log.php';?>
-    <div class="container">
-    <div class="row">
-        <div class="col-sm">
+    <div>
+    <div>
+        <div>
             <h1>Ingreso</h1>
         </div>
     </div>
