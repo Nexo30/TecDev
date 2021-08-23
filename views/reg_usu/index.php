@@ -14,11 +14,11 @@
     <?php require 'views/header2.php';?>
 
     <div id="main">
-
+        
         <h1 class="center">Registro usuario Admin</h1>
 
 
-        <form action="<?php echo constant('URL'); ?>reg_usu" method="POST">
+        <form action="<?php echo constant('URL'); ?>reg_usu/" method="POST">
             <label for="">Usuario</label><br>
             <input type="text" name="ci_adm" id=""><br>
             <label for="">Contraseña</label><br>
