@@ -58,6 +58,7 @@ class App
             }
         } else {
             $controller = new Errores_Controller();
+            //echo "error controllador";
         }
     }
 }

@@ -8,5 +8,6 @@ class Model
     {
         //echo "<p>Modelo principal</p>";
         $this->db = new Database();
+
     }
 }

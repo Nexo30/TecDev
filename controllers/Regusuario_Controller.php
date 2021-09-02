@@ -1,6 +1,6 @@
 <?php
 
-class Reg_usuarioC extends Controller
+class Regusuario_Controller extends Controller
 {
 
     public function __construct()
@@ -12,22 +12,23 @@ class Reg_usuarioC extends Controller
 
     public function render()
     {
-        $this->view->render('reg_usu/index');
+        $this->view->render('Regusuario/index');
+
     }
 
-    public function crear_usuario()
+    public function ingresar_reg()
     {
         //var_dump($this); //desplegar los detalles de una variable
         //echo 'ejecutando crear';
         $ci_adm = $_POST['ci_adm'];
         $contraseña_adm = $_POST['contraseña_adm'];
 
-        if ($this->model->insert(['ci_adm' => $ci_adm, 'contraseña_adm' => $contraseña_adm])) {
+        if ($this->model->ingresar_reg(['ci_adm' => $ci_adm, 'contraseña_adm' => $contraseña_adm])) {
             $this->view->mensaje = "Usuario creado correctamente";
-            $this->view->render('reg_usu/index');
+            $this->view->render('Regusuario/ingresar_reg');
         } else {
             $this->view->mensaje = "Error al crear el usuario";
-            $this->view->render('reg_usu/index');
+            $this->view->render('Regusuario/ingresar_reg');
         }
     }
 

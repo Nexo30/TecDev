@@ -26,6 +26,9 @@ class Controller
 
             $modelName = ucfirst($model) . '_Model';
             $this->model = new $modelName();
+            //var_dump($modelName);
+        } else {
+            echo "no existe url";
         }
     }
 }
