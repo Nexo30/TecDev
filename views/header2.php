@@ -26,8 +26,9 @@
 
       </ul>
       <div>
-        <a href="<?php echo constant('URL'); ?>regusuario/">Registarse</a>
-        <a  href="<?php echo constant('URL'); ?>login">Ingresar</a>
+        <a href="<?php echo constant('URL'); ?>regusuario/">Registrarse</a>
+        <a  href="<?php echo constant('URL'); ?>login">Ingresar</a> <br> </br>
+        <a  href="<?php echo constant('URL'); ?>Cliente">Registro del cliente</a>
       </div>
     </div>
   </div>

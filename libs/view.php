@@ -12,7 +12,7 @@ class View
     public function render($nombre)
     {
         require 'views/' . $nombre . '.php';
-        //var_dump($this);
-        //echo $nombre;
+        var_dump($this);
+        echo $nombre;
     }
 }

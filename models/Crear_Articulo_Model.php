@@ -1,6 +1,6 @@
 <?php
 
-class Regusuario_Model extends Model
+class Crear_Articulo_Model extends Model
 {
 
     public function __construct()
@@ -8,18 +8,24 @@ class Regusuario_Model extends Model
         parent::__construct();
     }
 
-    public function ingresar_reg($datos)
+    public function ingresar_articulo($datos)
     {
 
         var_dump($datos);
-        $ci_adm = $datos['ci_adm'];
-        $contrasena_adm = $datos['contraseña_adm'];
-        //echo "INSERT INTO usuario_admin (CI_Adm,Contraseña_Adm) values ('$ci_adm','$contrasena_adm')";
-        $query = $this->db->connect()->prepare("INSERT INTO usuario_admin (CI_Adm,Contraseña_Adm) values ('$ci_adm','$contrasena_adm' )");
+        $cod_art = $datos['cod_art'];
+        $cod_cat = $datos['cod_cat'];
+        $nombre = $datos['nombre'];
+        $marca = $datos['marca'];
+        $modelo = $datos['modelo'];
+        $descripcion = $datos['descripcion'];
+        $precio = $datos['precio'];
+        $stock = $datos['stock'];
+
+        $query = $this->db->connect()->prepare("INSERT INTO articulo (cod_art,cod_cat,nombre,marca,modelo,descripcion,precio,stock) values ('$cod_art','$cod_cat','$nombre','$marca','$modelo','$descripcion','$precio','$stock')");
 
         // $query->bindValue(':ci_adm', $datos['ci_adm']);
         //$query->bindValue(':contraseña_adm', $datos['contraseña_adm']);
-       // var_dump($query);
+        var_dump($query);
         if ($query->execute()) {
             return true;
         } else {
