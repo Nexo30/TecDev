@@ -22,6 +22,10 @@ echo $imagen;
 			<li><a href="#sidebar">Nosotros</a></li>
 			<li><a href="<?php echo constant('URL'); ?>contacto">Contactos</a></li>
 		</ul>
+		<div class="search-wrapper">
+        <span class="las la-search"></span>
+        <input type="search" name="" id="" placeholder="Escriba aqui...">
+      </div>
 </nav>
   <aside class="cuerpo">
   <div class="login__grupo" id="grupo__nombre2">

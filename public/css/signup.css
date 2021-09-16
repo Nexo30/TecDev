@@ -199,3 +199,29 @@ nav a {
   float: right;
   text-align: center;
 }
+.search-wrapper span {
+  display: inline-flexbox;
+  padding: 0rem 1rem;
+  font-size: 1.6rem;
+}
+.search-wrapper {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  width: 400px;
+  display: inline-flex;
+}
+.las la-search {
+  background-color: red;
+}
+.search-wrapper input {
+  height: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 20px;
+}

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda</title>
   <link rel="stylesheet" href="public/css/tienda.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body class="grid-container">
 <header class="header">
@@ -28,6 +29,10 @@ echo $imagen;
 			<li><a href="<?php echo constant('URL'); ?>index">Nosotros</a></li>
 			<li><a href="<?php echo constant('URL'); ?>contacto">Contactos</a></li>
 		</ul>
+    <div class="search-wrapper">
+        <span class="las la-search"></span>
+        <input type="search" name="" id="" placeholder="Escriba aqui...">
+      </div>
 </nav>
  <main class="datos" >Productos
 

@@ -63,9 +63,29 @@ body {
   padding: 0rem 1rem;
   font-size: 1.6rem;
 }
-
-.sidebar {
-  grid-area: sidebar;
+.search-wrapper {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  width: 400px;
+  display: inline-flex;
+}
+.las la-search {
+  background-color: red;
+}
+.search-wrapper input {
+  height: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 20px;
+}
+.sidebar3 {
+  grid-area: sidebar3;
   background-color: #2c0cc7;
 }
 .sidebar2 {
@@ -91,7 +111,7 @@ body {
     "navbar" 70px
     "main" auto
     "sidebar2" 200px
-    "sidebar" 200px
+    "sidebar3" 200px
     "footer" 100px;
   grid-template-rows: 100px 70px 50% 50% 30% 15%;
 }

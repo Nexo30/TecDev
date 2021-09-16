@@ -16,7 +16,6 @@ $imagen = '<img src="public/imagenes/articulos/' . "Logo" . '.png" / width="200p
 echo $imagen;
 ?>
 <a href="<?php echo constant('URL'); ?>dlogin" class="ingresar"><?php
-$figura = "Perfil";
 $imagen = '<img src="public/imagenes/articulos/' . "Perfil" . '.png" / width="70px" heigth="70px" ; > ';
 echo $imagen;
 ?></a>
@@ -32,6 +31,10 @@ echo $imagen;
 			<li><a href="<?php echo constant('URL'); ?>index">Nosotros</a></li>
 			<li><a href="<?php echo constant('URL'); ?>contacto">Contactos</a></li>
 		</ul>
+		<div class="search-wrapper">
+        <span class="las la-search"></span>
+        <input type="search" name="" id="" placeholder="Escriba aqui...">
+      </div>
 </nav>
   <aside class="sidebar2">
   <div class="contacto__grupo" id="grupo__nombre2">
