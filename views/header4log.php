@@ -40,6 +40,17 @@ if ($estaLogueado) {
           <a  href="<?php echo constant('URL'); ?>login/salir">Salir</a>
 <?php } else {
     ?>
+     <li class="nav-item">
+              <a class="nav-link text" href="<?php echo constant('URL'); ?>carrito" >
+      Carrito
+      </a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link text" href="<?php echo constant('URL'); ?>contacto" >
+      Contacto
+      </a>
+        </li>
+
         <a  href="<?php echo constant('URL'); ?>login">Ingresar</a>
 <?php }
 ;?>

@@ -17,7 +17,7 @@
     <li><a href="<?php echo constant('URL'); ?>nuevo">Nuevo</a></li>
     <li><a href="<?php echo constant('URL'); ?>consulta">Consulta</a></li>
     <li><a href="<?php echo constant('URL'); ?>login">Login</a></li>
-
+    <li><a href="<?php echo constant('URL'); ?>carrito">Carrito</a></li>
 
 </ul>
 

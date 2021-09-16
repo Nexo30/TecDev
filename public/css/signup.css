@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+
+  grid-template-rows: 100px 100px;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #76c9f2;
+}
+
+.cuerpo {
+  grid-area: cuerpo;
+  height: fit-content;
+}
+.usuario {
+  grid-area: usuario;
+}
+.contraseña {
+  grid-area: contraseña;
+}
+.main {
+  grid-area: main;
+  background-color: #414445;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #8c96a0;
+}
+.header {
+  grid-area: header;
+  box-shadow: none;
+  background-color: #74787a;
+  text-align: left;
+}
+.contacto__grupo-btn-enviar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacto__btn {
+  margin: 10px;
+  height: 45px;
+  line-height: 45px;
+  width: 30%;
+  background: blue;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.1s ease all;
+  font-size: 25px;
+}
+.contacto__btn:hover {
+  box-shadow: 3px 0px 30px rgb(53, 48, 48);
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header" 100px
+    "navbar" 70px
+    "cuerpo" 100px
+    "usuario" 100px
+    "contraseña" 100px
+    "footer" 195px;
+  grid-template-areas:
+    "header   header"
+    "navbar   navbar"
+    "cuerpo   cuerpo"
+    "usuario  contraseña"
+    "footer   footer";
+  grid-template-rows: 100px 70px 100% 70px 100px 50px;
+}
+@media (min-width: 600px) {
+}
+/*Vacio por ahora*/
+@media (min-width: 900px) {
+  /*Vacio por ahora*/
+}
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(0, 0, 0);
+}
+nav ul li {
+  float: left;
+  margin: 0em auto;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 1px;
+}
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+  padding: 12px;
+  text-align-last: center;
+}
+.signup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  font-weight: 700;
+}
+
+.signup__label {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+}
+.signup__grupo {
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.signup__grupo-input {
+  position: relative;
+}
+.signup__grupo2-input {
+  position: relative;
+}
+
+.signup__input {
+  width: 100%;
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  line-height: 45px;
+  transition: 0.3s ease all;
+  font-size: 20px;
+}
+.signup__input-email {
+  width: 55%;
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  line-height: 45px;
+  transition: 0.3s ease all;
+  font-size: 20px;
+}
+
+.signup__input:focus {
+  border: 3px solid #0075ff;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+.signup__grupo-btn-enviar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup__btn {
+  margin: 10px;
+  height: 45px;
+  line-height: 45px;
+  width: 30%;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.1s ease all;
+  font-size: 25px;
+}
+
+.signup__btn:hover {
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+.ingresar {
+  float: right;
+  text-align: center;
+}

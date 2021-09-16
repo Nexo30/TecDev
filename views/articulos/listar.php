@@ -28,6 +28,25 @@
     ?><div class="col-lg-4 col-md-6 col-sm-6 col-xs-4 p-3">
       <div class="card">
         <img class="card-img-top" src="<?=$value->url;?>" alt="Card image cap"/>
+        <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+$(document).ready(function(){
+  $("input").change(function(e){
+    let input = e.target;
+
+      var dataURL ="http://localhost/proyectofinal3bj/TecDev/public/imagenes/articulos/images.png";
+
+      $("#imgP").html("<img src='" +dataURL+ "' />");
+      $("#imgP").html(`<img src="${dataURL}" />`);
+      input.files[0];
+  });
+});
+</script>
+</head>
+<input type="file">
+<div id="imgP"><div/>
+
         <div class="card-body">
           <h5 class="card-title">ID: <?=$value->id;?> <?=$value->codigo;?></h5>
           <p class="card-text"><?=$value->descripcion;?></p>
@@ -46,7 +65,7 @@
 
       </div><!-- end row -->
     </div><!-- end container-->
-    <?php //var_dump($this->articulos);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;?>
+    <?php //var_dump($this->articulos);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;?>
     <?php require 'views/footer2.php';?>
 
     <script src="<?php echo constant('URL'); ?>/public/js/jquery-3.6.0.min.js"></script>
