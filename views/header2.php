@@ -29,6 +29,8 @@
         <a href="<?php echo constant('URL'); ?>regusuario/">Registrarse</a>
         <a  href="<?php echo constant('URL'); ?>login">Ingresar</a> <br> </br>
         <a  href="<?php echo constant('URL'); ?>Cliente">Registro del cliente</a>
+        <a  href="<?php echo constant('URL'); ?>Crear_Articulo">Registro de articulo</a>
+
       </div>
     </div>
   </div>

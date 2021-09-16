@@ -20,8 +20,9 @@ class Crear_Articulo_Model extends Model
         $descripcion = $datos['descripcion'];
         $precio = $datos['precio'];
         $stock = $datos['stock'];
+        $url_img = $datos['url_img'];
 
-        $query = $this->db->connect()->prepare("INSERT INTO articulo (cod_art,cod_cat,nombre,marca,modelo,descripcion,precio,stock) values ('$cod_art','$cod_cat','$nombre','$marca','$modelo','$descripcion','$precio','$stock')");
+        $query = $this->db->connect()->prepare("INSERT INTO articulo (cod_art,cod_cat,nombre,marca,modelo,descripcion,precio,stock,url_img) values ('$cod_art','$cod_cat','$nombre','$marca','$modelo','$descripcion','$precio','$stock','$url_img')");
 
         // $query->bindValue(':ci_adm', $datos['ci_adm']);
         //$query->bindValue(':contraseña_adm', $datos['contraseña_adm']);
