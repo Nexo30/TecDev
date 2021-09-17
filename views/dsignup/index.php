@@ -18,7 +18,7 @@ echo $imagen;
 $imagen = '<img src="public/imagenes/articulos/' . "Perfil" . '.png" / width="70px" heigth="70px" ; > ';
 echo $imagen;
 ?></a>
-<a href="<?php echo constant('URL'); ?>dsignup" class="ingresar">Ingresar
+<a href="<?php echo constant('URL'); ?>dlogin" class="ingresar">Ingresar
 </a>
 </header>
    <nav class="navbar">

@@ -31,8 +31,11 @@ body {
 }
 
 .cuerpo {
+  background-color: lightskyblue;
   grid-area: cuerpo;
   height: fit-content;
+  width: 700px;
+  margin: auto;
 }
 .usuario {
   grid-area: usuario;
