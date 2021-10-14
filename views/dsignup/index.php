@@ -40,10 +40,10 @@ echo $imagen;
 					<input type="text" class="signup__input" name="Usuario" id="Usuario" placeholder="Pepeej123"></input>
 </aside>
 </aside>
-      <aside class="contraseña" id="contraseña">
-				<label for="Contrasena" class="signup__label">Contraseña: </label>
+      <aside class="contraseña" id="contrasenia">
+				<label for="contraseniapp" class="signup__label">Contraseña: </label>
 				<aside class="signup__grupo2-input">
-					<input type="text" class="signup__input" name="Contrasena" id="Contrasena" placeholder="Pepeej123"></input>
+					<input type="password" class="signup__input" name="Contrasena" id="contraseniapp" placeholder="Pepeej123"></input>
 </aside>
 </aside>
 			<div class="signup__grupo" id="grupo__nombre">

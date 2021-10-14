@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda</title>
   <link rel="stylesheet" href="public/css/tienda.css">
+  <link rel="stylesheet" href="public/css/Carpeta/css/all.min.css">
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body class="grid-container">
@@ -15,11 +16,8 @@
 $imagen = '<img src="public/imagenes/articulos/' . "Logo" . '.png" / width="200px" heigth="100px" ; > ';
 echo $imagen;
 ?>
-<a href="<?php echo constant('URL'); ?>dlogin" class="ingresar"><?php
-$imagen = '<img src="public/imagenes/articulos/' . "Perfil" . '.png" / width="70px" heigth="70px" ; > ';
-echo $imagen;
-?></a>
-<a href="<?php echo constant('URL'); ?>dlogin" class="ingresar">Ingresar
+<a href="<?php echo constant('URL'); ?>dlogin" class="ingresar">
+<i class="fas fa-shopping-cart"></i>
 </a>
 </header>
   <nav class="navbar">

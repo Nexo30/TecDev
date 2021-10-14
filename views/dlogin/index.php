@@ -20,7 +20,8 @@ echo $imagen;
       <li><a href="<?php echo constant('URL'); ?>index">Inicio</a></li>
 			<li><a href="<?php echo constant('URL'); ?>tienda">Tienda</a></li>
 			<li><a href="#sidebar">Nosotros</a></li>
-			<li><a href="<?php echo constant('URL'); ?>contacto">Contactos</a></li>
+			<li><a href="<?php echo constant('URL'); ?>contacto">Contactos</a>
+		</li>
 		</ul>
 		<div class="search-wrapper">
         <span class="las la-search"></span>
@@ -37,7 +38,7 @@ echo $imagen;
       <div class="login__grupo" id="grupo__nombre">
 				<label for="Contrasena" class="login__label">Contraseña: </label>
 				<div class="login__grupo2-input">
-					<input type="text" class="login__input" name="Contrasena" id="Contrasena" placeholder="Pepeej123"></input>
+					<input type="password" class="login__input" name="Contrasena" id="Contrasena" placeholder="Pepeej123"></input>
 				</div>
 			</div>
 			<a href="<?php echo constant('URL'); ?>dsignup">Registrarse</a>
