@@ -26,13 +26,11 @@ body {
 }
 
 .header {
-  box-shadow: none;
   background-color: #74787a;
   text-align: left;
 }
 .header2 {
   width: 102%;
-  box-shadow: none;
   background-color: #74787a;
   text-align: right;
   padding-top: 10px;
@@ -46,7 +44,7 @@ body {
 
 .navbar {
   grid-area: navbar;
-  background-color: #76c9f2;
+  background-color: #c7d2d8;
 }
 .search-wrapper {
   border: 1px solid #ccc;
@@ -150,4 +148,6 @@ li {
 }
 .ingresar {
   float: right;
+  font-size: 37px;
+  color: black;
 }

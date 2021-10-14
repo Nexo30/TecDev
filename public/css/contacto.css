@@ -27,16 +27,7 @@ body {
 
 .navbar {
   grid-area: navbar;
-  background-color: #76c9f2;
-}
-
-.email {
-  grid-area: email;
-  background-color: white;
-}
-.usuario {
-  grid-area: usuario;
-  background-color: white;
+  background-color: #c7d2d8;
 }
 
 .main {
@@ -50,7 +41,6 @@ body {
 }
 .header {
   grid-area: header;
-  box-shadow: none;
   background-color: #74787a;
   text-align: left;
 }
@@ -61,14 +51,8 @@ body {
   grid-template:
     "header" 100px
     "navbar" 70px
-    "usuario" 100px
     "email" 100px
     "footer" 195px;
-  grid-template-areas:
-    "header   header"
-    "navbar   navbar"
-    "usuario  email"
-    "footer   footer";
   grid-template-rows: 100px 70px 100% 100px;
 }
 @media (min-width: 600px) {
@@ -124,9 +108,18 @@ nav a {
 .contacto__input {
   width: 100%;
   background: #fff;
-  border: 3px solid transparent;
+  border: 3px solid #c7d2d8;
   border-radius: 3px;
-  line-height: 45px;
+  line-height: 28px;
+  transition: 0.3s ease all;
+  font-size: 20px;
+}
+.contacto__input2 {
+  width: 100%;
+  background: #fff;
+  border: 3px solid #c7d2d8;
+  border-radius: 3px;
+  line-height: 40px;
   transition: 0.3s ease all;
   font-size: 20px;
 }
@@ -162,6 +155,8 @@ nav a {
 }
 .ingresar {
   float: right;
+  font-size: 37px;
+  color: black;
 }
 .search-wrapper span {
   display: inline-flexbox;

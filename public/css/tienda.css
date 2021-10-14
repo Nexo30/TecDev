@@ -27,7 +27,7 @@ body {
 
 .navbar {
   grid-area: navbar;
-  background-color: #76c9f2;
+  background-color: #c7d2d8;
 }
 
 .sidebar {
@@ -48,12 +48,13 @@ body {
   background-color: #8c96a0;
 }
 .header {
-  box-shadow: none;
   background-color: #74787a;
   text-align: left;
 }
 .ingresar {
   float: right;
+  font-size: 37px;
+  color: black;
 }
 
 .grid-container {
@@ -117,4 +118,20 @@ nav a {
   outline: none;
   width: 100%;
   font-size: 20px;
+}
+div li {
+  list-style: none;
+  display: inline;
+  float: right;
+  font-size: 30px;
+  margin: 15px;
+  padding: 10px;
+  width: 50px;
+  align-content: center;
+  background: gray;
+  color: white;
+  border-radius: 25px;
+}
+div li :hover {
+  cursor: pointer;
 }

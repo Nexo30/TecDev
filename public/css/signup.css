@@ -27,11 +27,11 @@ body {
 
 .navbar {
   grid-area: navbar;
-  background-color: #76c9f2;
+  background-color: #c7d2d8;
 }
 
 .cuerpo {
-  background-color: lightskyblue;
+  background-color: gray;
   grid-area: cuerpo;
   height: fit-content;
   width: 700px;
@@ -54,7 +54,6 @@ body {
 }
 .header {
   grid-area: header;
-  box-shadow: none;
   background-color: #74787a;
   text-align: left;
 }
