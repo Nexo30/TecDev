@@ -14,6 +14,9 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 1.2rem;
   min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../imagenes/articulos/29.jpg");
 }
 
 .grid-container > * {
@@ -21,7 +24,6 @@ body {
   border-radius: 4px;
   padding: 10px;
   text-align: center;
-
   grid-template-rows: 100px 100px;
 }
 
