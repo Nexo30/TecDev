@@ -37,7 +37,7 @@ echo $imagen;
       </div>
 </nav>
   <aside class="sidebar2">Imagen</aside>
-  <aside class="sidebar3" >Nosotros</aside>
+  <aside name="sidebar" id="sidebar" class="sidebar3" >Nosotros</aside>
   <article class="main">Imagen con Productos</article>
   <footer class="footer">Pie de pagina</footer>
 </body>

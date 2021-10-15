@@ -24,7 +24,7 @@ echo $imagen;
 		<ul>
     <li><a href="<?php echo constant('URL'); ?>index">Inicio</a></li>
 			<li><a href="<?php echo constant('URL'); ?>tienda">Tienda</a></li>
-			<li><a href="<?php echo constant('URL'); ?>index">Nosotros</a></li>
+			<li><a href="<?php echo constant('URL'); ?>index#sidebar">Nosotros</a></li>
 			<li><a href="<?php echo constant('URL'); ?>contacto">Contactos</a></li>
 		</ul>
     <div class="search-wrapper">

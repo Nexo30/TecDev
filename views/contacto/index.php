@@ -18,6 +18,10 @@ echo $imagen;
 ?>
 <a href="<?php echo constant('URL'); ?>dlogin" class="ingresar">
 <i class="fas fa-sign-in-alt"></i>
+<i class="fas fa-shopping-cart"></i>
+</a>
+<a href="<?php echo constant('URL'); ?>dlogin" class="ingresar">
+<i class="fas fa-shopping-cart"></i>
 </a>
 </header>
 
@@ -26,7 +30,7 @@ echo $imagen;
 		<ul>
       <li><a href="<?php echo constant('URL'); ?>index">Inicio</a></li>
 			<li><a href="<?php echo constant('URL'); ?>tienda">Tienda</a></li>
-			<li><a href="<?php echo constant('URL'); ?>index">Nosotros</a></li>
+			<li><a name="sidebar" id="sidebar" href="<?php echo constant('URL'); ?>index#sidebar">Nosotros</a></li>
 			<li><a href="<?php echo constant('URL'); ?>contacto">Contactos</a></li>
 		</ul>
 		<div class="search-wrapper">
@@ -52,7 +56,9 @@ echo $imagen;
 			</div>
 
   </aside>
-  <footer class="footer">Pie de pagina</footer>
+	<iframe class="footer" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d204.93806143241943!2d-56.21868829133565!3d-34.73016795194744!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x233db8c6106abffa!2sEscuela%20T%C3%A9cnica%20de%20Las%20Piedras!5e0!3m2!1ses-419!2suy!4v1634265898778!5m2!1ses-419!2suy" width="1865" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <footer class="footer2">Pie de pagina</footer>
+
 </body>
 </html>
 

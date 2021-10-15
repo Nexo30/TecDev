@@ -39,6 +39,9 @@ body {
 
 .footer {
   grid-area: footer;
+}
+.footer2 {
+  grid-area: footer2;
   background-color: #8c96a0;
 }
 .header {
@@ -54,8 +57,9 @@ body {
     "header" 100px
     "navbar" 70px
     "email" 100px
-    "footer" 195px;
-  grid-template-rows: 100px 70px 100% 100px;
+    "footer" 250px
+    "footer2" 120px;
+  grid-template-rows: 100px 70px 80% 250px 100px;
 }
 @media (min-width: 600px) {
 }
@@ -159,6 +163,7 @@ nav a {
   float: right;
   font-size: 37px;
   color: black;
+  display: inline table;
 }
 .search-wrapper span {
   display: inline-flexbox;
