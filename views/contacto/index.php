@@ -19,7 +19,7 @@ echo $imagen;
 <a href="<?php echo constant('URL'); ?>dlogin" class="ingresar">
 <i class="fas fa-sign-in-alt"></i>
 </a>
-<a href="<?php echo constant('URL'); ?>dlogin" class="ingresar">
+<a href="<?php echo constant('URL'); ?>carrito" class="ingresar">
 <i class="fas fa-shopping-cart"></i>
 </a>
 </header>

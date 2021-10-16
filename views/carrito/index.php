@@ -37,7 +37,6 @@ echo $imagen;
       </div>
 </nav>
 <input type="hidden" value="<?php echo constant('URL'); ?>" id="url">
-    <?php require 'views/header4log.php';?>
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
