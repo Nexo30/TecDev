@@ -33,11 +33,17 @@ echo $imagen;
       </div>
 </nav>
  <main class="datos" >Productos
-
-
-<div class="row"> Prueba
-
+ <div class="dropdown">
+  <button class="mainmenubtn">Categorias</button>
+  <div class="dropdown-child">
+    <a>Ofertas</a>
+    <a>Recomendados</a>
+    <a>Piezas de Recambio</a>
+    <a>Repuestos Originales</a>
+    <a>Repuestos Alternativos</a>
+  </div>
 </div>
+
 </main>
 
 

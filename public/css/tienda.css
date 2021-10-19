@@ -135,3 +135,32 @@ div li {
 div li :hover {
   cursor: pointer;
 }
+.mainmenubtn {
+  background-color: gray;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+  margin-top: 20px;
+}
+.mainmenubtn:hover {
+  background-color: gray;
+}
+.dropdown {
+  position: relative;
+  display: table;
+}
+.dropdown-child {
+  display: none;
+  background-color: gray;
+  min-width: 200px;
+}
+.dropdown-child a {
+  color: blue;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-child {
+  display: block;
+}
