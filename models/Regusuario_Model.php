@@ -15,11 +15,11 @@ class Regusuario_Model extends Model
         $ci_adm = $datos['ci_adm'];
         $contrasena_adm = $datos['contraseña_adm'];
         //echo "INSERT INTO usuario_admin (CI_Adm,Contraseña_Adm) values ('$ci_adm','$contrasena_adm')";
-        $query = $this->db->connect()->prepare("INSERT INTO usuario_admin (CI_Adm,Contraseña_Adm) values ('$ci_adm','$contrasena_adm' )");
+        $query = $this->db->connect()->prepare("INSERT INTO usuario (CI_adm,Password_adm) values ('$ci_adm','$contrasena_adm' )");
 
         // $query->bindValue(':ci_adm', $datos['ci_adm']);
         //$query->bindValue(':contraseña_adm', $datos['contraseña_adm']);
-       // var_dump($query);
+        // var_dump($query);
         if ($query->execute()) {
             return true;
         } else {

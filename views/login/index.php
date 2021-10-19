@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <title>Document</title>
+    <title>Ingresar</title>
 
 </head>
 <body>
@@ -14,7 +14,7 @@
     <div>
     <div>
         <div>
-            <h1>Login</h1>
+            <h1>Ingresar</h1>
         </div>
     </div>
     <div>
@@ -24,7 +24,7 @@
     </div>
         <form action="<?php echo constant('URL'); ?>login/ingresar" method="post">
         <div>
-            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <label for="exampleInputEmail1" class="form-label">Usuario</label>
             <input type="text"
             class="form-control"
             id="exampleInputEmail1"

@@ -19,7 +19,7 @@
 
 
         <form action="<?php echo constant('URL'); ?>Regusuario/ingresar_reg" method="POST">
-            <label for="">Usuario</label><br>
+            <label for="">Cedula</label><br>
             <input type="text" name="ci_adm" id=""><br>
             <label for="">Contraseña</label><br>
             <input type="text" name="contraseña_adm" id=""><br>

@@ -1,27 +1,34 @@
 <nav >
   <div>
+    <ul>
+    <li>
     <a href="<?php echo constant('URL'); ?>index">Inicio</a>
-    <button>
-      <span></span>
-    </button>
+    </li>
+    </ul>
     <div>
+
       <ul>
+
         <li>
-          <a href="#"></a>
+          <a  href="<?php echo constant('URL'); ?>articulos">Lista de productos</a>
+        </li>
+
+        <li>
+          <a  href="<?php echo constant('URL'); ?>contactos">Contactos</a>
+        </li>
+
+        <li>
+          <a  href="<?php echo constant('URL'); ?>nosotros">Nosotros</a>
         </li>
         <li>
-          <a  href="<?php echo constant('URL'); ?>articulos">Articulos</a>
+        <a  href="<?php echo constant('URL'); ?>carrito">carrito</a><br> </br>
         </li>
-        <li >
-          <a  href="#" >
-            Listar Articulos
-          </a>
-          <ul >
-            <li><a href="<?php echo constant('URL'); ?>articulos/listar">Articulos</a></li>
-            <li><hr ></li>
-          </ul>
-        </li>
-        <li >
+
+            <li>
+            <a href="<?php echo constant('URL'); ?>articulos/listar">Tienda</a>
+            </li>
+
+
           <a  href="#" tabindex="-1" aria-disabled="true"></a>
         </li>
 
@@ -40,7 +47,13 @@ if ($estaLogueado) {
           <a  href="<?php echo constant('URL'); ?>login/salir">Salir</a>
 <?php } else {
     ?>
-        <a  href="<?php echo constant('URL'); ?>login">Ingresar</a>
+      <li>
+      <a href="<?php echo constant('URL'); ?>regusuario/">Registrarse</a>
+      </li>
+
+         <li>
+          <a  href="<?php echo constant('URL'); ?>login">Ingresar</a>
+         </li>
 <?php }
 ;?>
 

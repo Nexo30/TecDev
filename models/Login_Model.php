@@ -16,7 +16,7 @@ class Login_Model extends Model
         $tieneAcceso = false;
 
         try {
-            $query = $this->db->connect()->prepare('SELECT password FROM usuario WHERE nombre=:nombre');
+            $query = $this->db->connect()->prepare('SELECT Password_cli FROM Nom_usuario WHERE Nom_usuario =:nombre');
             $query->bindValue(':nombre', $nombre);
             //$query->execute(['nombre' => $nombre]);
             $query->execute();

@@ -11,7 +11,7 @@ class Crear_Articulo_Model extends Model
     public function ingresar_articulo($datos)
     {
 
-        var_dump($datos);
+        //   var_dump($datos);
         $cod_art = $datos['cod_art'];
         $cod_cat = $datos['cod_cat'];
         $nombre = $datos['nombre'];
@@ -26,7 +26,7 @@ class Crear_Articulo_Model extends Model
 
         // $query->bindValue(':ci_adm', $datos['ci_adm']);
         //$query->bindValue(':contraseña_adm', $datos['contraseña_adm']);
-        var_dump($query);
+        //  var_dump($query);
         if ($query->execute()) {
             return true;
         } else {
