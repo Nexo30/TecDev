@@ -12,15 +12,51 @@
 </head>
 <body class="grid-container">
 <header class="header">
+<img src=public/imagenes/articulos/Logo.png width="60px" heigth="30px">
+<a class="ingresar">
+<input type="checkbox" id="btn-up">
+	<label for="btn-up" class="up">Registrarse</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
 
-<?php
-$imagen = '<img src="public/imagenes/articulos/' . "Logo" . '.png" / width="200px" heigth="100px" ; > ';
-echo $imagen;
-?>
-<a href="<?php echo constant('URL'); ?>dlogin" class="ingresar">
-<i class="fas fa-sign-in-alt"></i>
+	<div class="ventana">
+		<div class="contenedor">
+			<header>Ingrese sus datos de registro</header>
+			<label  class="X" for="btn-up">X</label> <!-- utilizamos el mismo id del checkbox para que funcione -->
+			<div class="contenido">
+
+
+				<input class="Contenido" type="text" placeholder="Usuario">
+				<input class="Contenido" type="password" placeholder="Contraseña">
+				<input class="Contenido" type="text" placeholder="Email">
+				<input class="Contenido" type="submit" value="Registrarse">
+
+			</div>
+		</div>
+	</div>
+
 </a>
+<a class="ingresar">
+<input type="checkbox" id="btn-up2">
+	<label for="btn-up2" class="up2">Iniciar Sesión</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
 
+	<div class="ventana2">
+		<div class="contenedor2">
+			<header>Ingrese sus datos de usuario</header>
+			<label  class="X2" for="btn-up2">X</label> <!-- utilizamos el mismo id del checkbox para que funcione -->
+			<div class="contenido2">
+
+
+				<input class="Contenido2" type="text" placeholder="Usuario">
+				<input class="Contenido2" type="password" placeholder="Contraseña">
+				<input class="Contenido2" type="submit" value="Iniciar">
+
+			</div>
+		</div>
+	</div>
+
+</a>
+<a href="<?php echo constant('URL'); ?>carrito" class="Carrito">
+<i class="fas fa-shopping-cart"></i>
+</a>
 </header>
 
 

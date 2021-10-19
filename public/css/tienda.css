@@ -14,6 +14,8 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 1.2rem;
   min-height: 100%;
+  background-image: url("../imagenes/articulos/13416.jpg");
+  background-image: url("13416.jpg");
 }
 
 .grid-container > * {
@@ -53,7 +55,7 @@ body {
 }
 .ingresar {
   float: right;
-  font-size: 37px;
+  font-size: 20px;
   color: black;
 }
 
@@ -163,4 +165,203 @@ div li :hover {
 }
 .dropdown:hover .dropdown-child {
   display: block;
+}
+.Carrito {
+  float: right;
+  font-size: 37px;
+  color: black;
+  display: inline table;
+  margin: 20px;
+}
+body .ventana {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ventana {
+  z-index: 2;
+  position: fixed; /*define una posición relativa*/
+  top: 0;
+  left: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*colores que se determian como rgb y al final la opacidad para que sea transparente*/
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden; /*oculta la ventana ya que necesitamos que se abra al hacer click en el boton*/
+}
+
+/*ACLARACIÓN COMO EL BOTON Y LA X TIENEN EL MISMO ID, CUANDO SE DE CLIC EN EL BOTÓN EL CHECK SE ACTIVARA Y MOSTRARÁ 
+LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
+
+#btn-up:checked ~ .ventana {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contenedor {
+  width: 400px;
+  height: 460px;
+  margin: auto; /*para que se centre el elemetno de forma automatica*/
+  background: #ffff;
+  box-shadow: 1px 7px 25px black; /*efecto sombra*/
+  transition: all 500ms ease;
+  position: relative;
+  transform: translateY(-30%);
+}
+
+#btn-up:checked ~ .ventana .contenedor {
+  transform: translateY(
+    0
+  ); /*da efecto de traslacion en el eje de las y, por ende en el sentido vertical*/
+}
+
+.contenedor header {
+  padding: 20px;
+  background: #8c96a0;
+  color: #ffff;
+}
+
+.X {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ffff;
+  cursor: pointer;
+}
+#btn-up {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  display: none; /*para que no muestre el cuadrito del check*/
+}
+
+.up {
+  background: #0075ff;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffff;
+}
+.up:hover {
+  background: black;
+}
+
+.contenido {
+  margin: auto;
+  /* VER VARIACIONES DE FORMULARIOS EN EL MATERIAL DE FORMULARIOS */
+}
+.Contenido {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 120px;
+  background: #200fb8;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffff;
+}
+input[type="submit"]:hover {
+  background: gray;
+}
+body .ventana2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ventana2 {
+  z-index: 2;
+  position: fixed; /*define una posición relativa*/
+  top: 0;
+  left: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*colores que se determian como rgb y al final la opacidad para que sea transparente*/
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden; /*oculta la ventana ya que necesitamos que se abra al hacer click en el boton*/
+}
+
+/*ACLARACIÓN COMO EL BOTON Y LA X TIENEN EL MISMO ID, CUANDO SE DE CLIC EN EL BOTÓN EL CHECK SE ACTIVARA Y MOSTRARÁ 
+LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
+
+#btn-up2:checked ~ .ventana2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contenedor2 {
+  width: 400px;
+  height: 400px;
+  margin: auto; /*para que se centre el elemetno de forma automatica*/
+  background: #ffff;
+  box-shadow: 1px 7px 25px black; /*efecto sombra*/
+  transition: all 500ms ease;
+  position: relative;
+  transform: translateY(-30%);
+}
+
+#btn-up2:checked ~ .ventana2 .contenedor2 {
+  transform: translateY(
+    0
+  ); /*da efecto de traslacion en el eje de las y, por ende en el sentido vertical*/
+}
+
+.contenedor2 header {
+  padding: 20px;
+  background: #8c96a0;
+  color: #ffff;
+}
+
+.X2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ffff;
+  cursor: pointer;
+}
+#btn-up2 {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  display: none; /*para que no muestre el cuadrito del check*/
+}
+
+.up2 {
+  background: #0075ff;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffff;
+}
+.up2:hover {
+  background: black;
+}
+
+.contenido2 {
+  margin: auto;
+  /* VER VARIACIONES DE FORMULARIOS EN EL MATERIAL DE FORMULARIOS */
+}
+.Contenido2 {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  outline: none;
 }

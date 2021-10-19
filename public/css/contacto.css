@@ -17,6 +17,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../imagenes/articulos/13416.jpg");
+  background-image: url("13416.jpg");
 }
 
 .grid-container > * {
@@ -59,7 +60,7 @@ body {
     "email" 100px
     "footer" 250px
     "footer2" 120px;
-  grid-template-rows: 100px 70px 80% 250px 100px;
+  grid-template-rows: 100px 70px 60% 250px 100px;
 }
 @media (min-width: 600px) {
 }
