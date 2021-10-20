@@ -54,7 +54,7 @@
 	</div>
 
 </a>
-<a href="<?php echo constant('URL'); ?>dlogin" class="Carrito">
+<a class="Carrito">
 <i class="fas fa-shopping-cart"></i>
 </a>
 </header>

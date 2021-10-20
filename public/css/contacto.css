@@ -17,7 +17,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../imagenes/articulos/13416.jpg");
-  background-image: url("13416.jpg");
 }
 
 .grid-container > * {
