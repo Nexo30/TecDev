@@ -12,11 +12,7 @@
 </head>
 <body class="grid-container">
 <header class="header">
-
-<?php
-$imagen = '<img src="public/imagenes/articulos/' . "Logo" . '.png" / width="200px" heigth="100px" ; > ';
-echo $imagen;
-?>
+<img src=public/imagenes/articulos/Logo2.png width="280px">
 <a href="<?php echo constant('URL'); ?>dlogin" class="ingresar">
 <i class="fas fa-sign-in-alt"></i>
 </a>
