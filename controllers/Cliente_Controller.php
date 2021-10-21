@@ -22,11 +22,10 @@ class Cliente_Controller extends Controller
         //echo 'ejecutando crear';
         $ci = $_POST['ci'];
         $nombre = $_POST['nombre'];
-        $tel = $_POST['tel'];
-        $direccion = $_POST['direccion'];
-        $apellido = $_POST['apellido'];
+        $pass = $_POST['pass'];
+
         echo $ci;
-        if ($this->model->ingresar_cliente(['ci' => $ci, 'nombre' => $nombre, 'tel' => $tel, 'direccion' => $direccion, 'apellido' => $apellido])) {
+        if ($this->model->ingresar_cliente(['ci' => $ci, 'nombre' => $nombre, 'pass' => $pass])) {
             $this->view->mensaje = "Se ha registrado correctamente";
             $this->view->render('Cliente/ingresar_cli');
         } else {

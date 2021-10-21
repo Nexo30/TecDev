@@ -24,13 +24,8 @@
             <input type="text" name="ci" id=""><br>
             <label for="">Nombre</label><br>
             <input type="text" name="nombre" id=""><br>
-            <label for="">Apellido</label><br>
-            <input type="text" name="apellido" id=""><br>
-            <label for="">Direccion</label><br>
-            <input type="text" name="direccion" id=""><br>
-            <label for="">Telefono</label><br>
-            <input type="text" name="tel" id=""><br>
-
+            <label for="">Password</label><br>
+            <input type="text" name="pass" id=""><br>
 
             <input type="submit" value="Crear">
         </form>

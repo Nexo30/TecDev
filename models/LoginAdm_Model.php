@@ -2,7 +2,7 @@
 
 require 'entidades/alumno.php';
 
-class Login_Model extends Model
+class LoginAdm_Model extends Model
 {
 
     public function __construct()
@@ -10,21 +10,21 @@ class Login_Model extends Model
         parent::__construct();
     }
 
-    public function ingresar($nombre, $pass)
+    public function ingresar($ci_adm, $passadm)
     {
 
         $tieneAcceso = false;
 
         try {
-            $query = $this->db->connect()->prepare('SELECT Password_cli FROM cliente WHERE Nom_usuario =:nombre');
-            $query->bindValue(':nombre', $nombre);
+            $query = $this->db->connect()->prepare('SELECT Password_adm FROM usuario WHERE CI_adm =:CI_adm');
+            $query->bindValue(':CI_adm', $ci_adm);
             //$query->execute(['nombre' => $nombre]);
             $query->execute();
             $paswordStr = "";
             while ($row = $query->fetch()) {
-                $paswordStr = $row['Password_cli'];
+                $paswordStr = $row['Password_adm'];
             }
-            if ($paswordStr == $pass) {
+            if ($paswordStr == $passadm) {
                 $tieneAcceso = true;
             }
         } catch (PDOException $e) {

@@ -29,6 +29,7 @@
             </li>
 
 
+
           <a  href="#" tabindex="-1" aria-disabled="true"></a>
         </li>
 
@@ -54,6 +55,10 @@ if ($estaLogueado) {
          <li>
           <a  href="<?php echo constant('URL'); ?>login">Ingresar</a>
          </li>
+
+         <li>
+         <a  href="<?php echo constant('URL'); ?>loginadm">IngresarAdmin</a> <br> </br>
+         </li>s
 <?php }
 ;?>
 

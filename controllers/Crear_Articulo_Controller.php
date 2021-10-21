@@ -66,10 +66,10 @@ class Crear_Articulo_Controller extends Controller
         }
 
         if ($this->model->ingresar_articulo(['cod_art' => $cod_art, 'cod_cat' => $cod_cat, 'nombre' => $nombre, 'marca' => $marca, 'modelo' => $modelo, 'descripcion' => $descripcion, 'precio' => $precio, 'stock' => $precio, 'url_img' => $nom_img])) {
-            $this->view->mensaje = "Articulo creado con exito +$msg_imagen";
+            $this->view->mensaje = "Articulo creado con exito";
             $this->view->render('Crear_Articulo/ingresar_articulo');
         } else {
-            $this->view->mensaje = "Error al crear el articulo, intentelo de nuevo+$msg_imagen";
+            $this->view->mensaje = "Error al crear el articulo, intentelo de nuevo";
             $this->view->render('Crear_Articulo/ingresar_articulo');
         }
     }
