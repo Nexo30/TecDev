@@ -89,6 +89,11 @@ nav ul li {
   color: rgb(0, 0, 0);
   padding: 1px;
 }
+
+nav li :hover {
+  border-bottom: solid;
+  border-bottom-color: #0075ff;
+}
 nav a {
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -133,9 +138,6 @@ div li {
   background: gray;
   color: white;
   border-radius: 25px;
-}
-div li :hover {
-  cursor: pointer;
 }
 .mainmenubtn {
   background-color: gray;

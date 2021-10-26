@@ -175,6 +175,10 @@ li {
   display: grid;
   text-decoration: none;
 }
+nav li :hover {
+  border-bottom: solid;
+  border-bottom-color: #0075ff;
+}
 .ingresar {
   float: right;
   font-size: 20px;

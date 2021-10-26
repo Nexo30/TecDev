@@ -9,6 +9,9 @@
   float: right;
   list-style: none;
 }
+i {
+  margin-left: 40px;
+}
 .fa-facebook {
   font-size: 40px;
 }
@@ -19,7 +22,11 @@
   font-size: 40px;
 }
 .admin {
-  margin-left: 30px;
+  border-radius: 10px;
+  background-color: #0075ff;
+  color: black;
+  margin-left: 150px;
   margin-top: 35px;
   padding: 5px;
+  cursor: pointer;
 }

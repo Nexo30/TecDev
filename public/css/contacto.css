@@ -88,6 +88,10 @@ nav a {
   padding: 12px;
   text-align-last: center;
 }
+nav li :hover {
+  border-bottom: solid;
+  border-bottom-color: #0075ff;
+}
 .Registro {
   position: absolute;
   top: 20px;
