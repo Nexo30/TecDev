@@ -1,0 +1,25 @@
+.logo {
+  float: left;
+}
+.informacion {
+  float: right;
+  list-style: none;
+}
+.informacion ul {
+  float: right;
+  list-style: none;
+}
+.fa-facebook {
+  font-size: 40px;
+}
+.fa-instagram {
+  font-size: 40px;
+}
+.fa-twitter {
+  font-size: 40px;
+}
+.admin {
+  margin-left: 30px;
+  margin-top: 35px;
+  padding: 5px;
+}

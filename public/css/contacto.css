@@ -39,11 +39,11 @@ body {
 }
 
 .footer {
-  grid-area: footer;
-}
-.footer2 {
   grid-area: footer2;
   background-color: #8c96a0;
+}
+.footer2 {
+  grid-area: footer;
 }
 .header {
   grid-area: header;
