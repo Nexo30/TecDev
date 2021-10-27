@@ -14,12 +14,29 @@ i {
 }
 .fa-facebook {
   font-size: 40px;
+  color: blue;
+  cursor: pointer;
 }
 .fa-instagram {
   font-size: 40px;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 .fa-twitter {
   font-size: 40px;
+  color: skyblue;
+  cursor: pointer;
 }
 .admin {
   border-radius: 10px;
