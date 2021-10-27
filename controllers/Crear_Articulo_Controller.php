@@ -30,6 +30,7 @@ class Crear_Articulo_Controller extends Controller
         $descripcion = $_POST['descripcion'];
         $precio = $_POST['precio'];
         $stock = $_POST['stock'];
+        $url_img = $datos['url_img'];
 
 //Si se quiere subir una imagen
         if (isset($_POST['crear'])) {

@@ -29,7 +29,7 @@
 
                     <th scope="col">Precio</th>
 
-                    <th scope="col">Año</th>
+                    <th scope="col">Modelo</th>
 
                 </tr>
                 </thead>
@@ -41,9 +41,9 @@ foreach ($this->articulos as $row) { // se recorre el array articulos con foreac
     $articulo = $row;?>
                 <tr id="filaart-<?php echo $articulo->id; ?>">
 
-                    <td><?php echo $articulo->nombre; ?></td>
-                    <td><?php echo $articulo->precio; ?></td>
-                    <td><?php echo $articulo->fecha; ?></td>
+                    <td><?php echo $articulo->Nom_art; ?></td>
+                    <td><?php echo $articulo->Precio; ?></td>
+                    <td><?php echo $articulo->Modelo; ?></td>
                     <td><a href="<?php echo constant('URL') . 'articulos/verArticulo/' . $articulo->id; ?>">Actualizar</a></td>
                     <td><button  data-alumno="<?php echo $articulo->id; ?>"
                     id="art<?php echo $articulo->id; ?>">Eliminar</button></td>
