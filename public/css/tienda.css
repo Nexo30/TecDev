@@ -89,10 +89,12 @@ nav ul li {
   color: rgb(0, 0, 0);
   padding: 1px;
 }
-
+#Adm {
+  float: right;
+}
 nav li :hover {
   border-bottom: solid;
-  border-bottom-color: #0075ff;
+  border-bottom-color: #2babe1;
 }
 nav a {
   color: rgb(0, 0, 0);
@@ -247,7 +249,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 }
 
 .up {
-  background: #0075ff;
+  background: #2babe1;
   cursor: pointer;
   border-radius: 5px;
   padding: 10px;
@@ -349,7 +351,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 }
 
 .up2 {
-  background: #0075ff;
+  background: #2babe1;
   cursor: pointer;
   border-radius: 5px;
   padding: 10px;

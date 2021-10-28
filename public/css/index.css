@@ -175,9 +175,12 @@ li {
   display: grid;
   text-decoration: none;
 }
+#Adm {
+  float: right;
+}
 nav li :hover {
   border-bottom: solid;
-  border-bottom-color: #0075ff;
+  border-bottom-color: #2babe1;
 }
 .ingresar {
   float: right;
@@ -255,7 +258,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 }
 
 .up {
-  background: #0075ff;
+  background: #2babe1;
   cursor: pointer;
   border-radius: 5px;
   padding: 10px;
@@ -364,7 +367,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 }
 
 .up2 {
-  background: #0075ff;
+  background: #2babe1;
   cursor: pointer;
   border-radius: 5px;
   padding: 10px;
