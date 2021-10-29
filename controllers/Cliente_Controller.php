@@ -21,11 +21,15 @@ class Cliente_Controller extends Controller
         //var_dump($this); //desplegar los detalles de una variable
         //echo 'ejecutando crear';
         $ci = $_POST['ci'];
-        $nombre = $_POST['nombre'];
+        $nom_usuario = $_POST['nom_usuario'];
         $pass = $_POST['pass'];
+        $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];
+        $calle = $_POST['calle'];
+        $ciudad = $_POST['ciudad'];
+        $numero = $_POST['numero'];
 
-        echo $ci;
-        if ($this->model->ingresar_cliente(['ci' => $ci, 'nombre' => $nombre, 'pass' => $pass])) {
+        if ($this->model->ingresar_cliente(['ci' => $ci, 'nom_usuario' => $nom_usuario, 'pass' => $pass, 'nombre' => $nombre, 'apellido' => $apellido, 'calle' => $calle, 'ciudad' => $ciudad, 'numero' => $numero])) {
             $this->view->mensaje = "Se ha registrado correctamente";
             $this->view->render('Cliente/ingresar_cli');
         } else {

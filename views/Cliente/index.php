@@ -22,10 +22,27 @@
 
             <label for="">Cedula</label><br>
             <input type="text" name="ci" id=""><br>
-            <label for="">Nombre</label><br>
-            <input type="text" name="nombre" id=""><br>
+
+            <label for="">Nombre Usuario</label><br>
+            <input type="text" name="nom_usuario" id=""><br>
+
             <label for="">Password</label><br>
             <input type="text" name="pass" id=""><br>
+
+            <label for="">Nombre</label><br>
+            <input type="text" name="nombre" id=""><br>
+
+            <label for="">Apellido</label><br>
+            <input type="text" name="apellido" id=""><br>
+
+            <label for="">Calle</label><br>
+            <input type="text" name="calle" id=""><br>
+
+            <label for="">Ciudad</label><br>
+            <input type="text" name="ciudad" id=""><br>
+
+            <label for="">Numero</label><br>
+            <input type="text" name="numero" id=""><br>
 
             <input type="submit" value="Crear">
         </form>
