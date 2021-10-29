@@ -11,9 +11,9 @@
 			<div class="contenido">
 
 
-				<input class="Contenido" type="text" placeholder="Usuario">
-				<input class="Contenido" type="password" placeholder="Contraseña">
-				<input class="Contenido" type="text" placeholder="Email">
+				<input class="Usuario" type="text" placeholder="Usuario">
+				<input class="Contraseña" type="password" placeholder="Contraseña">
+				<input class="Email" type="text" placeholder="Email">
 				<input class="Contenido" type="submit" value="Registrarse">
 
 			</div>

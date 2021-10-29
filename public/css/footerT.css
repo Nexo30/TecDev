@@ -14,6 +14,7 @@
 i {
   margin-left: 40px;
 }
+
 .fa-facebook {
   margin-top: 25px;
   font-size: 40px;
@@ -29,4 +30,19 @@ i {
   font-size: 40px;
   color: #2babe1;
   cursor: pointer;
+}
+.fa-facebook:hover {
+  color: grey;
+}
+.fa-instagram:hover {
+  color: grey;
+}
+.fa-twitter:hover {
+  color: grey;
+}
+.no {
+  visibility: hidden;
+}
+i {
+  visibility: visible;
 }

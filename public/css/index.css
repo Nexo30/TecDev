@@ -269,7 +269,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 }
 
 .contenido {
-  margin: auto;
+  margin-top: 100px;
   /* VER VARIACIONES DE FORMULARIOS EN EL MATERIAL DE FORMULARIOS */
 }
 .Contenido {
@@ -379,7 +379,6 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 
 .contenido2 {
   margin: auto;
-  /* VER VARIACIONES DE FORMULARIOS EN EL MATERIAL DE FORMULARIOS */
 }
 .Contenido2 {
   display: block;
@@ -387,4 +386,21 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   margin-top: 50px;
   padding: 10px;
   outline: none;
+}
+.Contraseña {
+  margin-left: 65px;
+  margin-top: 10px;
+  height: 35px;
+  width: 130px;
+}
+.Email {
+  height: 35px;
+  width: 130px;
+}
+.Usuario {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  height: 35px;
+  width: 222px;
 }
