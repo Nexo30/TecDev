@@ -17,7 +17,7 @@ body {
   min-height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../imagenes/articulos/13416.jpg");
+  background-image: url("../imagenes/fondo/13416.jpg");
 }
 
 .grid-container > * {
