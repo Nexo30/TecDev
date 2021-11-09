@@ -5,6 +5,7 @@
 	<label for="btn-up" class="up">Registrarse</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
 
 	<div class="ventana">
+	<form action="<?php echo constant('URL'); ?>index/registro" method="post">
 		<div class="contenedor">
 			<header>Ingrese sus datos de registro</header>
 			<label  class="X" for="btn-up">X</label> <!-- utilizamos el mismo id del checkbox para que funcione -->
@@ -17,6 +18,7 @@
 				<input class="Contenido" type="submit" value="Registrarse">
 
 			</div>
+			</form>
 		</div>
 	</div>
 
@@ -26,6 +28,7 @@
 	<label for="btn-up2" class="up2">Iniciar Sesión</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
 
 	<div class="ventana2">
+	<form action="<?php echo constant('URL'); ?>index/ingresar" method="post">
 		<div class="contenedor2">
 			<header>Ingrese sus datos de usuario</header>
 			<label  class="X2" for="btn-up2">X</label> <!-- utilizamos el mismo id del checkbox para que funcione -->
@@ -37,6 +40,7 @@
 				<input class="Contenido2" type="submit" value="Iniciar">
 
 			</div>
+     </form>
 		</div>
 	</div>
 
