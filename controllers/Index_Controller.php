@@ -13,10 +13,8 @@ class Index_Controller extends Controller
     public function render()
     {
         //$alumnos = $this->model->get();
-        $this->view->alumnos = "cargado";
         $this->view->render('index/index');
     }
-
     public function ingresar()
     {
         //$alumnos = $this->model->get();
@@ -28,10 +26,10 @@ class Index_Controller extends Controller
         if ($exitoLogin) {
             $_SESSION["estalogueado"] = true;
             $_SESSION["nombre"] = $nombre;
-            $this->view->render('login/ingresar');
+            $this->view->render('contacto/index');
         } else {
             $this->view->resultadoLogin = "usuario o contraseña incorrectos";
-            $this->view->render('login/index');
+            $this->view->render('tienda/tienda');
         }
 
     }

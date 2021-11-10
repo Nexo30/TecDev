@@ -5,7 +5,7 @@
 	<label for="btn-up" class="up">Registrarse</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
 
 	<div class="ventana">
-	<form action="<?php echo constant('URL'); ?>index/registro" method="post">
+	<form action="<?php echo constant('URL'); ?>index/ingresar" method="post">
 		<div class="contenedor">
 			<header>Ingrese sus datos de registro</header>
 			<label  class="X" for="btn-up">X</label> <!-- utilizamos el mismo id del checkbox para que funcione -->
@@ -28,15 +28,15 @@
 	<label for="btn-up2" class="up2">Iniciar Sesión</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
 
 	<div class="ventana2">
-	<form action="<?php echo constant('URL'); ?>index/ingresar" method="post">
+	<form action="<?php echo constant('URL'); ?>HeaderT/ingresar" method="post">
 		<div class="contenedor2">
 			<header>Ingrese sus datos de usuario</header>
 			<label  class="X2" for="btn-up2">X</label> <!-- utilizamos el mismo id del checkbox para que funcione -->
 			<div class="contenido2">
 
 
-				<input class="Contenido2" type="text" placeholder="Usuario">
-				<input class="Contenido2" type="password" placeholder="Contraseña">
+				<input class="Contenido2" type="text" placeholder="Usuario" name="nombre">
+				<input class="Contenido2" type="password" placeholder="Contraseña" name="pass">
 				<input class="Contenido2" type="submit" value="Iniciar">
 
 			</div>
