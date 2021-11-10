@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,7 @@
 <body class="grid-container">
 <?php require 'views/headerT.php';?>
  <main class="datos" >Productos
+
  <div class="dropdown">
   <button class="mainmenubtn">Categorias</button>
   <div class="dropdown-child">
@@ -25,6 +25,10 @@
 </div>
 
 </main>
+
+
+
+
 
 <?php require 'views/footerT.php';?>
 </body>

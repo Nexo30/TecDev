@@ -404,3 +404,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   height: 35px;
   width: 222px;
 }
+#icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}

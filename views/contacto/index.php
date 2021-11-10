@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body class="grid-container">
-<?php require 'views/HeaderT/headerT.php';?>
+<?php require 'views/headerT.php';?>
   <aside class="sidebar" >
 			<div class="contacto__grupo" id="grupo__nombre">
 				  <label for="Email" class="contacto__label">Email: </label>

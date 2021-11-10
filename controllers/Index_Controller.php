@@ -13,7 +13,7 @@ class Index_Controller extends Controller
     public function render()
     {
         //$alumnos = $this->model->get();
-        $this->view->render('index/index');
+        $this->view->render('inicio/index');
     }
     public function ingresar()
     {

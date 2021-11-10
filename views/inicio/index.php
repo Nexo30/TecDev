@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body class="grid-container">
-<?php require 'views/HeaderT/headerT.php';?>
+<?php require 'views/headerT.php';?>
   <aside class="sidebar2">Imagen</aside>
   <aside name="sidebar" id="sidebar" class="sidebar3" >Nosotros</aside>
   <article class="main">Imagen con Productos</article>

@@ -1,8 +1,8 @@
 <header class="header">
-<img src=public/imagenes/articulos/Logo2.png width="280px">
+<img src="<?php echo constant('URL'); ?>public/imagenes/articulos/Logo2.png" width="280px">
 <a class="ingresar">
 <input type="checkbox" id="btn-up">
-	<label for="btn-up" class="up">Registrarse</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
+	<label for="btn-up" class="up"><i id="icon"class="fas fa-user-circle"></i>Registrarse</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
 
 	<div class="ventana">
 	<form action="<?php echo constant('URL'); ?>index/ingresar" method="post">
@@ -25,10 +25,10 @@
 </a>
 <a class="ingresar">
 <input type="checkbox" id="btn-up2">
-	<label for="btn-up2" class="up2">Iniciar Sesión</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
+<label for="btn-up2" class="up2"><i id="icon"class="fas fa-sign-in-alt"></i>Iniciar Sesion</label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
 
 	<div class="ventana2">
-	<form action="<?php echo constant('URL'); ?>HeaderT/ingresar" method="post">
+	<form action="<?php echo constant('URL'); ?>tienda/ingresar" method="post">
 		<div class="contenedor2">
 			<header>Ingrese sus datos de usuario</header>
 			<label  class="X2" for="btn-up2">X</label> <!-- utilizamos el mismo id del checkbox para que funcione -->
@@ -48,6 +48,7 @@
 <a class="Carrito">
 <i class="fas fa-shopping-cart"></i>
 </a>
+<h1 id="Res"><?php echo $this->resultadoLogin; ?></h1>
 </header>
   <nav class="navbar">
 		<ul>
