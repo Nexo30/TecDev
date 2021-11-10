@@ -1,10 +1,12 @@
 (function($, param) {
   $(document).ready(function() {
-      //alert('hola');
-      //console.log("funciona ver articulo");
+      
+      console.log("funciona ver articulo");
       let $listaArticulos=[];
       let url= $("#url").val();
-      let urlReq =url+"api260260articulos/listar";
+      console.log(url);
+     
+      let urlReq =url+"articulos/listar";
       console.log("url: "+urlReq);
       let headers = {"Content-Type":"application/json;charset=utf-8"}; 
       let data = {};
@@ -12,11 +14,11 @@
               url: urlReq,
               headers: headers,
               type: 'DELETE',
-              data: data
+              data: data  
           })
           .done(function (data) { 
             $listaArticulos=data.datos;
-            //console.log($listaArticulos);
+            console.log($listaArticulos);
            })
           .fail(function (jqXHR, textStatus, errorThrown) { serrorFunction(); });
 

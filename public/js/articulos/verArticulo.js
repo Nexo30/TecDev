@@ -23,7 +23,7 @@
           //solitud ajax, 
           //$("#filaart-"+alumnoId).remove();
           let url= $("#url").val();
-          let urlReq =url+"api260260articulos/actualizar";
+          let urlReq =url+"articulos/actualizar";
           //console.log("url: "+urlReq);
           let headers = {"Content-Type":"application/json;charset=utf-8"};
           let data = JSON.stringify(objeto);

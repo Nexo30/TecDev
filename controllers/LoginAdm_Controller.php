@@ -26,6 +26,7 @@ class LoginAdm_Controller extends Controller
         if ($exitoLogin) {
             $_SESSION["estalogueado"] = true;
             $_SESSION["nombre"] = $ci_adm;
+            $_SESSION["tipo"] = "admin";
             $this->view->render('loginadm/ingresar');
         } else {
             $this->view->resultadoLogin = "usuario o contraseña incorrectos";
@@ -37,6 +38,7 @@ class LoginAdm_Controller extends Controller
     {
         $_SESSION["estalogueado"] = false;
         unset($_SESSION["nombre"]);
+        unset($_SESSION["tipo"]);
         $this->view->render('index/index');
     }
 }

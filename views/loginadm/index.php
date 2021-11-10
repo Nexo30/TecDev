@@ -42,6 +42,8 @@
         <div class="col-lg-12 col-md-12 col-sm-12 py-2">
             <button type="submit" class="btn btn-primary">Ingresar</button>
         </div>
+        <a  href="<?php echo constant('URL'); ?>Regusuario">Registro de Administrador</a>
+
         </form>
     </div>
     <?php require 'views/footer2.php';?>

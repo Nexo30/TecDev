@@ -30,7 +30,7 @@ class Crear_Articulo_Controller extends Controller
         $descripcion = $_POST['descripcion'];
         $precio = $_POST['precio'];
         $stock = $_POST['stock'];
-        $url_img = $datos['url_img'];
+        $url_img = $_POST['url_img'];
 
 //Si se quiere subir una imagen
         if (isset($_POST['crear'])) {
@@ -59,11 +59,13 @@ class Crear_Articulo_Controller extends Controller
                     } else {
                         //Si no se ha podido subir la imagen, mostramos un mensaje de error
                         $msg_imagen = '<div><b>Ocurrió algún error al subir el fichero. No pudo guardarse.</b></div>';
+                        $nom_img = "imagenDefecto.svg";
                     }
                 }
             }
         } else {
             $msg_imagen = '<div><b>Error en la imagen.No se envio la imagen por post</b></div>';
+            $nom_img = "imagenDefecto.svg";
         }
 
         if ($this->model->ingresar_articulo(['cod_art' => $cod_art, 'cod_cat' => $cod_cat, 'nombre' => $nombre, 'marca' => $marca, 'modelo' => $modelo, 'descripcion' => $descripcion, 'precio' => $precio, 'stock' => $precio, 'url_img' => $nom_img])) {

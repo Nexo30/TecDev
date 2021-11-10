@@ -4,8 +4,9 @@
       //console.log("funciona ver articulo");
       var $listaArticulos=[];
       let url= $("#url").val();
-      let urlReq =url+"api260260articulos/listar";
       console.log("url: "+urlReq);
+      let urlReq =url+"articulos/listar";
+     
       let headers = {"Content-Type":"application/json;charset=utf-8"}; 
       let data = {};
             $.ajax({

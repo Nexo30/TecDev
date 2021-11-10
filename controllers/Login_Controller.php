@@ -28,6 +28,8 @@ class Login_Controller extends Controller
         if ($exitoLogin) {
             $_SESSION["estalogueado"] = true;
             $_SESSION["nombre"] = $nombre;
+            $_SESSION["tipo"] = "cliente";
+
             $this->view->render('login/ingresar');
         } else {
             $this->view->resultadoLogin = "usuario o contraseña incorrectos";
@@ -39,6 +41,7 @@ class Login_Controller extends Controller
     {
         $_SESSION["estalogueado"] = false;
         unset($_SESSION["nombre"]);
+        unset($_SESSION["tipo"]);
         $this->view->render('index/index');
     }
 }
