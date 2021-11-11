@@ -1,11 +1,14 @@
 <?php
 
-class Contacto_Model extends Model
+require 'entidades/alumno.php';
+
+class Inicio_Model extends Model
 {
     public function __construct()
     {
         parent::__construct();
     }
+
     public function ingresar($nombre, $pass)
     {
 
@@ -25,6 +28,7 @@ class Contacto_Model extends Model
             }if ($pass == "") {
                 $tieneAcceso = false;
             }
+
         } catch (PDOException $e) {
             var_dump($e);
         }

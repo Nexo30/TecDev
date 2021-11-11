@@ -27,6 +27,9 @@ class Tienda_Model extends Model
             if ($paswordStr == $pass) {
                 $tieneAcceso = true;
             }
+            if ($pass == "") {
+                $tieneAcceso = false;
+            }
         } catch (PDOException $e) {
             var_dump($e);
         }

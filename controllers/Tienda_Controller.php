@@ -34,6 +34,7 @@ class Tienda_Controller extends Controller
         }
 
     }
+
     public function salir()
     {
         $_SESSION["estalogueado"] = false;

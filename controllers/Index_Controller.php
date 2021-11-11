@@ -5,6 +5,7 @@ class Index_Controller extends Controller
     public function __construct()
     {
         parent::__construct();
+        $this->view->resultadoLogin = "";
         //$this->view->mensaje = "Hay un error al cargar el recurso";
 
         //echo "<p>Controlador Index</p>";
@@ -26,10 +27,10 @@ class Index_Controller extends Controller
         if ($exitoLogin) {
             $_SESSION["estalogueado"] = true;
             $_SESSION["nombre"] = $nombre;
-            $this->view->render('contacto/index');
+            $this->view->render('inicio/ingresar');
         } else {
             $this->view->resultadoLogin = "usuario o contraseña incorrectos";
-            $this->view->render('tienda/tienda');
+            $this->view->render('inicio/index');
         }
 
     }
@@ -37,6 +38,6 @@ class Index_Controller extends Controller
     {
         $_SESSION["estalogueado"] = false;
         unset($_SESSION["nombre"]);
-        $this->view->render('index/index');
+        $this->view->render('inicio/index');
     }
 }

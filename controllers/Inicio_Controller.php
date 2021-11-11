@@ -1,17 +1,20 @@
 <?php
 
-class Contacto_Controller extends Controller
+class Inicio_Controller extends Controller
 {
     public function __construct()
     {
         parent::__construct();
         $this->view->resultadoLogin = "";
+        //$this->view->mensaje = "Hay un error al cargar el recurso";
+
+        //echo "<p>Controlador Index</p>";
     }
+
     public function render()
     {
-
-        $this->view->render('contacto/index');
-
+        //$alumnos = $this->model->get();
+        $this->view->render('inicio/index');
     }
     public function ingresar()
     {
@@ -27,10 +30,10 @@ class Contacto_Controller extends Controller
             $_SESSION["tipo"] = "cliente";
             $this->view->resultadoLogin = "Ingreso Exitoso";
 
-            $this->view->render('contacto/ingresar');
+            $this->view->render('inicio/ingresar');
         } else {
             $this->view->resultadoLogin = "Usuario o contraseña incorrectos";
-            $this->view->render('contacto/index');
+            $this->view->render('inicio/index');
         }
 
     }
@@ -40,6 +43,6 @@ class Contacto_Controller extends Controller
         $_SESSION["estalogueado"] = false;
         unset($_SESSION["nombre"]);
         unset($_SESSION["tipo"]);
-        $this->view->render('contacto/index');
+        $this->view->render('inicio/index');
     }
 }
