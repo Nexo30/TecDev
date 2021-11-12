@@ -44,20 +44,28 @@ class Inicio_Model extends Model
         $ciudad = $datos['ciudad'];
         $numero = $datos['telefono'];
 
-        $query = $this->db->connect()->prepare("INSERT INTO cliente (Nom_usuario,Password_cli) values ('$nombre','$pass')");
+        try {
+            $query = $this->db->connect()->prepare("INSERT INTO cliente (Nom_usuario,Password_cli) values ('$nombre','$pass')");
 
-        if ($query->execute()) {
-
-            $query = $this->db->connect()->prepare("INSERT INTO persona (Nombre,Apellido,Calle,Ciudad,Numero) values ('$nombre','$apellido','$calle','$ciudad','$numero')");
             if ($query->execute()) {
-                return true;
+
+                $query = $this->db->connect()->prepare("INSERT INTO persona (Nombre,Apellido,Calle,Ciudad,Numero) values ('$nombre','$apellido','$calle','$ciudad','$numero')");
+                if ($query->execute()) {
+                    return true;
+                } else {
+                    return false;
+                    $this->view->render('inicio/index');
+                    echo "Fallo el registro";
+                }
+
             } else {
                 return false;
+                $this->view->render('');
+                echo "Fallo el registro";
             }
-
-        } else {
+        } catch (PDOException $e) {
             return false;
         }
-
     }
+
 }

@@ -44,9 +44,9 @@ class Tienda_Model extends Model
         $calle = $datos['calle'];
         $ciudad = $datos['ciudad'];
         $numero = $datos['telefono'];
-
-        $query = $this->db->connect()->prepare("INSERT INTO cliente (Nom_usuario,Password_cli) values ('$nombre','$pass')");
         try {
+            $query = $this->db->connect()->prepare("INSERT INTO cliente (Nom_usuario,Password_cli) values ('$nombre','$pass')");
+
             if ($query->execute()) {
                 $query = $this->db->connect()->prepare("INSERT INTO persona (Nombre,Apellido,Calle,Ciudad,Numero) values ('$nombre','$apellido','$calle','$ciudad','$numero')");
                 if ($query->execute()) {
