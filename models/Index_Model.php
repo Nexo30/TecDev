@@ -32,4 +32,28 @@ class Index_Model extends Model
         return $tieneAcceso;
 
     }
+    public function registrar($datos)
+    {
+        $pass = $datos['contrasena'];
+        $nombre = $datos['nombre'];
+        $calle = $datos['calle'];
+        $ciudad = $datos['ciudad'];
+        $numero = $datos['telefono'];
+
+        $query = $this->db->connect()->prepare("INSERT INTO cliente (Nom_usuario,Password_cli) values ('$nombre','$pass')");
+
+        if ($query->execute()) {
+
+            $query = $this->db->connect()->prepare("INSERT INTO persona (Nombre,Calle,Ciudad,Numero) values ('$nombre','$calle','$ciudad','$numero')");
+            if ($query->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } else {
+            return false;
+        }
+
+    }
 }

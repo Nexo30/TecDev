@@ -36,5 +36,34 @@ class Tienda_Model extends Model
         return $tieneAcceso;
 
     }
+    public function registrar($datos)
+    {
+        $pass = $datos['contrasena'];
+        $nombre = $datos['usuario'];
+        $apellido = $datos['apellido'];
+        $calle = $datos['calle'];
+        $ciudad = $datos['ciudad'];
+        $numero = $datos['telefono'];
 
+        $query = $this->db->connect()->prepare("INSERT INTO cliente (Nom_usuario,Password_cli) values ('$nombre','$pass')");
+        try {
+            if ($query->execute()) {
+                $query = $this->db->connect()->prepare("INSERT INTO persona (Nombre,Apellido,Calle,Ciudad,Numero) values ('$nombre','$apellido','$calle','$ciudad','$numero')");
+                if ($query->execute()) {
+                    return true;
+                } else {
+                    return false;
+                    $this->view->render('tienda/tienda');
+                    echo "Fallo el registro";
+                }
+            } else {
+                return false;
+                $this->view->render('tienda/tienda');
+                echo "Fallo el registro";
+            }
+
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
 }

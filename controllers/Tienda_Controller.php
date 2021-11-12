@@ -4,6 +4,7 @@ class Tienda_Controller extends Controller
     public function __construct()
     {
         parent::__construct();
+        $this->view->mensaje = "";
         $this->view->resultadoLogin = "";
 
     }
@@ -40,6 +41,25 @@ class Tienda_Controller extends Controller
         $_SESSION["estalogueado"] = false;
         unset($_SESSION["nombre"]);
         unset($_SESSION["tipo"]);
-        $this->view->render('index/index');
+        $this->view->render('tienda/tienda');
+    }
+    public function registrar()
+    {
+        //var_dump($this); //desplegar los detalles de una variable
+
+        //echo 'ejecutando crear';
+        $nombre = $_POST['usuario'];
+        $pass = $_POST['contrasena'];
+        $calle = $_POST['calle'];
+        $ciudad = $_POST['ciudad'];
+        $apellido = $_POST['apellido'];
+        $numero = $_POST['telefono'];
+        if ($this->model->registrar(['usuario' => $nombre, 'apellido' => $apellido, 'contrasena' => $pass, 'calle' => $calle, 'ciudad' => $ciudad, 'telefono' => $numero])) {
+            $this->view->mensaje = "Se ha registrado correctamente";
+            $this->view->render('tienda/registrar');
+        } else {
+            $this->view->mensaje = "Error, intentelo de nuevo";
+            $this->view->render('tienda/tienda');
+        }
     }
 }

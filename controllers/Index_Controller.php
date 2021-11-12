@@ -5,6 +5,7 @@ class Index_Controller extends Controller
     public function __construct()
     {
         parent::__construct();
+        $this->view->mensaje = "";
         $this->view->resultadoLogin = "";
         //$this->view->mensaje = "Hay un error al cargar el recurso";
 
@@ -39,5 +40,23 @@ class Index_Controller extends Controller
         $_SESSION["estalogueado"] = false;
         unset($_SESSION["nombre"]);
         $this->view->render('inicio/index');
+    }
+    public function registrar()
+    {
+        //var_dump($this); //desplegar los detalles de una variable
+
+        //echo 'ejecutando crear';
+        $nombre = $_POST['usuario'];
+        $pass = $_POST['contrasena'];
+        $calle = $_POST['calle'];
+        $ciudad = $_POST['ciudad'];
+        $numero = $_POST['telefono'];
+        if ($this->model->ingresar_cliente(['usuario' => $nombre, 'contrasena' => $pass, 'calle' => $calle, 'ciudad' => $ciudad, 'telefono' => $numero])) {
+            $this->view->mensaje = "Se ha registrado correctamente";
+            $this->view->render('inicio/registrar');
+        } else {
+            $this->view->mensaje = "Error, intentelo de nuevo";
+            $this->view->render('');
+        }
     }
 }

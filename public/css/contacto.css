@@ -423,3 +423,46 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   float: right;
   font-size: 20px;
 }
+.Contenido {
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoU {
+  margin: auto;
+  margin-left: 5px;
+  margin-top: 75px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoT {
+  float: right;
+  margin: auto;
+  margin-top: 75px;
+  margin-right: 4px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoC {
+  float: right;
+  display: block;
+  margin-top: 25px;
+  margin-right: 4px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoE {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoR {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px;
+  outline: none;
+}
