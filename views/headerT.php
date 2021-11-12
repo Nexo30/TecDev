@@ -9,7 +9,7 @@ $urlB = basename("$urlS");
 if ($urlB == "TecDev") {
     $urlF = "$urlS" . "inicio/registrar";
 } else {
-    $urlF = "$urlS" . "/" . "registrar";
+    $urlF = "$urlB" . "/" . "registrar";
 }
 if ("$urlB" . "/" . "$urlB" == $urlF) {
     $urlF = $urlB;
