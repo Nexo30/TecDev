@@ -12,7 +12,26 @@
 </head>
 <body class="grid-container">
 <?php require 'views/headerT.php';?>
- <main class="datos" >Productos
+ <main class="datos"><?php foreach ($this->articulos as $row) {; # code...
+$articulo = $row;
+    //echo constant('URL') . "public/imagenes/articulos/" . $articulo->url_img;
+    ?><div class="col-lg-4 col-md-6 col-sm-6 col-xs-4 p-3">
+      <div class="card">
+        <img class="card-img-top" src="<?php echo constant('URL') . "public/imagenes/articulos/" . $articulo->url_img; ?>" alt="Card image cap"/>
+        <div class="card-body">
+          <h5 class="card-title"><?=$articulo->Nom_art;?></h5>
+          <p class="card-text"><?=$articulo->Descripcion;?></p>
+          <p class="card-text">$ <?=$articulo->Precio;?></p>
+          <input id="art-<?=$articulo->Cod_Art;?>" class="form-control"
+          value="1" type="number"
+          ></p>
+          <button type="button" class="btn btn-primary btnAgregar"
+          data-articulo-id="<?php echo $articulo->Cod_art; ?>">Agregar</button>
+        </div>
+
+      </div><!-- end card -->
+    </div><!-- end col --><?php }
+;?>
  <div class="dropdown">
   <button class="mainmenubtn">Categorias</button>
   <div class="dropdown-child">

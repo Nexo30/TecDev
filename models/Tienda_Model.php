@@ -1,6 +1,7 @@
 <?php
 
 require 'entidades/alumno.php';
+require 'entidades/articulo.php';
 
 class Tienda_Model extends Model
 {
@@ -66,4 +67,25 @@ class Tienda_Model extends Model
             return false;
         }
     }
+    public function tienda($id)
+    {
+        $articulo = null;
+        try {
+            $query = $this->db->connect()->prepare('SELECT id_productos, codigo,descripcion,precio,fecha FROM productos WHERE id_productos=:id');
+            $query->bindValue(':id', $id);
+            //$query->execute(['nombre' => $nombre]);
+            $query->execute();
+            while ($row = $query->fetch()) {
+                $articulo = new Articulo();
+                $articulo->id = $row['id_productos'];
+                $articulo->codigo = $row['codigo'];
+                $articulo->descripcion = $row['descripcion'];
+                $articulo->precio = $row['precio'];
+                $articulo->fecha = $row['fecha'];
+            }
+        } catch (PDOException $e) {
+            var_dump($e);
+        }
+        return $articulo;
+    } //end ver
 }
