@@ -59,7 +59,7 @@ class Inicio_Controller extends Controller
             $this->view->render('inicio/registrar');
         } else {
             $this->view->mensaje = "Error, intentelo de nuevo";
-            $this->view->render('');
+            $this->view->render('inicio/index');
         }
     }
 }

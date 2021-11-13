@@ -54,13 +54,11 @@ class Inicio_Model extends Model
                     return true;
                 } else {
                     return false;
-                    $this->view->render('inicio/index');
                     echo "Fallo el registro";
                 }
 
             } else {
                 return false;
-                $this->view->render('');
                 echo "Fallo el registro";
             }
         } catch (PDOException $e) {

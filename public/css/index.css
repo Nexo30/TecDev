@@ -87,40 +87,38 @@ body {
 .sidebar3 {
   grid-area: sidebar3;
   background-color: #2c0cc7;
+  height: 45vw;
+  background: url("../imagenes/fondo/FondoNosotros.png");
+  background-size: cover;
 }
 .sidebar2 {
   grid-area: sidebar2;
   background-color: #2c0cc7;
-  height: 700px;
+  height: 45vw;
+  background: url("../imagenes/fondo/FondoDestacados.png");
+  background-size: cover;
 }
 
 .main {
   grid-area: main;
   background-repeat: no-repeat;
-  background: url("../imagenes/articulos/Fondo.png");
   animation: imagenes 20s infinite;
   background-size: cover;
-  width: 100vw;
-  height: 700px;
+  height: 45vw;
 }
 @keyframes imagenes {
   25% {
-    background: url("../imagenes/articulos/Prueba.png"); /*las imagenes son a modo de ejemplo deben usar con el tamaño adecuado*/
+    background: url("../imagenes/fondo/Fondo.png"); /*las imagenes son a modo de ejemplo deben usar con el tamaño adecuado*/
     background-size: cover;
     background-repeat: no-repeat;
   }
   50% {
-    background: url("../imagenes/articulos/Prueba2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  75% {
-    background: url("../imagenes/articulos/Prueba3.png");
+    background: url("../imagenes/fondo/FondoDescuento.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
   100% {
-    background: url("../imagenes/articulos/Prueba2.png");
+    background: url("../imagenes/fondo/FondoPromo.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -141,7 +139,7 @@ body {
     "sidebar2" 200px
     "sidebar3" 200px
     "footer" 100px;
-  grid-template-rows: 100px 70px 50% 50% 30% 100px;
+  grid-template-rows: 100px 70px 30% 30% 30% 100px;
 }
 
 @media (min-width: 600px) {
