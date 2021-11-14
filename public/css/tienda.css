@@ -40,6 +40,41 @@ body {
   grid-area: main;
   background-color: #414445;
 }
+.row {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.col {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  border: solid 2px;
+  border-spacing: 10px 5px;
+  width: 300px;
+  background: white;
+  margin: 20px;
+  padding: 5px;
+}
+.Agregar {
+  margin-top: 10px;
+  padding: 5px;
+  background: black;
+  color: white;
+  font-size: 18px;
+}
+.Agregar:hover {
+  background: grey;
+  cursor: pointer;
+}
+.val {
+  padding: 2px;
+  border: solid 2px;
+}
 .datos {
   background-color: #ffffff;
 }

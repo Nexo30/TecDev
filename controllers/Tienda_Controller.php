@@ -10,7 +10,8 @@ class Tienda_Controller extends Controller
     }
     public function render()
     {
-
+        $articulos = $this->model->get();
+        $this->view->articulos = $articulos;
         $this->view->render('tienda/tienda');
 
     }
