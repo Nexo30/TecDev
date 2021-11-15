@@ -26,8 +26,8 @@ $mail->SMTPOptions = array(
 );
 $mail->isHTML(true);
 
-$mail->Username = ('HTMConsultas@gmail.com');
-$mail->Password = ('Vaniersa2021');
+$mail->Username = ('HTMConsultas@gmail.com2');
+$mail->Password = ('Vaniersa20212');
 
 $mail->setFrom($correo, $nombre);
 $mail->Subject = "Correo de Usuario HTMotors";
