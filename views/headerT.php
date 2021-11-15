@@ -1,3 +1,4 @@
+
 <header class="header">
 <img src="<?php echo constant('URL'); ?>public/imagenes/articulos/Logo2.png" width="280px">
 <a class="ingresar">
@@ -77,8 +78,10 @@ if ("$url" == "inicio/ingresar") {
 	</div>
 
 </a>
-<a class="Carrito">
+<a class="Carrito" href="<?php echo constant('URL'); ?>carrito">
 <i class="fas fa-shopping-cart"></i>
+</a>
+<span class="CarritoCont" id="cantidadElemCarrito">0</span>
 </a>
 <h1 id="Res"><?php echo $this->resultadoLogin; ?></h1>
 <h1 id="Res"><?php echo $this->mensaje; ?></h1>

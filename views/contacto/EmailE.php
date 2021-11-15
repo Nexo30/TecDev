@@ -1,4 +1,42 @@
 
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+require 'PHPMailer-master/PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/PHPMailer-master/src/SMTP.php';
+$correo = $_POST['Email'];
+$nombre = $_POST['Nombre'];
+$mensaje = $_POST['Mensaje'];
+$mail = new PHPMailer(true);
+
+$mail->isSMTP();
+$mail->CharSet = "utf-8";
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = 'tls';
+
+$mail->Host = 'smtp.gmail.com';
+$mail->Port = 587;
+$mail->SMTPOptions = array(
+    'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true,
+    ),
+);
+$mail->isHTML(true);
+
+$mail->Username = ('HTMConsultas@gmail.com');
+$mail->Password = ('Vaniersa2021');
+
+$mail->setFrom($correo, $nombre);
+$mail->Subject = "Correo de Usuario HTMotors";
+$mail->MsgHTML($mensaje);
+$mail->addAddress('HTMConsultas@gmail.com', 'Consultas');
+
+$mail->send();
+$this->mensaje = "Mensaje Enviado Correctamente";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

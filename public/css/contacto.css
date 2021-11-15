@@ -193,7 +193,14 @@ nav li :hover {
   font-size: 37px;
   color: black;
   display: inline table;
-  margin: 20px;
+  margin: 15px;
+  margin-right: 35px;
+}
+#Res {
+  color: #2babe1;
+  margin-top: 30px;
+  float: right;
+  font-size: 20px;
 }
 .search-wrapper span {
   display: inline-flexbox;
@@ -431,7 +438,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 }
 .ContenidoU {
   margin: auto;
-  margin-left: 5px;
+  margin-left: 11px;
   margin-top: 75px;
   padding: 10px;
   outline: none;
@@ -465,4 +472,16 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   margin-top: 25px;
   padding: 10px;
   outline: none;
+}
+#cantidadElemCarrito {
+  float: right;
+  box-shadow: 0 0 1px 1px black;
+  border: solid 1px black;
+  border-radius: 100%;
+  background: red;
+  color: white;
+  padding: 2px;
+  font-size: 15px;
+  margin-right: -50px;
+  margin-top: 5px;
 }

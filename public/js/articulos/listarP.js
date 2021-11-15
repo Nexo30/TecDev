@@ -23,7 +23,7 @@
           .fail(function (jqXHR, textStatus, errorThrown) { serrorFunction(); });
 
           //asiganr la funcionalidad del carrito
-          const items = document.querySelectorAll(".btnAgregar");
+          const items = document.querySelectorAll(".Agregar");
           items.forEach(item => {
           item.addEventListener("click", function(){          
             let articuloId = this.dataset.articuloId;

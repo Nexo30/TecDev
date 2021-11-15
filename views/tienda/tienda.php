@@ -32,7 +32,7 @@
       <div class="col">
         <div class="card">
           <!--ID: <?=$value->Cod_Art;?>-->
-          <img class="Img" src="<?php echo $articulo->url_img; ?>" alt="" />
+          <img class="Img" src="<?php echo $articulo->url_img; ?>" alt="Imagen Producto" />
           <p class=""> <?=$value->Nom_art;?></p>
           <p class=""> <?=$articulo->Descripcion;?></p>
           <p class="">$ <?=$articulo->Precio;?></p>
@@ -47,6 +47,6 @@
 
 <?php require 'views/footerT.php';?>
 <script src="<?php echo constant('URL'); ?>/public/js/jquery-3.6.0.min.js"></script>
-<script src="<?php echo constant('URL'); ?>/public/js/articulos/listar.js"></script>
+<script src="<?php echo constant('URL'); ?>/public/js/articulos/listarP.js"></script>
 </body>
 </html>

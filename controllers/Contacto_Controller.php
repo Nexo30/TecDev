@@ -62,4 +62,5 @@ class Contacto_Controller extends Controller
             $this->view->render('contacto/index');
         }
     }
+
 }
