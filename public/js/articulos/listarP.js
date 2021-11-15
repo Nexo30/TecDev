@@ -64,7 +64,8 @@
               console.log("itemCarrito: "+itemCarrito);
               if (itemCarrito==undefined){
                 carrito.push(item);
-                localStorage.setItem("carrito", JSON.stringify(carrito));              
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                $("#cantidadElemCarrito").text(carrito.length);             
               } 
               
             }

@@ -2,13 +2,13 @@
 
 class Articulo
 {
-    public $id;
+    public $Cod_Art;
     //no va a ser usado
-    public $nombre;
+    public $Nom_art;
     //no va a ser usado
-    public $codigo;
-    public $descripcion;
-    public $precio;
-    public $fecha;
-    public $url;
+    public $Marca;
+    public $Modelo;
+    public $Descripcion;
+    public $Precio;
+    public $Stock;
 }

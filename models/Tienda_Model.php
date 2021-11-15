@@ -9,6 +9,7 @@ class Tienda_Model extends Model
     public function __construct()
     {
         parent::__construct();
+
     }
     public function get()
     {
@@ -36,6 +37,7 @@ class Tienda_Model extends Model
         } catch (PDOException $e) {
             var_dump($e);
         }
+
     }
     public function ingresar($nombre, $pass)
     {

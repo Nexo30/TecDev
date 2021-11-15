@@ -1,4 +1,5 @@
 <?php
+
 class Tienda_Controller extends Controller
 {
     public function __construct()
@@ -14,6 +15,16 @@ class Tienda_Controller extends Controller
         $this->view->articulos = $articulos;
         $this->view->render('tienda/tienda');
 
+    }
+    public function tienda($param = null)
+    {
+
+        //obtiene todos los articulos
+        $articulos = $this->model->get();
+        //lo asigna a la varible articulos
+        $this->view->articulos = $articulos;
+        //lista los articulos
+        $this->view->render('tienda/tienda');
     }
     public function ingresar()
     {
