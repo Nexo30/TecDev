@@ -124,15 +124,18 @@ class Api260260articulos_Controller extends Controller
         $json = file_get_contents('php://input');
         $obj = json_decode($json);
         $articulo = new Articulo();
-        $articulo->id = $obj->id;
-        $articulo->codigo = $obj->codigo;
-        $articulo->descripcion = $obj->descripcion;
-        $articulo->precio = $obj->precio;
-        $articulo->fecha = $obj->fecha;
+        $articulo->Cod_Art = $obj->Cod_Art;
+        $articulo->Cod_Cat = $obj->Cod_Cat;
+        $articulo->Cod_Cat = $obj->Nom_Art;
+        $articulo->Descripcion = $obj->Descripcion;
+        $articulo->Marca = $obj->Marca;
+        $articulo->Modelo = $obj->Modelo;
+        $articulo->Precio = $obj->Precio;
+        $articulo->Stock = $obj->Stock;
         $resultado = $this->model->actualizar($articulo);
         $verboHTTP = $_SERVER['REQUEST_METHOD'];
         $respuesta = [
-            "ArituloId" => $articulo->id,
+            "ArituloId" => $articulo->Cod_Art,
             "resultado" => $resultado,
             "verboHTTP" => $verboHTTP,
         ];

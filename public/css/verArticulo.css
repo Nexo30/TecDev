@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f0f0f0;
+  background-blend-mode: luminosity;
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+  background-image: url("../imagenes/fondo/13416.jpg");
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  background-color: #74787a;
+  text-align: left;
+}
+.header2 {
+  width: 102%;
+  background-color: #74787a;
+  text-align: right;
+  padding-top: 10px;
+}
+.texto {
+  margin: 15px;
+  float: right;
+  padding: 0px;
+  text-align: center;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #c7d2d8;
+}
+.search-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  text-align: right;
+}
+
+.search-wrapper span {
+  display: inline-flexbox;
+  padding: 0rem 1rem;
+  font-size: 1.6rem;
+}
+.search-wrapper {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  width: 400px;
+  display: inline-flex;
+}
+.las la-search {
+  background-color: red;
+}
+.search-wrapper input {
+  height: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 20px;
+}
+
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+  background-color: #8c96a0;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header" 100px
+    "navbar" 70px
+    "main" auto
+    "footer" 100px;
+}
+/*para eliminar los puntos y espacios*/
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(0, 0, 0);
+}
+/*Para que sea flotante a izquierda */
+nav ul li {
+  float: left;
+  margin: 0em auto;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 1px;
+}
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+  padding: 12px;
+  text-align-last: center;
+}
+li {
+  text-decoration: none;
+}
+#Adm {
+  float: right;
+}
+nav li :hover {
+  border-bottom: solid;
+  border-bottom-color: #2babe1;
+}
+.ingresar {
+  float: right;
+  font-size: 20px;
+  color: black;
+  margin-right: 8px;
+  margin-top: 25px;
+}
+.tabla {
+  border: solid;
+  padding: 25px;
+}
+.actualizar {
+  margin-left: 20px;
+  color: black;
+  padding: 1px;
+}
+.eliminar {
+  margin-left: 20px;
+  background: black;
+  color: white;
+  font-size: 15px;
+}
+.datos {
+  margin: auto;
+  width: 800px;
+  margin-top: 23px;
+  padding: 5px;
+  display: grid;
+}
+.Submit {
+  background: black;
+  color: white;
+  padding: 4px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.Submit:hover {
+  background: #2babe1;
+  cursor: pointer;
+}
+.Ajax {
+  padding: 10px;
+  float: left;
+}
+.formulario {
+  padding: 5px;
+}
+body .ventana {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ventana {
+  z-index: 2;
+  position: fixed; /*define una posición relativa*/
+  top: 0;
+  left: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*colores que se determian como rgb y al final la opacidad para que sea transparente*/
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden; /*oculta la ventana ya que necesitamos que se abra al hacer click en el boton*/
+}
+
+/*ACLARACIÓN COMO EL BOTON Y LA X TIENEN EL MISMO ID, CUANDO SE DE CLIC EN EL BOTÓN EL CHECK SE ACTIVARA Y MOSTRARÁ 
+LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
+
+#btn-up:checked ~ .ventana {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contenedor {
+  width: 400px;
+  height: 460px;
+  margin: auto; /*para que se centre el elemetno de forma automatica*/
+  background: #ffff;
+  box-shadow: 1px 7px 25px black; /*efecto sombra*/
+  transition: all 500ms ease;
+  position: relative;
+  transform: translateY(-30%);
+}
+
+#btn-up:checked ~ .ventana .contenedor {
+  transform: translateY(
+    0
+  ); /*da efecto de traslacion en el eje de las y, por ende en el sentido vertical*/
+}
+
+.contenedor header {
+  padding: 20px;
+  background: #8c96a0;
+  color: #ffff;
+}
+
+.X {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ffff;
+  cursor: pointer;
+}
+#btn-up {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  display: none; /*para que no muestre el cuadrito del check*/
+}
+
+.up {
+  background: #2babe1;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffff;
+}
+.up:hover {
+  background: black;
+}
+
+.Contenido {
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoU {
+  margin: auto;
+  margin-left: 4px;
+  margin-top: 75px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoT {
+  float: right;
+  margin: auto;
+  margin-top: 75px;
+  margin-right: 4px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoC {
+  float: right;
+  display: block;
+  margin-top: 25px;
+  margin-right: 4px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoE {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoR {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 120px;
+  background: #200fb8;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffff;
+}
+input[type="submit"]:hover {
+  background: gray;
+}
+.Carrito {
+  float: right;
+  font-size: 37px;
+  color: black;
+  display: inline table;
+  margin: 15px;
+  margin-right: 35px;
+  cursor: default;
+}
+.fa-shopping-cart:hover {
+  cursor: pointer;
+  color: #2babe1;
+}
+body .ventana2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ventana2 {
+  z-index: 2;
+  position: fixed; /*define una posición relativa*/
+  top: 0;
+  left: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*colores que se determian como rgb y al final la opacidad para que sea transparente*/
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden; /*oculta la ventana ya que necesitamos que se abra al hacer click en el boton*/
+}
+
+/*ACLARACIÓN COMO EL BOTON Y LA X TIENEN EL MISMO ID, CUANDO SE DE CLIC EN EL BOTÓN EL CHECK SE ACTIVARA Y MOSTRARÁ 
+LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
+
+#btn-up2:checked ~ .ventana2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contenedor2 {
+  width: 400px;
+  height: 400px;
+  margin: auto; /*para que se centre el elemetno de forma automatica*/
+  background: #ffff;
+  box-shadow: 1px 7px 25px black; /*efecto sombra*/
+  transition: all 500ms ease;
+  position: relative;
+  transform: translateY(-30%);
+}
+
+#btn-up2:checked ~ .ventana2 .contenedor2 {
+  transform: translateY(
+    0
+  ); /*da efecto de traslacion en el eje de las y, por ende en el sentido vertical*/
+}
+
+.contenedor2 header {
+  padding: 20px;
+  background: #8c96a0;
+  color: #ffff;
+}
+
+.X2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ffff;
+  cursor: pointer;
+}
+#btn-up2 {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  display: none; /*para que no muestre el cuadrito del check*/
+}
+
+.up2 {
+  background: #2babe1;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffff;
+}
+.up2:hover {
+  background: black;
+}
+
+.contenido2 {
+  margin: auto;
+}
+.Contenido2 {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  outline: none;
+}
+.Contraseña {
+  margin-left: 65px;
+  margin-top: 10px;
+  height: 35px;
+  width: 130px;
+}
+.Email {
+  height: 35px;
+  width: 130px;
+}
+.Usuario {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  height: 35px;
+  width: 222px;
+}
+#icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#Res {
+  color: #2babe1;
+  margin-top: 30px;
+  float: right;
+  font-size: 20px;
+}
+#cantidadElemCarrito {
+  float: right;
+  box-shadow: 0 0 1px 1px black;
+  border: solid 1px black;
+  border-radius: 100%;
+  background: red;
+  color: white;
+  padding: 2px;
+  font-size: 15px;
+  margin-right: -50px;
+  margin-top: 5px;
+}
+@media (min-width: 600px) {
+}
+
+@media (min-width: 900px) {
+}

@@ -9,11 +9,14 @@ class Articulos_Controller extends Controller
         $cambio = "a eliminar";
         parent::__construct();
         $this->view->mensaje = "";
+        $this->view->mensajeC = "";
+        $this->view->resultadoLogin = "";
     }
 
     //http://localhost/prophp3bj/proyectoPHPComun/articulos
     public function render()
     {
+
         $articulos = $this->model->get();
         $this->view->articulos = $articulos;
         $this->view->render('articulos/index');
@@ -36,13 +39,16 @@ class Articulos_Controller extends Controller
         $resultado = false;
         try {
             $articulo = new Articulo();
-            $articulo->id = $_POST['articuloId'];
-            $articulo->codigo = $_POST['codigo'];
-            $articulo->descripcion = $_POST['descripcion'];
-            $articulo->fecha = $_POST['fecha'];
-            $precioSF = $_POST['precio'];
-            $precio = floatval($precioSF);
-            $articulo->precio = number_format((float) $precio, 2, '.', '');
+            $articulo->Cod_Art = $_POST['Cod_Art'];
+            $articulo->Cod_Cat = $_POST['Cod_Cat'];
+            $articulo->Nom_art = $_POST['Nom_Art'];
+            $articulo->Descripcion = $_POST['Descripcion'];
+            $articulo->Marca = $_POST['Marca'];
+            $articulo->Modelo = $_POST['Modelo'];
+            $articulo->Stock = $_POST['Stock'];
+            $precioSF = $_POST['Precio'];
+            $Precio = floatval($precioSF);
+            $articulo->Precio = number_format((float) $Precio, 2, '.', '');
             $resultado = $this->model->actualizar($articulo);
         } catch (\Throwable $th) {
             $resultado = false;

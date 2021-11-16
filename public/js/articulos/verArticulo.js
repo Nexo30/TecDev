@@ -2,21 +2,27 @@
   $(document).ready(function() {
       //alert('hola');
       //console.log("funciona ver articulo"); 
-      $("#enviarForm").click(function() {
+      $("#btnEnviarForm").click(function() {
         //alert('hola');
         //console.log("enviarFormulario");
-        var id = $("#articuloId").val();
-        var codigo = $("#articuloCodigo").val();
-        var descripcion = $("#articuloDescripcion").val();
-        var precio = $("#articuloPrecio").val();
-        var fecha = $("#articuloFecha").val();
+        var Cod_Art = $("#articuloId").val();
+        var Cod_Cat = $("#articuloCat").val();
+        var Nom_Art = $("#articuloNom").val();
+        var Descripcion = $("#articuloDescripcion").val();
+        var Marca = $("#articuloMarca").val();
+        var Modelo = $("#articuloModelo").val();
+        var Precio = $("#articuloPrecio").val();
+        var Stock = $("#articuloStock").val();
+
         var objeto = {
-        "id": id,
-        "codigo": codigo,
-        "descripcion" : descripcion,
-        "precio": precio,
-        "fecha" : fecha}
-        //console.log(objeto);
+        "Cod_Art": Cod_Art,
+        "Cod_Cat": Cod_Cat,
+        "Nom_Art": Nom_Art,
+        "Descripcion" : Descripcion,
+        "Marca": Marca,
+        "Modelo": Modelo,
+        "Precio": Precio,
+        "Stock" : Stock}
         const confirm = window.confirm("Deseas actualizar el elemento?");
         if (confirm){
           //console.log("entro if");

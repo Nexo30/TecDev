@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/Carpeta/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/verArticulo.css">
 
     <title>Document</title>
 </head>
-<body>
+<body class="grid-container">
 <input type="hidden" value="<?php echo constant('URL'); ?>" id="url">
-    <?php require 'views/header4log.php';?>
+    <?php require 'views/headerT.php';?>
 
     <div class="container">
     <div class="row">
@@ -20,72 +20,97 @@
         </div>
     </div>
       <form id="form01" class="row" action="<?php echo constant('URL'); ?>articulos/actualizar" method="post">
-      <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="datos">
           <label for="articuloId" class="form-label">Id</label>
           <input type="text"
-          class="form-control"
+          class="formulario"
           id="articuloId"
           aria-describedby="emailHelp"
-          name="id"
-          disabled
-          value="<?php echo $this->articulo->id; ?>">
+          name="Cod_Art"
+          value="<?=$this->articulo->Cod_Art;?>">
       </div>
-      <div class="col-lg-12 col-md-12 col-sm-12">
-          <label for="articuloCodigo" class="form-label">Codigo</label>
+      <div class="datos">
+          <label for="articuloCat" class="form-label">Codigo</label>
           <input type="text"
-          class="form-control"
+          class="formulario"
           id="articuloCodigo"
-          name="codigo"
-          value="<?=$this->articulo->codigo;?>">
+          name="Cod_Cat"
+          value="<?=$this->articulo->Cod_Cat;?>">
       </div>
-      <div class="col-lg-12 col-md-12 col-sm-12">
-          <label for="articuloDescripcion" class="form-label">Descripcion</label>
+      <div class="datos">
+          <label for="articuloNom" class="form-label">Nombre</label>
           <input type="text"
-          class="form-control"
-          id="articuloDescripcion"
+          class="formulario"
+          id="articuloId"
           aria-describedby="emailHelp"
-          name="descripcion"
-          value="<?=$this->articulo->descripcion;?>">
+          name="Nom_Art"
+          value="<?=$this->articulo->Nom_Art;?>">
       </div>
-      <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="datos">
           <label for="articuloPrecio" class="form-label">Precio</label>
           <input type="text"
-          class="form-control"
+          class="formulario"
           id="articuloPrecio"
           aria-describedby="emailHelp"
-          name="precio"
-          value="<?=$this->articulo->precio;?>">
+          name="Precio"
+          value="<?=$this->articulo->Precio;?>">
       </div>
-      <div class="col-lg-12 col-md-12 col-sm-12">
-          <label for="articuloFecha" class="form-label">Fecha</label>
-          <input type="date"
-          class="form-control"
+      <div class="datos">
+          <label for="articuloDescripcion" class="form-label">Descripcion</label>
+          <input type="text"
+          class="formulario"
+          id="articuloDescripcion"
+          aria-describedby="emailHelp"
+          name="Descripcion"
+          value="<?=$this->articulo->Descripcion;?>">
+      </div>
+      <div class="datos">
+          <label for="articuloMarca" class="form-label">Marca</label>
+          <input type="text"
+          class="formulario"
+          id="articuloId"
+          aria-describedby="emailHelp"
+          name="Marca"
+          value="<?=$this->articulo->Marca;?>">
+      </div>
+      <div class="datos">
+          <label for="articuloModelo" class="form-label">Modelo</label>
+          <input type="text"
+          class="formulario"
+          id="articuloId"
+          aria-describedby="emailHelp"
+          name="Modelo"
+          value="<?=$this->articulo->Modelo;?>">
+      </div>
+      <div class="datos">
+          <label for="articuloStock" class="form-label">Stock</label>
+          <input type="text"
+          class="formulario"
           id="articuloFecha"
           aria-describedby="emailHelp"
-          name="fecha"
-          value="<?=$this->articulo->fecha;?>">
+          name="Stock"
+          value="<?=$this->articulo->Stock;?>">
       </div>
 
-      <div class="col-lg-6 col-md-6 col-sm-6 py-2">
-        <button id="btnEnviarForm" type="submit" class="btn btn-success">Submit</button>
+      <div >
+        <button id="btnEnviarForm" type="submit" class="Submit">Actualizar</button>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-6 py-2">
-        <span type="submit" class="btn btn-danger" id="enviarForm">Ajax</span>
+      <div>
+        <button type="submit" class="Ajax" id="enviarForm">Ajax</span>
       </div>
-      <input type="hidden" value="<?php echo $this->articulo->id; ?>" id="articuloId" name="articuloId">
+      <input type="hidden" value="<?php echo $this->articulo->Cod_Art; ?>" id="articuloId" name="articuloId">
       </form>
     </div>
 
 
 
 
-    <?php require 'views/footer2.php';?>
+    <?php require 'views/footerT.php';?>
 
     <script src="<?php echo constant('URL'); ?>/public/js/jquery-3.6.0.min.js"></script>
     <!-- importo el javascript-->
     <script src="<?php echo constant('URL'); ?>/public/js/articulos/verArticulo.js"></script>
     <!--<script src="<?php echo constant('URL'); ?>/public/js/main.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -116,12 +116,15 @@ class Api260260articulos_Model extends Model
         $resultado = false;
         $pdo = $query = $this->db->connect();
         try {
-            $query = $pdo->prepare('UPDATE productos SET codigo=:codigo, descripcion=:descripcion, precio= :precio, fecha= :fecha WHERE id_productos= :id');
-            $query->bindParam(':codigo', $articulo->codigo);
-            $query->bindParam(':descripcion', $articulo->descripcion);
-            $query->bindParam(':precio', $articulo->precio);
-            $query->bindParam(':fecha', $articulo->fecha);
-            $query->bindParam(':id', $articulo->id);
+            $query = $pdo->prepare('UPDATE articulo SET Cod_Cat=:Cod_Cat,Nom_Art= :Nom_Art, Descripcion= :Descripcion,Marca= :Marca,Modelo=:Modelo, Precio= :Precio, Stock= :Stock WHERE Cod_Art= :Cod_Art');
+            $query->bindParam(':Cod_Cat', $articulo->Cod_Cat);
+            $query->bindParam(':Nom_Art', $articulo->Nom_Art);
+            $query->bindParam(':Descripcion', $articulo->Descripcion);
+            $query->bindParam(':Marca', $articulo->Marca);
+            $query->bindParam(':Modelo', $articulo->Modelo);
+            $query->bindParam(':Precio', $articulo->Precio);
+            $query->bindParam(':Stock', $articulo->Stock);
+            $query->bindParam(':Cod_Art', $articulo->Cod_Art);
             //:descripcion, :precio, :fecha
             $lastInsertId = 0;
             $resultado = $query->execute();

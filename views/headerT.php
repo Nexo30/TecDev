@@ -105,7 +105,7 @@ if ($url == "EmailE" . "/" . "ingresar") {
 			<li><a href="<?php echo constant('URL'); ?>tienda">Tienda</a></li>
 			<li><a href="<?php echo constant('URL'); ?>#sidebar">Nosotros</a></li>
 			<li><a href="<?php echo constant('URL'); ?>contacto">Contactos</a></li>
-			<li id="Adm"><a href="<?php echo constant('URL'); ?>contacto">Administrar Articulos</a></li>
+			<li id="Adm"><a href="<?php echo constant('URL'); ?>articulos">Administrar Articulos</a></li>
 		</ul>
     <div class="search-wrapper">
         <span class="las la-search"></span>

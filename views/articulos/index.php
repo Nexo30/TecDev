@@ -4,59 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/Carpeta/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/articulos.css">
+    <title>Administrar Articulos</title>
 </head>
-<body>
+<body class="grid-container">
 
-    <?php require 'views/header4log.php';?>
-    <?php include_once 'entidades/alumno.php';?>
+    <?php require 'views/headerT.php';?>
 <input type="hidden" value="<?php echo constant('URL'); ?>" id="url">
 <!--hidden -->
-<div>
-    <div>
-        <div>
-        <h1>Articulos</h1>
-    </div>
-    <div>
-        <div>
-            <table>
-                <thead>
-                <tr>
+    <div class="main">
+        <div class="table">
+            <table class="tabla">
+                <thead class="cabeza">
+                <tr >
 
                     <th scope="col">Nombre</th>
 
                     <th scope="col">Precio</th>
 
-                    <th scope="col">Año</th>
+                    <th scope="col">Descripcion</th>
+
+                    <th scope="col">Marca</th>
+
+                    <th scope="col">Modelo</th>
+
+                    <th class="Stock" scope="col">Stock</th>
 
                 </tr>
                 </thead>
-                <tbody>
+                <tbody class="cuerpo">
                 <?php
-
-// Se cargan los articulos en la tabla, se traen del objeto articulo
 foreach ($this->articulos as $row) { // se recorre el array articulos con foreach
     $articulo = $row;?>
-                <tr id="filaart-<?php echo $articulo->id; ?>">
+                <tr class="tablas"id="filaart-<?php echo $articulo->Cod_Art; ?>">
 
-                    <td><?php echo $articulo->nombre; ?></td>
-                    <td><?php echo $articulo->precio; ?></td>
-                    <td><?php echo $articulo->fecha; ?></td>
-                    <td><a href="<?php echo constant('URL') . 'articulos/verArticulo/' . $articulo->id; ?>">Actualizar</a></td>
-                    <td><button  data-alumno="<?php echo $articulo->id; ?>"
-                    id="art<?php echo $articulo->id; ?>">Eliminar</button></td>
+                    <td><?php echo $articulo->Nom_art; ?></td>
+                    <td><?php echo $articulo->Precio; ?></td>
+                    <td><?php echo $articulo->Descripcion; ?></td>
+                    <td><?php echo $articulo->Marca; ?></td>
+                    <td><?php echo $articulo->Modelo; ?></td>
+                    <td><?php echo $articulo->Stock; ?></td>
+                    <td><a class="actualizar" href="<?php echo constant('URL') . 'articulos/verArticulo/' . $articulo->Cod_Art; ?>">Actualizar</a></td>
+                    <td><button class="eliminar" data-alumno="<?php echo $articulo->Cod_Art; ?>"
+                    id="art<?php echo $articulo->Cod_Art; ?>">Eliminar</button></td>
                 </tr>
                 <?php }?>
                 </tbody>
             </table>
         </div>
-    </div>
 </div>
 
-
-    <?php require 'views/footer2.php';?>
+    <?php require 'views/footerT.php';?>
 
 
 
@@ -65,6 +65,5 @@ foreach ($this->articulos as $row) { // se recorre el array articulos con foreac
     <!-- importo el javascript-->
     <script src="<?php echo constant('URL'); ?>/public/js/articulos/index02.js"></script>
     <!--<script src="<?php echo constant('URL'); ?>/public/js/main.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>
