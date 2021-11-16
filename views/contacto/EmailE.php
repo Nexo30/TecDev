@@ -14,9 +14,8 @@ $mail->isSMTP();
 $mail->CharSet = "utf-8";
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'tls';
-
 $mail->Host = 'smtp.gmail.com';
-$mail->Port = 587;
+$mail->Port = 25;
 $mail->SMTPOptions = array(
     'ssl' => array(
         'verify_peer' => false,
@@ -24,18 +23,24 @@ $mail->SMTPOptions = array(
         'allow_self_signed' => true,
     ),
 );
-$mail->isHTML(true);
+try {
+    $mail->isHTML(true);
 
-$mail->Username = ('HTMConsultas@gmail.com');
-$mail->Password = ('Vaniersa2021');
+    $mail->Username = ('HTMConsultas@gmail.com');
+    $mail->Password = ('Vaniersa2021');
 
-$mail->setFrom($correo, $nombre);
-$mail->Subject = "Correo de Usuario HTMotors";
-$mail->MsgHTML($mensaje);
-$mail->addAddress('HTMConsultas@gmail.com', 'Consultas');
+    $mail->setFrom($correo, $nombre);
+    $mail->Subject = "Correo de Pagina HTMotors";
+    $mail->MsgHTML($mensaje);
+    $mail->addAddress('HTMConsultas@gmail.com', 'Consultas');
 
-$mail->send();
-$this->mensaje = "Mensaje Enviado Correctamente";
+    $mail->send();
+    $this->mensajeC = "Mensaje Enviado Correctamente";
+} catch (\Throwable $th) {
+
+    $this->mensajeC = "Error en envio de mensaje asegure el llenar todos los campos";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

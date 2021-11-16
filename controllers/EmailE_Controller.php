@@ -6,6 +6,7 @@ class EmailE_Controller extends Controller
         parent::__construct();
         $this->view->mensaje = "";
         $this->view->resultadoLogin = "";
+        $this->view->mensajeC = "";
 
     }
     public function render()

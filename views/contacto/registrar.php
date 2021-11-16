@@ -13,6 +13,7 @@
 <body class="grid-container">
 <?php require 'views/headerT.php';?>
   <aside class="sidebar" >
+	<form action="EmailE" method="post">
 			<div class="contacto__grupo" id="grupo__nombre">
 				  <label for="Email" class="contacto__label">Email: </label>
 					<input type="text" class="contacto__input2" name="Email" id="Email" placeholder="Ejemplo@.com"></input>
@@ -21,6 +22,7 @@
 					<textarea type="text" class="contacto__input" name="Mensaje" id="Mensaje" placeholder="Mensaje..." rows="10" cols="45"></textarea>
 
 				<button type="submit" class="contacto__btn">Enviar</button>
+</form>
 		</div>
 
   </aside>

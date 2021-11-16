@@ -195,6 +195,11 @@ nav li :hover {
   display: inline table;
   margin: 15px;
   margin-right: 35px;
+  cursor: default;
+}
+.fa-shopping-cart:hover {
+  cursor: pointer;
+  color: #2babe1;
 }
 #Res {
   color: #2babe1;
@@ -438,7 +443,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 }
 .ContenidoU {
   margin: auto;
-  margin-left: 11px;
+  margin-left: 4px;
   margin-top: 75px;
   padding: 10px;
   outline: none;
@@ -484,4 +489,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   font-size: 15px;
   margin-right: -50px;
   margin-top: 5px;
+}
+.oculto {
+  visibility: hidden;
 }

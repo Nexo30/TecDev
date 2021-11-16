@@ -1,4 +1,5 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
 
 class Contacto_Controller extends Controller
 {
@@ -6,6 +7,7 @@ class Contacto_Controller extends Controller
     {
         parent::__construct();
         $this->view->mensaje = "";
+        $this->view->mensajeC = "";
         $this->view->resultadoLogin = "";
     }
     public function render()
@@ -16,9 +18,6 @@ class Contacto_Controller extends Controller
     }
     public function ingresar()
     {
-        //$alumnos = $this->model->get();
-        //$this->view->alumnos = "exitoso";
-        //$this->view->post = var_dump($_POST);
         $nombre = $_POST['nombre'];
         $pass = $_POST['pass'];
         $exitoLogin = $this->model->ingresar($nombre, $pass);
@@ -59,6 +58,48 @@ class Contacto_Controller extends Controller
             $this->view->render('contacto/registrar');
         } else {
             $this->view->mensaje = "Error, intentelo de nuevo";
+            $this->view->render('contacto/index');
+        }
+    }
+    public function EmailE()
+    {
+        require 'PHPMailer-master/PHPMailer-master/src/Exception.php';
+        require 'PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
+        require 'PHPMailer-master/PHPMailer-master/src/SMTP.php';
+        $correo = $_POST['Email'];
+        $nombre = $_POST['Nombre'];
+        $mensaje = $_POST['Mensaje'];
+        $mail = new PHPMailer(true);
+
+        $mail->isSMTP();
+        $mail->CharSet = "utf-8";
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'tls';
+        $mail->Host = 'smtp.gmail.com';
+        $mail->Port = 25;
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true,
+            ),
+        );
+        try {
+            $mail->isHTML(true);
+
+            $mail->Username = ('HTMConsultas@gmail.com');
+            $mail->Password = ('Vaniersa2021');
+
+            $mail->setFrom($correo, $nombre);
+            $mail->Subject = "Correo de Pagina HTMotors";
+            $mail->MsgHTML($mensaje);
+            $mail->addAddress('HTMConsultas@gmail.com', 'Consultas');
+            $mail->send();
+            $this->mensajeC = "Mensaje Enviado Correctamente";
+            $this->view->render('contacto/index');
+        } catch (\Throwable $th) {
+
+            $this->mensajeC = "Error en envio de Mensaje";
             $this->view->render('contacto/index');
         }
     }

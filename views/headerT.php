@@ -12,6 +12,12 @@ if ($urlB == "TecDev") {
 } else {
     $urlF = "$urlB" . "/" . "registrar";
 }
+if ($urlF == "ingresar" . "/" . "registrar") {
+    $urlF = "registrar";
+}
+if ($urlF == "EmailE" . "/" . "registrar") {
+    $urlF = "registrar";
+}
 if ("$urlB" . "/" . "$urlB" == $urlF) {
     $urlF = $urlB;
 }
@@ -53,10 +59,16 @@ if ($url2 == "TecDev") {
 } else {
     $url = "$url2" . "/" . "ingresar";
 }
+if ($url == "registrar" . "/" . "ingresar") {
+    $url = "ingresar";
+}
 if ("$url2" . "/" . "$url2" == $url) {
     $url = $url2;
 }
 if ("$url" == "inicio/ingresar") {
+    $url = "ingresar";
+}
+if ($url == "EmailE" . "/" . "ingresar") {
     $url = "ingresar";
 }
 ;?>
@@ -85,6 +97,7 @@ if ("$url" == "inicio/ingresar") {
 </a>
 <h1 id="Res"><?php echo $this->resultadoLogin; ?></h1>
 <h1 id="Res"><?php echo $this->mensaje; ?></h1>
+<h1 id="Res"><?php echo $this->mensajeC; ?></h1>
 </header>
   <nav class="navbar">
 		<ul>

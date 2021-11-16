@@ -224,6 +224,7 @@ div li {
   color: black;
   margin: 15px;
   margin-right: 35px;
+  cursor: default;
 }
 .fa-shopping-cart:hover {
   cursor: pointer;
@@ -458,7 +459,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 }
 .ContenidoU {
   margin: auto;
-  margin-left: 11px;
+  margin-left: 4px;
   margin-top: 75px;
   padding: 10px;
   outline: none;

@@ -7,6 +7,7 @@ class Index_Controller extends Controller
         parent::__construct();
         $this->view->mensaje = "";
         $this->view->resultadoLogin = "";
+        $this->view->mensajeC = "";
         //$this->view->mensaje = "Hay un error al cargar el recurso";
 
         //echo "<p>Controlador Index</p>";

@@ -7,30 +7,17 @@ class Tienda_Controller extends Controller
         parent::__construct();
         $this->view->mensaje = "";
         $this->view->resultadoLogin = "";
-
+        $this->view->mensajeC = "";
     }
-    public function render()
+    public function render($param = null)
     {
         $articulos = $this->model->get();
         $this->view->articulos = $articulos;
         $this->view->render('tienda/tienda');
 
-    }
-    public function tienda($param = null)
-    {
-
-        //obtiene todos los articulos
-        $articulos = $this->model->get();
-        //lo asigna a la varible articulos
-        $this->view->articulos = $articulos;
-        //lista los articulos
-        $this->view->render('tienda/tienda');
     }
     public function ingresar()
     {
-        //$alumnos = $this->model->get();
-        //$this->view->alumnos = "exitoso";
-        //$this->view->post = var_dump($_POST);
         $nombre = $_POST['nombre'];
         $pass = $_POST['pass'];
         $exitoLogin = $this->model->ingresar($nombre, $pass);
@@ -39,11 +26,15 @@ class Tienda_Controller extends Controller
             $_SESSION["nombre"] = $nombre;
             $_SESSION["tipo"] = "cliente";
             $this->view->resultadoLogin = "Ingreso Exitoso";
-
+            $articulos = $this->model->get();
+            $this->view->articulos = $articulos;
             $this->view->render('tienda/ingresar');
         } else {
             $this->view->resultadoLogin = "Usuario o contraseña incorrectos";
+            $articulos = $this->model->get();
+            $this->view->articulos = $articulos;
             $this->view->render('tienda/tienda');
+
         }
 
     }
@@ -68,9 +59,13 @@ class Tienda_Controller extends Controller
         $numero = $_POST['telefono'];
         if ($this->model->registrar(['usuario' => $nombre, 'apellido' => $apellido, 'contrasena' => $pass, 'calle' => $calle, 'ciudad' => $ciudad, 'telefono' => $numero])) {
             $this->view->mensaje = "Se ha registrado correctamente";
+            $articulos = $this->model->get();
+            $this->view->articulos = $articulos;
             $this->view->render('tienda/registrar');
         } else {
             $this->view->mensaje = "Error, intentelo de nuevo";
+            $articulos = $this->model->get();
+            $this->view->articulos = $articulos;
             $this->view->render('tienda/tienda');
         }
     }
