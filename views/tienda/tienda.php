@@ -37,7 +37,7 @@
           <p class=""> <?=$articulo->Descripcion;?></p>
           <p class="">$ <?=$articulo->Precio;?></p>
           <input class="val" id="art-<?=$articulo->Cod_Art;?>" value="1" type="number"></p>
-          <button class="Agregar" type="button" data-articulo-id="<?php echo $value->Cod_Ar; ?>">Agregar</button>
+          <button class="btnAgregar" type="button" data-articulo-id="<?php echo $value->Cod_Art; ?>">Agregar</button>
         </div>
       </div><?php }
 ;?>
@@ -47,6 +47,6 @@
 
 <?php require 'views/footerT.php';?>
 <script src="<?php echo constant('URL'); ?>/public/js/jquery-3.6.0.min.js"></script>
-<script src="<?php echo constant('URL'); ?>/public/js/articulos/listarP.js"></script>
+<script src="<?php echo constant('URL'); ?>public/js/articulos/listar.js"></script>
 </body>
 </html>

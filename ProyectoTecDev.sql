@@ -68,7 +68,7 @@ Nom_art varchar (30) not null,
 Marca varchar (30) not null, 
 Modelo varchar (30) not null, 
 Descripcion varchar (50), 
-Precio int (10) not null, 
+Precio decimal (10,2) not null, 
 Stock int (15) not null,
 primary key (Cod_Art),
 foreign key (Cod_Cat) references Categoria (Cod_Cat));
@@ -79,6 +79,7 @@ insert into Articulo (Cod_Cat, Nom_art, Marca, Modelo, Descripcion, Precio, Stoc
 (4, 'Alfombra', 'Chevrolet', 'C 10', 'asdasdasd', 3500, 14),
 (5, 'Radiador', 'Fiat', 'Palio', 'asdasdasd', 4300, 6),
 (6, 'Caño de Escape', 'Nissan', 'Tida', 'asdasdasd', 2700, 3);
+ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 Create table COMPRA (
 CI int (8),
@@ -90,7 +91,7 @@ foreign key (CI) references Cliente (CI),
 foreign key (Cod_art) references Articulo (Cod_art));
 insert into Compra (CI, Cod_Art, Cantidad, Fecha) values
 (47896540, 1, 2, '2020/11/05'),
-(44569542, 3, 4, '2021/08/15'),
+(44569542, 3, 4, '2021/08/15'), 
 (36584582, 4, 4,'2021/08/09'),
 (44569896, 5, 1, '2021/09/05');
 
@@ -139,7 +140,7 @@ insert into Administran (CI, CI_Adm, Cod_Cat, Cod_Art) values
 (44569542, 48412546, 3, 3),
 (36584582, 43695472, 4, 4),
 (44569896, 43695472, 5, 5);
-
+ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 #Consultas
 
 #1-Mostrar los pedidos que se hicieron en el mes de agosto, que articulos se vendieron y ciudad.

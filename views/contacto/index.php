@@ -14,7 +14,7 @@
 <body class="grid-container">
 <?php require 'views/headerT.php';?>
   <aside class="sidebar" >
-	<form action="EmailE" method="post">
+	<form action="<?php echo constant('URL'); ?>contacto/EmailE" method="post">
 			<div class="contacto__grupo" id="grupo__nombre">
 			<label for="Nombre" class="contacto__label">Nombre: </label>
 					<input type="text" class="contacto__input2" name="Nombre" id="Nombre" placeholder="Nombre..."></input>

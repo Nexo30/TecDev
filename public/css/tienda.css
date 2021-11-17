@@ -60,14 +60,14 @@ body {
   margin: 20px;
   padding: 5px;
 }
-.Agregar {
+.btnAgregar {
   margin-top: 10px;
   padding: 5px;
   background: black;
   color: white;
   font-size: 18px;
 }
-.Agregar:hover {
+.btnAgregar:hover {
   background: grey;
   cursor: pointer;
 }

@@ -35,7 +35,6 @@ class Articulos_Controller extends Controller
 
     public function actualizar($param = null)
     {
-        //var_dump($_POST);
         $resultado = false;
         try {
             $articulo = new Articulo();
@@ -56,21 +55,6 @@ class Articulos_Controller extends Controller
         $this->view->respuesta = $resultado;
         $this->view->render('articulos/actualizar');
     }
-/*
-public function eliminarAlumno($param = null)
-{
-$matricula = $param[0];
-
-if ($this->model->delete($matricula)) {
-$mensaje = "Alumno eliminado correctamente";
-//$this->view->mensaje = "Alumno eliminado correctamente";
-} else {
-$mensaje = "No se pudo eliminar al alumno";
-//$this->view->mensaje = "No se pudo eliminar al alumno";
-}
-echo $mensaje;
-}
- */
     public function listar($param = null)
     {
 

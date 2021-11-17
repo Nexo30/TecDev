@@ -95,9 +95,6 @@
       <div >
         <button id="btnEnviarForm" type="submit" class="Submit">Actualizar</button>
       </div>
-      <div>
-        <button type="submit" class="Ajax" id="enviarForm">Ajax</span>
-      </div>
       <input type="hidden" value="<?php echo $this->articulo->Cod_Art; ?>" id="articuloId" name="articuloId">
       </form>
     </div>

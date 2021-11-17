@@ -63,19 +63,19 @@ class Articulos_Model extends Model
 
     public function actualizar($articulo)
     {
-
         $resultado = false;
         $pdo = $query = $this->db->connect();
         try {
-            $query = $pdo->prepare('UPDATE articulo SET Cod_Art= :Cod_Art,Cod_Cat= :Cod_Cat,Nom_art= :Nom_art,Marca= :Marca,Modelo= :Modelo,Descripcion=:Descripcion,Precio= :Precio,Stock= :Stock WHERE Cod_Art= :Cod_Art');
+            $query = $pdo->prepare('UPDATE articulo SET Cod_Art= :Cod_Art, Cod_Cat=:Cod_Cat,Nom_art=:Nom_art,Marca=:Marca,Modelo=:Modelo, Descripcion=:Descripcion, Precio=:Precio,Stock=:Stock WHERE Cod_Art=:Cod_Art02');
+            $query->bindParam(':Cod_Art', $articulo->Cod_Art);
             $query->bindParam(':Cod_Cat', $articulo->Cod_Cat);
             $query->bindParam(':Nom_art', $articulo->Nom_art);
+            $query->bindParam(':Marca', $articulo->Marca);
+            $query->bindParam(':Modelo', $articulo->Modelo);
             $query->bindParam(':Descripcion', $articulo->Descripcion);
             $query->bindParam(':Precio', $articulo->Precio);
             $query->bindParam(':Stock', $articulo->Stock);
-            $query->bindParam(':Marca', $articulo->Marca);
-            $query->bindParam(':Modelo', $articulo->Modelo);
-            $query->bindParam(':Cod_Art', $articulo->Cod_Art);
+            $query->bindParam(':Cod_Art02', $articulo->Cod_Art);
             $resultado = $query->execute();
             $filasAf = $query->rowCount();
             return $resultado;

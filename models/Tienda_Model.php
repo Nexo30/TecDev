@@ -1,7 +1,8 @@
 <?php
 
-require 'entidades/alumno.php';
 require 'entidades/articulo.php';
+require 'entidades/carrito.php';
+require 'entidades/pedidos.php';
 
 class Tienda_Model extends Model
 {
