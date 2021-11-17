@@ -16,7 +16,6 @@ class Articulos_Model extends Model
         $items = []; // en el arreglo items se cargan los objetos Articulo
 
         try {
-            $urlDefecto = constant('URL') . '/public/imagenes/articulos/imagenDefecto.svg';
             $query = $this->db->connect()->query('SELECT Cod_Art,Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock FROM articulo');
             while ($row = $query->fetch()) {
                 $item = new Articulo();
@@ -29,7 +28,6 @@ class Articulos_Model extends Model
                 $item->Precio = $row['Precio'];
                 $item->Stock = $row['Stock'];
 
-                $item->url_img = $urlDefecto;
                 array_push($items, $item);
             }
             return $items;
@@ -69,31 +67,22 @@ class Articulos_Model extends Model
         $resultado = false;
         $pdo = $query = $this->db->connect();
         try {
-            $query = $pdo->prepare('UPDATE articulo SET Cod_Art= :Cod_Art,Nom_Art= :Nom_Art,Descripcion=:Descripcion, Precio= :Precio,Stock= :Stock,Marca= :Marca,Modelo= :Modelo WHERE Cod_Art= :Cod_Art');
+            $query = $pdo->prepare('UPDATE articulo SET Cod_Art= :Cod_Art,Cod_Cat= :Cod_Cat,Nom_art= :Nom_art,Marca= :Marca,Modelo= :Modelo,Descripcion=:Descripcion,Precio= :Precio,Stock= :Stock WHERE Cod_Art= :Cod_Art');
             $query->bindParam(':Cod_Cat', $articulo->Cod_Cat);
-            $query->bindParam(':Nom_Art', $articulo->Nom_Art);
+            $query->bindParam(':Nom_art', $articulo->Nom_art);
             $query->bindParam(':Descripcion', $articulo->Descripcion);
             $query->bindParam(':Precio', $articulo->Precio);
             $query->bindParam(':Stock', $articulo->Stock);
             $query->bindParam(':Marca', $articulo->Marca);
             $query->bindParam(':Modelo', $articulo->Modelo);
             $query->bindParam(':Cod_Art', $articulo->Cod_Art);
-            //:descripcion, :precio, :fecha
-            //$resultado = $query->execute();
             $resultado = $query->execute();
             $filasAf = $query->rowCount();
-            if ($filasAf == 0) {
-                $resultado = false;
-            }
-            //$str = "valor";
-            //$resultado = $query->fetch(); // return (PDOStatement) or false on failure
-            //$query->close();
             return $resultado;
         } catch (PDOException $e) {
-            return var_dump($e);
-
+            var_dump($e);
         } finally {
             $pdo = null;
         }
-    } //end actualizar
+    }
 }

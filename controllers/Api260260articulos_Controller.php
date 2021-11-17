@@ -87,10 +87,10 @@ class Api260260articulos_Controller extends Controller
         $lista = [];
         foreach ($listaArticulos as $key => $obj) {
             $articulo = new Articulo();
-            $articulo->codigo = $obj->codigo;
-            $articulo->descripcion = $obj->descripcion;
-            $articulo->precio = $obj->precio;
-            $articulo->fecha = $obj->fecha;
+            $articulo->codigo = $obj->Cod_Cat;
+            $articulo->descripcion = $obj->Descripcion;
+            $articulo->precio = $obj->Precio;
+            $articulo->Stock = $obj->Stock;
             //$lista[] = $articulo;
             array_push($lista, $articulo);
         }
@@ -126,7 +126,7 @@ class Api260260articulos_Controller extends Controller
         $articulo = new Articulo();
         $articulo->Cod_Art = $obj->Cod_Art;
         $articulo->Cod_Cat = $obj->Cod_Cat;
-        $articulo->Cod_Cat = $obj->Nom_Art;
+        $articulo->Nom_Art = $obj->Nom_Art;
         $articulo->Descripcion = $obj->Descripcion;
         $articulo->Marca = $obj->Marca;
         $articulo->Modelo = $obj->Modelo;

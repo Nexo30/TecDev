@@ -33,7 +33,7 @@
           <label for="articuloCat" class="form-label">Codigo</label>
           <input type="text"
           class="formulario"
-          id="articuloCodigo"
+          id="articuloCat"
           name="Cod_Cat"
           value="<?=$this->articulo->Cod_Cat;?>">
       </div>
@@ -41,7 +41,7 @@
           <label for="articuloNom" class="form-label">Nombre</label>
           <input type="text"
           class="formulario"
-          id="articuloId"
+          id="articuloNom"
           aria-describedby="emailHelp"
           name="Nom_Art"
           value="<?=$this->articulo->Nom_Art;?>">
@@ -68,7 +68,7 @@
           <label for="articuloMarca" class="form-label">Marca</label>
           <input type="text"
           class="formulario"
-          id="articuloId"
+          id="articuloMarca"
           aria-describedby="emailHelp"
           name="Marca"
           value="<?=$this->articulo->Marca;?>">
@@ -77,7 +77,7 @@
           <label for="articuloModelo" class="form-label">Modelo</label>
           <input type="text"
           class="formulario"
-          id="articuloId"
+          id="articuloModelo"
           aria-describedby="emailHelp"
           name="Modelo"
           value="<?=$this->articulo->Modelo;?>">
@@ -86,7 +86,7 @@
           <label for="articuloStock" class="form-label">Stock</label>
           <input type="text"
           class="formulario"
-          id="articuloFecha"
+          id="articuloStock"
           aria-describedby="emailHelp"
           name="Stock"
           value="<?=$this->articulo->Stock;?>">
