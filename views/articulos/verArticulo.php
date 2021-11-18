@@ -92,7 +92,7 @@
           value="<?=$this->articulo->Stock;?>">
       </div>
 
-      <div >
+      <div>
         <button id="btnEnviarForm" type="submit" class="Submit">Actualizar</button>
       </div>
       <input type="hidden" value="<?php echo $this->articulo->Cod_Art; ?>" id="articuloId" name="articuloId">

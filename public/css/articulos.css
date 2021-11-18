@@ -143,8 +143,15 @@ nav li :hover {
 }
 .tabla {
   margin: auto;
+  margin-top: 6vw;
   border: solid;
   padding: 25px;
+}
+.tablas {
+  border: 1px solid black;
+}
+.crear {
+  padding: 1px;
 }
 .cuerpo {
   margin-left: 5px;

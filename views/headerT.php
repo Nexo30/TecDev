@@ -98,6 +98,7 @@ if ($url == "EmailE" . "/" . "ingresar") {
 <h1 id="Res"><?php echo $this->resultadoLogin; ?></h1>
 <h1 id="Res"><?php echo $this->mensaje; ?></h1>
 <h1 id="Res"><?php echo $this->mensajeC; ?></h1>
+
 </header>
   <nav class="navbar">
 		<ul>
@@ -105,7 +106,6 @@ if ($url == "EmailE" . "/" . "ingresar") {
 			<li><a href="<?php echo constant('URL'); ?>tienda">Tienda</a></li>
 			<li><a href="<?php echo constant('URL'); ?>#sidebar">Nosotros</a></li>
 			<li><a href="<?php echo constant('URL'); ?>contacto">Contactos</a></li>
-			<li id="Adm"><a href="<?php echo constant('URL'); ?>Articulos">Administrar Articulos</a></li>
 		</ul>
     <div class="search-wrapper">
         <span class="las la-search"></span>

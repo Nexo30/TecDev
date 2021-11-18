@@ -11,17 +11,17 @@ class Crear_Articulo_Model extends Model
     public function ingresar_articulo($datos)
     {
 
-        //   var_dump($datos);
-        $cod_art = $datos['cod_art'];
-        $cod_cat = $datos['cod_cat'];
-        $nombre = $datos['nombre'];
-        $marca = $datos['marca'];
-        $modelo = $datos['modelo'];
-        $descripcion = $datos['descripcion'];
-        $precio = $datos['precio'];
-        $stock = $datos['stock'];
+        $Cod_Art = $datos['Cod_Art'];
+        $Cod_Cat = $datos['Cod_Cat'];
+        $Nombre = $datos['Nombre'];
+        $Marca = $datos['Marca'];
+        $Modelo = $datos['Modelo'];
+        $Descripcion = $datos['Descripcion'];
+        $Precio = $datos['Precio'];
+        $Stock = $datos['Stock'];
+        $Imagen = $datos['Imagen'];
 
-        $query = $this->db->connect()->prepare("INSERT INTO articulo (Cod_Art,Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock) values ('$cod_art','$cod_cat','$nombre','$marca','$modelo','$descripcion','$precio','$stock')");
+        $query = $this->db->connect()->prepare("INSERT INTO articulo (Cod_Art,Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock,Imagen) values ('$Cod_Art','$Cod_Cat','$Nombre','$Marca','$Modelo','$Descripcion','$Precio','$Stock','$Imagen')");
 
         try {
             if ($query->execute()) {

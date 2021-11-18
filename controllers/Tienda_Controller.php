@@ -6,6 +6,7 @@ class Tienda_Controller extends Controller
     {
         parent::__construct();
         $this->view->mensaje = "";
+        $this->view->nombreUsuario = "";
         $this->view->resultadoLogin = "";
         $this->view->mensajeC = "";
     }

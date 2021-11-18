@@ -54,6 +54,9 @@ foreach ($this->articulos as $row) { // se recorre el array articulos con foreac
                 </tbody>
             </table>
         </div>
+        <div>
+        <li><a class="crear" href="<?php echo constant('URL'); ?>Crear_Articulo/">Crear Articulo</a></li>
+      </div>
 </div>
 
     <?php require 'views/footerT.php';?>

@@ -23,6 +23,25 @@
     <a>Repuestos Alternativos</a>
   </div>
 </div>
+<div class="row">
+      <?php foreach ($this->articulos as $key => $value) {
+    $articulo = new Articulo();
+    $articulo = $value;
+    ?>
+      <div class="col">
+        <div class="card">
+          <!--ID: <?=$value->Cod_Art;?>-->
+          <img class="Img" src="<?php echo $articulo->url_img; ?>" alt="Imagen Producto" />
+          <p class=""> <?=$value->Nom_art;?></p>
+          <p class=""> <?=$articulo->Descripcion;?></p>
+          <p class="">$ <?=$articulo->Precio;?></p>
+          <input class="val" id="art-<?=$articulo->Cod_Art;?>" value="1" type="number"></p>
+          <button class="btnAgregar" type="button" data-articulo-id="<?php echo $value->Cod_Art; ?>">Agregar</button>
+        </div>
+      </div><?php }
+;?>
+    </div>
+  </div>
 
 </main>
 

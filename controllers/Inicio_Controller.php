@@ -30,8 +30,6 @@ class Inicio_Controller extends Controller
             $_SESSION["estalogueado"] = true;
             $_SESSION["nombre"] = $nombre;
             $_SESSION["tipo"] = "cliente";
-            $this->view->resultadoLogin = "Ingreso Exitoso";
-
             $this->view->render('inicio/ingresar');
         } else {
             $this->view->resultadoLogin = "Usuario o contraseña incorrectos";

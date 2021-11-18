@@ -1,7 +1,5 @@
 <?php
 
-require 'entidades/alumno.php';
-
 class Inicio_Model extends Model
 {
     public function __construct()
