@@ -14,30 +14,29 @@
             $.ajax({
               url: urlReq,
               headers: headers,
-              type: 'DELETE',
+              type: 'POST',
               data: data
           })
           .done(function (data) { 
-            $listaArticulos=data.articulosDisponibles;
+            $listaArticulos=data.datos;
             console.log($listaArticulos);
            })
-          .fail(function (jqXHR, textStatus, errorThrown) {console.log("fallo");  });
+          .fail(function (jqXHR, textStatus, errorThrown) {console.log(textStatus)});
+
           $(".btnAgregar").each(function(index) { 
         
           $(this).on("click", function(){    
             let IDProd = $(this).data("articuloId");
             let articuloNombre = $(this).data("articulosNom");
             let articuloDescripcion = $(this).data("articulosDescripcion");
-            console.log("lista de articuls\n");
+            console.log("lista de articulos\n");
             console.log($listaArticulos);
             console.log('Articulo ID: '+IDProd);
-            let articulo= $listaArticulos.find(articulo => {
-              return articulo.Cod_Art == IDProd;
+            let articulo= $listaArticulos.find(articulos => {
+              return articulos.Cod_Art == IDProd;
             });          
             carrito = JSON.parse(localStorage.getItem("carrito"));
             if (carrito==null){
-              //inicilizo el carrito
-              //agrego el elememto al carrito
               let cantidadAux= $("#art-"+Cod_Art).val();
               let cantidad=1; 
               if (cantidadAux>=1){
@@ -56,7 +55,6 @@
               localStorage.setItem("carrito", JSON.stringify(carrito));
               $("#cantidadElemCarrito").text(carrito.length);
             } else{
-              //ya tienen por lo menos un item
               let cantidadAux= $("#art-"+Cod_Art).val();
               let cantidad=1; 
               if (cantidadAux>=1){
@@ -69,7 +67,7 @@
                     "Stock": articulo.Stock,
                     "url": articulo.Imagen
               }
-              let itemCarrito= carrito.find(articulo => articulo.Cod_Art ==Cod_Art);
+              let itemCarrito= carrito.find(articulo => articulo.Cod_Art ==IDProd);
               if (itemCarrito==undefined){
                 carrito.push(articulo);
                 localStorage.setItem("carrito", JSON.stringify(carrito));

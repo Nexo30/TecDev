@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body class="grid-container">
-<?php require 'views/headerT.php';?>
+<?php require 'views/headerI.php';?>
   <aside class="sidebar" >
 	<form action="<?php echo constant('URL'); ?>contacto/EmailE" method="post">
 			<div class="contacto__grupo" id="grupo__nombre">

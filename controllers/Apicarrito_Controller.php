@@ -26,9 +26,7 @@ class Apicarrito_Controller extends Controller
             $articulos->Cod_Cat = $obj->Cod_Cat;
             $articulos->Imagen = $obj->Imagen;
             $lista[] = $articulos;
-            //array_push($lista, $articulo);
         }
-        //Defino los resultados de las request
         $respuesta = [];
         $resultado = $this->model->completarCarrito($lista, $personas);
         if ($resultado->res) {

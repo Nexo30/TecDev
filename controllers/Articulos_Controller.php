@@ -61,7 +61,7 @@ class Articulos_Controller extends Controller
         //obtiene todos los articulos
         $articulos = $this->model->get();
         //lo asigna a la varible articulos
-        $this->view->articulos = $articulos;
+        $this->view->articulo = $articulos;
         //lista los articulos
         $this->view->render('articulos/listar');
     }
