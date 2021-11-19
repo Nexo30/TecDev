@@ -40,7 +40,7 @@
 
             Añadir imagen: <input name="Imagen" id="" type="file"/>
 
-            <input type="submit" name="crear" value="Crear">
+            <input class="crear"type="submit" name="crear" value="Crear">
         </form>
 
 
