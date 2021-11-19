@@ -33,7 +33,7 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #2c0cc7;
+  background-color: #2babe1;
 }
 
 .main {
@@ -323,7 +323,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 
 input[type="submit"] {
   width: 120px;
-  background: #200fb8;
+  background: #2babe1;
   cursor: pointer;
   border-radius: 5px;
   padding: 10px;
@@ -432,25 +432,6 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 	los 20s indican la cantidad de segundos*/
 }
 
-/*carcateristicas de la animacion, indicar el nombre que se indico en la llinea anterior*/
-@keyframes imagenes {
-  25% {
-    background: url(../img/mujer.jpg); /*las imagenes son a modo de ejemplo deben usar con el tamaño adecuado*/
-    background-size: cover;
-  }
-  50% {
-    background: url(../img/tecno.jpg);
-    background-size: cover;
-  }
-  75% {
-    background: url(../img/fondo2.jpg);
-    background-size: cover;
-  }
-  100% {
-    background: url(../img/mujer.jpg);
-    background-size: cover;
-  }
-}
 .Contenido {
   margin: auto;
   margin-top: 50px;

@@ -86,14 +86,14 @@ body {
 }
 .sidebar3 {
   grid-area: sidebar3;
-  background-color: #2c0cc7;
+  background-color: #2babe1;
   height: 45vw;
   background: url("../imagenes/fondo/FondoNosotros.png");
   background-size: cover;
 }
 .sidebar2 {
   grid-area: sidebar2;
-  background-color: #2c0cc7;
+  background-color: #2babe1;
   height: 45vw;
   background: url("../imagenes/fondo/FondoDestacados.png");
   background-size: cover;
@@ -102,12 +102,14 @@ body {
 .main {
   grid-area: main;
   background-repeat: no-repeat;
-  animation: imagenes 20s infinite;
+  background: url(../imagenes/fondo/TecDev-Final2.0F.png);
+  animation: imagenes 30s infinite;
+
   background-size: cover;
   height: 45vw;
 }
 @keyframes imagenes {
-  25% {
+  30% {
     background: url("../imagenes/fondo/Fondo.png"); /*las imagenes son a modo de ejemplo deben usar con el tamaño adecuado*/
     background-size: cover;
     background-repeat: no-repeat;
@@ -117,7 +119,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  100% {
+  90% {
     background: url("../imagenes/fondo/FondoPromo.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -312,7 +314,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 
 input[type="submit"] {
   width: 120px;
-  background: #200fb8;
+  background: #2babe1;
   cursor: pointer;
   border-radius: 5px;
   padding: 10px;

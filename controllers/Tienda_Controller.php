@@ -70,4 +70,16 @@ class Tienda_Controller extends Controller
             $this->view->render('tienda/tienda');
         }
     }
+    public function buscar()
+    {
+        try {
+            $texto = $_POST['textoBuscador'];
+            $this->view->articulos = $resultado = $this->model->buscar($texto);
+            $this->view->respuesta = $resultado;
+            $this->view->render('tienda/buscarProd');
+        } catch (Exception $th) {
+            $resultado = false;
+        }
+    }
+
 }
