@@ -20,6 +20,7 @@ class Crear_Articulo_Model extends Model
         $Precio = $datos['Precio'];
         $Stock = $datos['Stock'];
         $Imagen = $datos['Imagen'];
+        $Imagen = "public/imagenes/articulos/" . $Imagen;
 
         $query = $this->db->connect()->prepare("INSERT INTO articulo (Cod_Art,Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock,Imagen) values ('$Cod_Art','$Cod_Cat','$Nombre','$Marca','$Modelo','$Descripcion','$Precio','$Stock','$Imagen')");
 
