@@ -11,7 +11,7 @@
 </head>
 <body class="grid-container">
 <input type="hidden" value="<?php echo constant('URL'); ?>" id="url">
-    <?php require 'views/headerT.php';?>
+    <?php require 'views/headerI.php';?>
 
     <div class="container">
     <div class="row">

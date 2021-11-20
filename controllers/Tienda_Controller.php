@@ -81,5 +81,12 @@ class Tienda_Controller extends Controller
             $resultado = false;
         }
     }
+    public function tiendaI($param = null)
+    {
+        $articulos = $this->model->get();
+        $this->view->articulos = $articulos;
+        $this->view->render('tienda/tiendaI');
+
+    }
 
 }

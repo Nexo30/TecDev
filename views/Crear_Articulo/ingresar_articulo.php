@@ -11,11 +11,11 @@
     <!-- vista principal -->
 </head>
 <body class="grid-container">
-    <?php require 'views/headerT.php';?>
+    <?php require 'views/headerI.php';?>
     <div>
     <div>
         <div>
-            <h1>Articulo</h1>
+            <h1>Articulo Creado Con Exito</h1>
         </div>
     </div>
 

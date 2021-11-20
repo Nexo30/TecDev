@@ -12,7 +12,7 @@
 </head>
 <body class="grid-container">
 
-    <?php require 'views/headerT.php';?>
+    <?php require 'views/headerI.php';?>
 
     <div id="main">
 

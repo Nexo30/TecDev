@@ -35,10 +35,10 @@ if ("$urlF" == "inicio/registrar") {
 
 
 				<input class="ContenidoU" type="text" placeholder="Nombre" name="usuario">
-				<input class="ContenidoT" type="text" placeholder="Contraseña" name="contrasena">
-				<input class="ContenidoC" type="password" placeholder="Ciudad" name="ciudad">
-				<input class="ContenidoE" type="password" placeholder="Calle" name="calle">
-				<input class="ContenidoC" type="password" placeholder="Telefono" name="telefono">
+				<input class="ContenidoT" type="password" placeholder="Contraseña" name="contrasena">
+				<input class="ContenidoC" type="text" placeholder="Ciudad" name="ciudad">
+				<input class="ContenidoE" type="text" placeholder="Calle" name="calle">
+				<input class="ContenidoC" type="text" placeholder="Telefono" name="telefono">
 				<input class="ContenidoE" type="text" placeholder="Apellido" name="apellido">
 				<input class="ContenidoR" type="submit" value="Registrarse" name=" ">
 
@@ -80,7 +80,7 @@ if ($url == "EmailE" . "/" . "ingresar") {
 			<div class="contenido2">
 
 
-				<input class="Contenido2" type="text" placeholder="Usuario" name="nombre">
+				<input class="Contenido2" type="text" placeholder="Correo" name="nombre">
 				<input class="Contenido2" type="password" placeholder="Contraseña" name="pass">
 				<input class="Contenido2" type="submit" value="Iniciar">
 

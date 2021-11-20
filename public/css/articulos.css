@@ -459,6 +459,10 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   padding: 10px;
   color: #ffff;
 }
+li {
+  list-style: none;
+  margin-top: 15px;
+}
 @media (min-width: 600px) {
 }
 

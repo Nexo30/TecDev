@@ -60,4 +60,9 @@ class Index_Controller extends Controller
             $this->view->render('');
         }
     }
+    public function indexI()
+    {
+        //$alumnos = $this->model->get();
+        $this->view->render('inicio/indexI');
+    }
 }

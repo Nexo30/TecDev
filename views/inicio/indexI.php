@@ -10,11 +10,10 @@
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body class="grid-container">
-<?php require 'views/headerT.php';?>
+<?php require 'views/headerI.php';?>
   <aside class="sidebar2"></aside>
-  <aside name="sidebar" id="sidebar" class="sidebar3" ></aside>
+  <aside name="sidebarI" id="sidebarI" class="sidebar3"></aside>
   <article class="main"></article>
   <?php require 'views/footerT.php';?>
 </body>
 </html>
-

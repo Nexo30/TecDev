@@ -11,9 +11,9 @@
 </head>
 <body class="grid-container">
 <?php require 'views/headerI.php';?>
-  <aside class="sidebar2">Imagen</aside>
-  <aside name="sidebar" id="sidebar" class="sidebar3" >Nosotros</aside>
-  <article class="main">Imagen con Productos</article>
+  <aside class="sidebar2"></aside>
+  <aside name="sidebar" id="sidebar" class="sidebar3" ></aside>
+  <article class="main"></article>
   <?php require 'views/footerT.php';?>
 </body>
 </html>
