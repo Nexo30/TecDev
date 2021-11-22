@@ -2,6 +2,7 @@
   $(document).ready(function () {
     //alert('hola');
     //console.log("funciona ver articulo");
+    
     $("#btnEnviarForm").click(function (e) {
       e.preventDefault();
       //alert('hola');
@@ -25,6 +26,7 @@
         Precio: Precio,
         Stock: Stock,
       };
+      
       const confirm = window.confirm("Deseas actualizar el elemento?");
       if (confirm) {
         //console.log("entro if");
@@ -34,7 +36,8 @@
       } else {
         console.log("entro else");
       }
-    }); //end enviar Form ajax
+    });
+    
 
     /*$("#btnEnviarForm").click(function (e) {
       console.log("funciona");

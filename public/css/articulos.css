@@ -147,6 +147,7 @@ nav li :hover {
   border: solid;
   padding: 25px;
 }
+<<<<<<< HEAD
 .tablaA {
   border: 1px solid #2babe1;
   padding: 4px;
@@ -160,6 +161,11 @@ nav li :hover {
 }
 .tablaB:hover {
   background: #2babe1;
+=======
+.tablas {
+  padding: 4px;
+  border: 1px solid black;
+>>>>>>> 2079567 (Arreglado de vistas)
 }
 .crear {
   padding: 1px;
