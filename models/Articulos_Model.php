@@ -15,7 +15,7 @@ class Articulos_Model extends Model
         $items = []; // en el arreglo items se cargan los objetos Articulo
 
         try {
-            $query = $this->db->connect()->query('SELECT Cod_Art,Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock FROM articulo');
+            $query = $this->db->connect()->query('SELECT Cod_Art,Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock,Imagen FROM articulo');
             while ($row = $query->fetch()) {
                 $item = new Articulo();
                 $item->Cod_Art = $row['Cod_Art'];
@@ -26,7 +26,7 @@ class Articulos_Model extends Model
                 $item->Descripcion = $row['Descripcion'];
                 $item->Precio = $row['Precio'];
                 $item->Stock = $row['Stock'];
-
+                $item->url = $row['Imagen'];
                 array_push($items, $item);
             }
             return $items;

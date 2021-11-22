@@ -63,12 +63,12 @@ body {
 .btnAgregar {
   margin-top: 10px;
   padding: 5px;
-  background: black;
+  background: #8c96a0;
   color: white;
   font-size: 18px;
 }
 .btnAgregar:hover {
-  background: grey;
+  background: #2babe1;
   cursor: pointer;
 }
 .val {
@@ -172,6 +172,9 @@ nav a {
   outline: none;
   width: 100%;
   font-size: 20px;
+}
+.titulo {
+  font-family: "Shippori Antique B1", sans-serif;
 }
 div li {
   list-style: none;

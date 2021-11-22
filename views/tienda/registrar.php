@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +12,8 @@
 </head>
 <input type="hidden" value="<?php echo constant('URL'); ?>" id="url">
 <body class="grid-container">
-<?php require 'views/headerT.php';?>
- <main class="datos" >Productos
-
+<?php require 'views/headerI.php';?>
+ <main class="datos">
  <div class="dropdown">
   <button class="mainmenubtn">Categorias</button>
   <div class="dropdown-child">
@@ -25,19 +25,19 @@
   </div>
 </div>
 <div class="row">
-      <?php foreach ($this->articulos as $key => $value) {
+      <?php foreach ($this->articulos as $datos => $value) {
     $articulo = new Articulo();
     $articulo = $value;
     ?>
       <div class="col">
         <div class="card">
           <!--ID: <?=$value->Cod_Art;?>-->
-          <img class="Img" src="<?php echo $articulo->url_img; ?>" alt="Imagen Producto" />
+          <img class="Img" src="<?php echo $articulo->urlP; ?>" alt="Imagen Producto" />
           <p class=""> <?=$value->Nom_art;?></p>
-          <p class=""> <?=$articulo->Descripcion;?></p>
-          <p class="">$ <?=$articulo->Precio;?></p>
+          <p class=""> <?=$value->Descripcion;?></p>
+          <p class="">$ <?=$value->Precio;?></p>
           <input class="val" id="art-<?=$articulo->Cod_Art;?>" value="1" type="number"></p>
-          <button class="Agregar" type="button" data-articulo-id="<?php echo $value->Cod_Ar; ?>">Agregar</button>
+          <button class="btnAgregar" type="button" data-id="<?php echo $value->Cod_Art; ?>">Agregar</button>
         </div>
       </div><?php }
 ;?>
@@ -45,10 +45,8 @@
   </div>
 </main>
 
-
-
-
-
 <?php require 'views/footerT.php';?>
+<script src="<?php echo constant('URL'); ?>/public/js/jquery-3.6.0.min.js"></script>
+<script src="<?php echo constant('URL'); ?>public/js/articulos/listarP.js"></script>
 </body>
 </html>

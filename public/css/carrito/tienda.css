@@ -8,12 +8,9 @@
 
 html {
   height: 100%;
-  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #f0f0f0;
-  background-blend-mode: luminosity;
   font-family: "Public Sans", sans-serif;
   font-size: 1.2rem;
   min-height: 100%;
@@ -25,39 +22,135 @@ body {
   border-radius: 4px;
   padding: 10px;
   text-align: center;
-}
 
-.header {
-  background-color: #74787a;
-  text-align: left;
-}
-.header2 {
-  width: 102%;
-  background-color: #74787a;
-  text-align: right;
-  padding-top: 10px;
-}
-.texto {
-  margin: 15px;
-  float: right;
-  padding: 0px;
-  text-align: center;
+  grid-template-rows: 100px 70px 100% 100px;
 }
 
 .navbar {
   grid-area: navbar;
   background-color: #c7d2d8;
 }
-.search-wrapper {
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  overflow-x: hidden;
-  text-align: right;
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #2babe1;
 }
 
+.main {
+  grid-area: main;
+  background-color: #414445;
+}
+.row {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.col {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  border: solid 2px;
+  border-spacing: 10px 5px;
+  width: 300px;
+  background: white;
+  margin: 20px;
+  padding: 5px;
+}
+.btnAgregar {
+  margin-top: 10px;
+  padding: 5px;
+  background: black;
+  color: white;
+  font-size: 18px;
+}
+.btnAgregar:hover {
+  background: grey;
+  cursor: pointer;
+}
+.val {
+  padding: 2px;
+  border: solid 2px;
+}
+.datos {
+  background-color: #ffffff;
+}
+h1 {
+  font-family: "Shippori Antique B1", sans-serif;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #8c96a0;
+}
+.header {
+  background-color: #74787a;
+  text-align: left;
+}
+.ingresar {
+  float: right;
+  font-size: 20px;
+  color: black;
+  margin-right: 8px;
+  margin-top: 25px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header" 100px
+    "navbar" 70px
+    "datos" 100px
+    "footer" 195px;
+  grid-template-rows: 100px 70px 85% 100px;
+}
+@media (min-width: 600px) {
+}
+
+@media (min-width: 900px) {
+}
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(0, 0, 0);
+}
+/*Para que sea flotante a izquierda */
+nav ul li {
+  float: left;
+  margin: 0em auto;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 1px;
+}
+#Adm {
+  float: right;
+}
+#Res {
+  color: #2babe1;
+  margin-top: 30px;
+  float: right;
+  font-size: 20px;
+}
+#icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+nav li :hover {
+  border-bottom: solid;
+  border-bottom-color: #2babe1;
+}
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+  padding: 12px;
+  text-align-last: center;
+}
 .search-wrapper span {
   display: inline-flexbox;
   padding: 0rem 1rem;
@@ -67,7 +160,6 @@ body {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 30px;
   height: 50px;
-  display: flex;
   align-items: center;
   overflow-x: hidden;
   width: 400px;
@@ -84,111 +176,62 @@ body {
   width: 100%;
   font-size: 20px;
 }
-.sidebar3 {
-  grid-area: sidebar3;
-  background-color: #2babe1;
-  height: 45vw;
-  background: url("../imagenes/fondo/FondoNosotros.png");
-  background-size: cover;
-}
-.sidebar2 {
-  grid-area: sidebar2;
-  background-color: #2babe1;
-  height: 45vw;
-  background: url("../imagenes/fondo/FondoDestacados.png");
-  background-size: cover;
-}
-
-.main {
-  grid-area: main;
-  background-repeat: no-repeat;
-  background: url(../imagenes/fondo/TecDev-Final2.0F.png);
-  animation: imagenes 25s infinite;
-  animation-fill-mode: both;
-
-  background-size: cover;
-  height: 45vw;
-}
-@keyframes imagenes {
-  25% {
-    background: url("../imagenes/fondo/Fondo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  50% {
-    background: url("../imagenes/fondo/fondo2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  100% {
-    background: url("../imagenes/fondo/fondo3.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
-.footer {
-  grid-area: footer;
-  background-color: #8c96a0;
-}
-
-.grid-container {
-  display: grid;
-  gap: 10px;
-  grid-template:
-    "header" 100px
-    "navbar" 70px
-    "main" auto
-    "sidebar2" 200px
-    "sidebar3" 200px
-    "footer" 100px;
-  grid-template-rows: 100px 70px 30% 30% 30% 100px;
-}
-
-@media (min-width: 600px) {
-}
-
-@media (min-width: 900px) {
-}
-
-/*para eliminar los puntos y espacios*/
-nav ul {
+div li {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
-  color: rgb(0, 0, 0);
+  display: inline;
+  float: right;
+  font-size: 30px;
+  margin: 15px;
+  padding: 10px;
+  width: 50px;
+  align-content: center;
+  background: gray;
+  color: white;
+  border-radius: 25px;
 }
-/*Para que sea flotante a izquierda */
-nav ul li {
-  float: left;
-  margin: 0em auto;
-  text-align: center;
-  color: rgb(0, 0, 0);
-  padding: 1px;
+.mainmenubtn {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 20px;
+  margin-top: 20px;
 }
-nav a {
-  color: rgb(0, 0, 0);
+.mainmenubtn:hover {
+  background-color: gray;
+}
+.dropdown {
+  position: relative;
+  display: table;
+}
+.dropdown-child {
+  display: none;
+  background-color: gray;
+  min-width: 200px;
+}
+.dropdown-child a {
+  color: #2babe1;
+  padding: 20px;
   text-decoration: none;
   display: block;
-  padding: 12px;
-  text-align-last: center;
+  cursor: pointer;
 }
-li {
-  text-decoration: none;
+.dropdown:hover .dropdown-child {
+  display: block;
 }
-#Adm {
+.dropdown-child a:hover {
+  background-color: gainsboro;
+}
+.Carrito {
   float: right;
-}
-nav li :hover {
-  border-bottom: solid;
-  border-bottom-color: #2babe1;
-}
-.ingresar {
-  float: right;
-  font-size: 20px;
+  font-size: 37px;
   color: black;
-  margin-right: 8px;
-  margin-top: 25px;
+  margin: 15px;
+  margin-right: 35px;
+  cursor: default;
+}
+.fa-shopping-cart:hover {
+  cursor: pointer;
+  color: #2babe1;
 }
 body .ventana {
   width: 100%;
@@ -269,46 +312,14 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   background: black;
 }
 
+.contenido {
+  margin: auto;
+  /* VER VARIACIONES DE FORMULARIOS EN EL MATERIAL DE FORMULARIOS */
+}
 .Contenido {
+  display: block;
   margin: auto;
   margin-top: 50px;
-  padding: 10px;
-  outline: none;
-}
-.ContenidoU {
-  margin: auto;
-  margin-left: 4px;
-  margin-top: 75px;
-  padding: 10px;
-  outline: none;
-}
-.ContenidoT {
-  float: right;
-  margin: auto;
-  margin-top: 75px;
-  margin-right: 4px;
-  padding: 10px;
-  outline: none;
-}
-.ContenidoC {
-  float: right;
-  display: block;
-  margin-top: 25px;
-  margin-right: 4px;
-  padding: 10px;
-  outline: none;
-}
-.ContenidoE {
-  display: block;
-  margin: auto;
-  margin-top: 25px;
-  padding: 10px;
-  outline: none;
-}
-.ContenidoR {
-  display: block;
-  margin: auto;
-  margin-top: 25px;
   padding: 10px;
   outline: none;
 }
@@ -323,19 +334,6 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   background: gray;
-}
-.Carrito {
-  float: right;
-  font-size: 37px;
-  color: black;
-  display: inline table;
-  margin: 15px;
-  margin-right: 35px;
-  cursor: default;
-}
-.fa-shopping-cart:hover {
-  cursor: pointer;
-  color: #2babe1;
 }
 body .ventana2 {
   width: 100%;
@@ -418,6 +416,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 
 .contenido2 {
   margin: auto;
+  /* VER VARIACIONES DE FORMULARIOS EN EL MATERIAL DE FORMULARIOS */
 }
 .Contenido2 {
   display: block;
@@ -426,32 +425,58 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   padding: 10px;
   outline: none;
 }
-.Contraseña {
-  margin-left: 65px;
-  margin-top: 10px;
-  height: 35px;
-  width: 130px;
+.slider {
+  width: 700px;
+  height: 320px;
+  background: url(../img/fondo.jpg);
+  background-size: cover;
+  margin: 50px auto;
+  animation: imagenes 20s infinite; /*el nombre de la animación es a elección 
+	los 20s indican la cantidad de segundos*/
 }
-.Email {
-  height: 35px;
-  width: 130px;
+
+.Contenido {
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  outline: none;
 }
-.Usuario {
+.ContenidoU {
+  margin: auto;
+  margin-left: 4px;
+  margin-top: 75px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoT {
+  float: right;
+  margin: auto;
+  margin-top: 75px;
+  margin-right: 4px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoC {
+  float: right;
+  display: block;
+  margin-top: 25px;
+  margin-right: 4px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoE {
   display: block;
   margin: auto;
-  margin-top: 10px;
-  height: 35px;
-  width: 222px;
+  margin-top: 25px;
+  padding: 10px;
+  outline: none;
 }
-#icon {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-#Res {
-  color: #2babe1;
-  margin-top: 30px;
-  float: right;
-  font-size: 20px;
+.ContenidoR {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px;
+  outline: none;
 }
 #cantidadElemCarrito {
   float: right;
@@ -464,7 +489,4 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   font-size: 15px;
   margin-right: -50px;
   margin-top: 5px;
-}
-.oculto {
-  visibility: hidden;
 }

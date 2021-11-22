@@ -103,25 +103,24 @@ body {
   grid-area: main;
   background-repeat: no-repeat;
   background: url(../imagenes/fondo/TecDev-Final2.0F.png);
-  animation: imagenes 25s infinite;
-  animation-fill-mode: both;
+  animation: imagenes 30s infinite;
 
   background-size: cover;
   height: 45vw;
 }
 @keyframes imagenes {
-  25% {
-    background: url("../imagenes/fondo/Fondo.png");
+  30% {
+    background: url("../imagenes/fondo/Fondo.png"); /*las imagenes son a modo de ejemplo deben usar con el tamaño adecuado*/
     background-size: cover;
     background-repeat: no-repeat;
   }
   50% {
-    background: url("../imagenes/fondo/fondo2.png");
+    background: url("../imagenes/fondo/FondoDescuento.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
-  100% {
-    background: url("../imagenes/fondo/fondo3.png");
+  90% {
+    background: url("../imagenes/fondo/FondoPromo.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -467,4 +466,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
 }
 .oculto {
   visibility: hidden;
+}
+h1 {
+  font-family: "Shippori Antique B1", sans-serif;
 }

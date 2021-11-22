@@ -14,6 +14,11 @@ class Tienda_Controller extends Controller
     {
         $articulos = $this->model->get();
         $this->view->articulos = $articulos;
+        $respuesta = [
+            "datos" => $articulos,
+            "totalResultados" => count($articulos),
+        ];
+        $this->view->respuesta = json_encode($respuesta);
         $this->view->render('tienda/tienda');
 
     }
@@ -28,6 +33,11 @@ class Tienda_Controller extends Controller
             $_SESSION["tipo"] = "cliente";
             $this->view->resultadoLogin = "Ingreso Exitoso";
             $articulos = $this->model->get();
+            $articulos = $this->model->get();
+            $respuesta = [
+                "datos" => $articulos,
+                "totalResultados" => count($articulos),
+            ];
             $this->view->articulos = $articulos;
             $this->view->render('tienda/ingresar');
         } else {
@@ -61,6 +71,11 @@ class Tienda_Controller extends Controller
         if ($this->model->registrar(['usuario' => $nombre, 'apellido' => $apellido, 'contrasena' => $pass, 'calle' => $calle, 'ciudad' => $ciudad, 'telefono' => $numero])) {
             $this->view->mensaje = "Se ha registrado correctamente";
             $articulos = $this->model->get();
+            $articulos = $this->model->get();
+            $respuesta = [
+                "datos" => $articulos,
+                "totalResultados" => count($articulos),
+            ];
             $this->view->articulos = $articulos;
             $this->view->render('tienda/registrar');
         } else {
@@ -84,6 +99,10 @@ class Tienda_Controller extends Controller
     public function tiendaI($param = null)
     {
         $articulos = $this->model->get();
+        $respuesta = [
+            "datos" => $articulos,
+            "totalResultados" => count($articulos),
+        ];
         $this->view->articulos = $articulos;
         $this->view->render('tienda/tiendaI');
 

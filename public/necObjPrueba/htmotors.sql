@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 20-11-2021 a las 02:13:21
+-- Tiempo de generación: 22-11-2021 a las 16:49:19
 -- Versión del servidor: 8.0.21
 -- Versión de PHP: 7.3.21
 
@@ -71,26 +71,21 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   `Estado` enum('activo','inactivo') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`Cod_Art`),
   KEY `Cod_Cat` (`Cod_Cat`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `articulo`
 --
 
 INSERT INTO `articulo` (`Cod_Art`, `Cod_Cat`, `Nom_art`, `Marca`, `Modelo`, `Descripcion`, `Precio`, `Imagen`, `Stock`, `Estado`) VALUES
-(1, 1, 'Lampara Led', 'Peugeot', '308', 'Buena', 1500, 'public/imagenes/articulos/lampara.jpg', 15, NULL),
-(2, 2, 'Mordaza', 'Volkswagen', 'Gol', 'asdasdasd', 2500, 'public/imagenes/articulos/mordaza.jpg', 8, NULL),
-(3, 3, 'Amortiguador', 'Volkswagen', 'Saveiro', 'asdasdasd', 1100, 'public/imagenes/articulos/amortiguador.jpg', 25, NULL),
-(4, 4, 'Alfombra', 'Chevrolet', 'C 10', 'asdasdasd', 3500, 'public/imagenes/articulos/alfombra.jpg', 14, NULL),
-(5, 5, 'Radiador', 'Fiat', 'Palio', 'asdasdasd', 4300, 'public/imagenes/articulos/radiador.jpg', 6, NULL),
-(6, 6, 'Caño de Escape', 'Nissan', 'Tida', 'asdasdasd', 2700, 'public/imagenes/articulos/caño.jpg', 3, NULL),
-(7, 7, 'Nombre de Prueba', 'Marca Prueba', 'Modelo Prueba', 'Descripcion de Prueba', 1000, 'public/imagen/articulos/prueba.png', 1, 'activo'),
-(14, 15, 'LamparaaS', 'Marca San', 'Modelo San', 'Buena Descripcion', 15124, 'Tienda.png', 1, NULL),
-(22, 22, 'Nombre de Prueba', 'Marca Prueba', 'Modelo Prueba', 'Descripcion de Prueba', 1200, 'public/imagen/articulos/prueba2.png', 1, 'activo'),
-(23, 23, 'Nombre de Prueba', 'Marca Prueba', 'Modelo Prueba', 'Descripcion de Prueba', 1200, 'public/imagen/articulos/prueba2.png', 1, 'activo'),
-(24, 24, 'Santiago', 'Prueba', 'Prueba', 'descripcion buena', 1200, 'public/imagenes/articulos/p.png', 1, NULL),
-(25, 26, 'Manguera1', 'Prueba', 'Prueba', 'descripcion', 1200, 'public/imagenes/articulos/Sin título.png', 1, NULL),
-(26, 26, 'ProdPrueba', 'marca', 'modelo', 'descripcion buena', 1200, 'public/imagenes/articulos/p.png', 12, NULL);
+(1, 1, 'Lampara Led', 'Peugeot', '308', 'Carolina', 1500, 'public/imagenes/articulos/lampara.png', 15, NULL),
+(2, 2, 'Mordaza', 'Volkswagen', 'Gol', 'asdasdasd', 2500, 'public/imagenes/articulos/lampara.png', 8, NULL),
+(3, 3, 'Amortiguador', 'Volkswagen', 'Saveiro', 'asdasdasd', 1100, 'public/imagenes/articulos/amortiguador.png', 25, NULL),
+(4, 4, 'Alfombra', 'Chevrolet', 'C 10', 'asdasdasd', 3500, 'public/imagenes/articulos/lampara.png', 14, NULL),
+(5, 5, 'Radiador', 'Fiat', 'Palio', 'asdasdasd', 4300, 'public/imagenes/articulos/radiador.png', 6, NULL),
+(6, 6, 'Caño de Escape', 'Nissan', 'Tida', 'asdasdasd', 2700, 'public/imagenes/articulos/lampara.png', 3, NULL),
+(7, 7, 'Nombre Prueba', 'MarcaP', 'ModeloP', 'Buena Descripcion', 1000, 'public/imagenes/articulos/lampara.png', 1, 'activo'),
+(8, 8, 'Nombre Prueba', 'MarcaP', 'ModeloP', 'Buena Descripcion', 1000, 'public/imagenes/articulos/lampara.png', 1, 'activo');
 
 -- --------------------------------------------------------
 
@@ -130,21 +125,18 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `Password_cli` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`Id_P`),
   UNIQUE KEY `Nom_usuario` (`Nom_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `cliente`
 --
 
 INSERT INTO `cliente` (`Id_P`, `Nom_usuario`, `Password_cli`) VALUES
-(3, 'Danilo542', 'Gallero1578'),
-(4, 'Alfredo582', 'Retamoza5487'),
-(5, 'Gregorio896', 'Pergolini2147'),
-(6, 'Santiago', '26042004'),
-(7, 'Roberto540', 'Fernandez1345'),
-(8, 'wdadwadwa', '13122'),
-(11, 'Heber', '121312'),
-(12, 'Heber2', '123124421');
+(1, 'Roberto540', 'Fernandez1345'),
+(2, 'Danilo542', 'Gallero1578'),
+(3, 'Alfredo582', 'Retamoza5487'),
+(4, 'Gregorio896', 'Pergolini2147'),
+(6, 'Santiago', '26042004');
 
 -- --------------------------------------------------------
 
@@ -241,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `Ciudad` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `Numero` int DEFAULT NULL,
   PRIMARY KEY (`Id_P`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `persona`
@@ -255,14 +247,7 @@ INSERT INTO `persona` (`Id_P`, `Nombre`, `Apellido`, `Calle`, `Ciudad`, `Numero`
 (5, 'Alexander', 'Pombo', 'Rivera', 'Las Piedras', 2698),
 (6, 'Sanchez', 'Manovelcro', 'Durzano', 'Progreso', 236),
 (7, 'Tota', 'Lugano', 'Wilson Ferreira', 'Carmelo', 1548),
-(8, 'Gaston', 'Ramirez', 'Interbalnearia', 'Salinas', 3587),
-(10, 'dawadwd', 'wadadw', 'dwadw', 'wadadwdwa', 0),
-(11, 'wdadwawdadw', 'Bueno', 'dawdwa', 'dawawd', 41141424),
-(12, 'wdadwadwa', 'buenardo', 'dadwa', 'awddwawd', 221112),
-(13, '', '', '', '', 0),
-(14, 'Heber', '', '13232', 'Ramones', 0),
-(15, 'Heber2', 'wdad', 'Pepesito', 'Ramones', 122331),
-(16, '', '', '', '', 0);
+(8, 'Gaston', 'Ramirez', 'Interbalnearia', 'Salinas', 3587);
 
 -- --------------------------------------------------------
 

@@ -17,7 +17,7 @@
             //solitud ajax, 
             //$("#filaart-"+alumnoId).remove();
             let url= $("#url").val();
-            let urlReq =url+"api260260articulos/borrar/"+alumnoId;
+            let urlReq =url+"apiarticulos/borrar/"+alumnoId;
             console.log("url: "+urlReq);
             let headers = {"Content-Type":"application/json;charset=utf-8"};
             let data = {};

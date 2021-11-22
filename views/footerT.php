@@ -7,7 +7,7 @@
 <a class="no" href="https://www.instagram.com/_tecdev_/">
 <i class="fab fa-instagram"></i>
 </a>
-<a class="no" href="https://www.twitter.com/">
+<a class="no" href="https://twitter.com/HT_Motors">
 <i class="fab fa-twitter"></i>
 </a>
  <aside class="logo"><img src="<?php echo constant('URL'); ?>public/imagenes/articulos/Logo2.png" width="280px"></aside>

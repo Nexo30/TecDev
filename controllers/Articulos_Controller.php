@@ -62,8 +62,28 @@ class Articulos_Controller extends Controller
         $articulos = $this->model->get();
         //lo asigna a la varible articulos
         $this->view->articulo = $articulos;
+        $respuesta = [
+            "datos" => $articulos,
+            "totalResultados" => count($articulos),
+        ];
+        $this->view->respuesta = json_encode($respuesta);
         //lista los articulos
         $this->view->render('articulos/listar');
+    }
+    public function api_listar()
+    {
+
+        //obtiene todos los articulos
+        $articulos = $this->model->get();
+
+        $respuesta = [
+            "datos" => $articulos,
+            "totalResultados" => count($articulos),
+        ];
+        $this->view->respuesta = json_encode($respuesta);
+
+        //lista los articulos
+        $this->view->render('articulos/api_listar');
     }
 
 }

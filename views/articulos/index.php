@@ -55,7 +55,7 @@ foreach ($this->articulos as $row) { // se recorre el array articulos con foreac
             </table>
         </div>
         <div>
-        <li><a class="crear" href="<?php echo constant('URL'); ?>Crear_Articulo/">Crear Articulo</a></li>
+        <li class="crea"><a class="crear" href="<?php echo constant('URL'); ?>Crear_Articulo/">Crear Articulo</a></li>
       </div>
 </div>
 

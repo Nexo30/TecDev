@@ -11,7 +11,6 @@ class Crear_Articulo_Model extends Model
     public function ingresar_articulo($datos)
     {
 
-        $Cod_Art = $datos['Cod_Art'];
         $Cod_Cat = $datos['Cod_Cat'];
         $Nombre = $datos['Nombre'];
         $Marca = $datos['Marca'];
@@ -22,10 +21,11 @@ class Crear_Articulo_Model extends Model
         $Imagen = $datos['Imagen'];
         $Imagen = "public/imagenes/articulos/" . $Imagen;
 
-        $query = $this->db->connect()->prepare("INSERT INTO articulo (Cod_Art,Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock,Imagen) values ('$Cod_Art','$Cod_Cat','$Nombre','$Marca','$Modelo','$Descripcion','$Precio','$Stock','$Imagen')");
+        $query = $this->db->connect()->prepare("INSERT INTO articulo (Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock,Imagen,Estado) values ('$Cod_Cat','$Nombre','$Marca','$Modelo','$Descripcion','$Precio','$Stock','$Imagen','activo')");
 
         try {
             if ($query->execute()) {
+
                 return true;
             } else {
                 return false;

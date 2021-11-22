@@ -19,7 +19,7 @@ class Tienda_Model extends Model
 
         try {
             $urlDefecto = constant('URL') . '/public/imagenes/articulos/imagenDefecto.svg';
-            $query = $this->db->connect()->query('SELECT Cod_Art,Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock FROM articulo');
+            $query = $this->db->connect()->query('SELECT Cod_Art,Cod_Cat,Nom_art,Marca,Modelo,Descripcion,Precio,Stock,Imagen FROM articulo');
             while ($row = $query->fetch()) {
                 $item = new Articulo();
                 $item->Cod_Art = $row['Cod_Art'];
@@ -31,7 +31,7 @@ class Tienda_Model extends Model
                 $item->Precio = $row['Precio'];
                 $item->Stock = $row['Stock'];
 
-                $item->url_img = $urlDefecto;
+                $item->urlP = constant('URL') . $row['Imagen'];
                 array_push($items, $item);
             }
             return $items;
