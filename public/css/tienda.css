@@ -425,15 +425,6 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   padding: 10px;
   outline: none;
 }
-.slider {
-  width: 700px;
-  height: 320px;
-  background: url(../img/fondo.jpg);
-  background-size: cover;
-  margin: 50px auto;
-  animation: imagenes 20s infinite; /*el nombre de la animación es a elección 
-	los 20s indican la cantidad de segundos*/
-}
 
 .Contenido {
   margin: auto;
@@ -477,6 +468,17 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   margin-top: 25px;
   padding: 10px;
   outline: none;
+}
+.completar {
+  color: white;
+  font-size: 14px;
+  background: grey;
+  margin: auto;
+  padding: 12px;
+}
+.completar:hover{
+  background: #2babe1;
+  cursor: pointer;
 }
 #cantidadElemCarrito {
   float: right;

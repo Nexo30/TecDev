@@ -26,8 +26,21 @@
     </div><!-- end row-->
     <div class="row" id="itemsCarrito">
       <div id="carritoid"></div>
+
         </div>
+        <div class="col">
+        <button class="completar" id="btnCompletarCarrito">Completar carrito</button>
       </div>
+      </div>
+      <div class="low" id="resPedido" style="display:none">
+        <div class="col">
+          <h1>Resultado del pedido</h1>
+          <div class="alerta" role="alert">
+            pedido completado con exito <span id="numPedido"></span>
+          </div>
+        </div>
+        </div><!-- end row-->
+
 
 
 

@@ -24,7 +24,6 @@ class Crear_Articulo_Controller extends Controller
         //echo 'ejecutando crear';
         $msg_imagen;
         $nom_img = "ImagenDefecto.svg";
-        $Cod_Art = $_POST['Cod_Art'];
         $Cod_Cat = $_POST['Cod_Cat'];
         $Nombre = $_POST['Nombre'];
         $Marca = $_POST['Marca'];
@@ -70,7 +69,7 @@ class Crear_Articulo_Controller extends Controller
             $nom_img = "imagenDefecto.svg";
         }
 
-        if ($this->model->ingresar_articulo(['Cod_Art' => $Cod_Art, 'Cod_Cat' => $Cod_Cat, 'Nombre' => $Nombre, 'Marca' => $Marca, 'Modelo' => $Modelo, 'Descripcion' => $Descripcion, 'Precio' => $Precio, 'Stock' => $Stock, 'Imagen' => $nom_img])) {
+        if ($this->model->ingresar_articulo(['Cod_Cat' => $Cod_Cat, 'Nombre' => $Nombre, 'Marca' => $Marca, 'Modelo' => $Modelo, 'Descripcion' => $Descripcion, 'Precio' => $Precio, 'Stock' => $Stock, 'Imagen' => $nom_img])) {
             $this->view->mensaje = "Articulo creado con exito";
             $this->view->render('Crear_Articulo/ingresar_articulo');
         } else {

@@ -40,21 +40,12 @@ foreach ($this->articulos as $row) { // se recorre el array articulos con foreac
     $articulo = $row;?>
                 <tr class="tablas"id="filaart-<?php echo $articulo->Cod_Art; ?>">
 
-<<<<<<< HEAD
                     <td class="tablaA"><?php echo $articulo->Nom_art; ?></td>
                     <td class="tablaB"><?php echo $articulo->Precio; ?></td>
                     <td class="tablaA"><?php echo $articulo->Descripcion; ?></td>
                     <td class="tablaB"><?php echo $articulo->Marca; ?></td>
                     <td class="tablaA"><?php echo $articulo->Modelo; ?></td>
                     <td class="tablaB"class="tablas"><?php echo $articulo->Stock; ?></td>
-=======
-                    <td class="tablas"><?php echo $articulo->Nom_art; ?></td>
-                    <td class="tablas"><?php echo $articulo->Precio; ?></td>
-                    <td class="tablas"><?php echo $articulo->Descripcion; ?></td>
-                    <td class="tablas"><?php echo $articulo->Marca; ?></td>
-                    <td class="tablas"><?php echo $articulo->Modelo; ?></td>
-                    <td class="tablas"><?php echo $articulo->Stock; ?></td>
->>>>>>> 2079567 (Arreglado de vistas)
                     <td><a class="actualizar" href="<?php echo constant('URL') . 'articulos/verArticulo/' . $articulo->Cod_Art; ?>">Actualizar</a></td>
                     <td><button class="eliminar" data-alumno="<?php echo $articulo->Cod_Art; ?>"
                     id="art<?php echo $articulo->Cod_Art; ?>">Eliminar</button></td>

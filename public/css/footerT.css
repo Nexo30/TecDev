@@ -18,27 +18,27 @@ i {
 .fa-facebook {
   margin-top: 25px;
   font-size: 40px;
-  color: #2babe1;
+  color: grey;
   cursor: pointer;
 }
 .fa-instagram {
   font-size: 40px;
-  color: #2babe1;
+  color: grey;
   cursor: pointer;
 }
 .fa-twitter {
   font-size: 40px;
-  color: #2babe1;
+  color: grey;
   cursor: pointer;
 }
 .fa-facebook:hover {
-  color: grey;
+  color: #2babe1;
 }
 .fa-instagram:hover {
-  color: grey;
+  color: #2babe1;
 }
 .fa-twitter:hover {
-  color: grey;
+  color: #2babe1;
 }
 .no {
   visibility: hidden;

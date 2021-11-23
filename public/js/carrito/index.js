@@ -72,7 +72,7 @@
       $("#btnCompletarCarrito").on("click",function(){
         //alert(token);
         let url= $("#url").val();
-        let urlReq =url+"apicarrito/completarCarrito";
+        let urlReq =url+"Apicarrito/completarCarrito";
 
         //$token = localStorage.getItem('token');
         let headers = {'Content-Type':'application/json;charset=utf-8'};
@@ -80,7 +80,7 @@
 
         var data = {"lista": carrito,
                     "usuario": 1 };
-                    //console.log(data);                    
+                    console.log(data);                    
               $.ajax({
                 url: urlReq,
                 headers: headers,
@@ -92,7 +92,7 @@
             .done(function (data) {              
 
               localStorage.setItem("carrito", JSON.stringify([]));
-                  
+              $("#cantidadElemCarrito").text(0);
               $("#itemsCarrito").html(`<div id="carritoid"></div>`);              
               $("#numPedido").text(data.resultado);              
               $("#resPedido").css("display","block");
