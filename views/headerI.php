@@ -16,7 +16,7 @@ Salir <!-- para vincular un input con label usar el mismo id en este caso btn-up
 		<ul>
     <li><a href="<?php echo constant('URL'); ?>Inicio/indexI">Inicio</a></li>
 			<li><a href="<?php echo constant('URL'); ?>tienda/tiendaI">Tienda</a></li>
-			<li><a href="<?php echo constant('URL'); ?>inicioI#sidebarI">Nosotros</a></li>
+			<li><a href="<?php echo constant('URL'); ?>inicio/indexI/#sidebarI">Nosotros</a></li>
 			<li><a href="<?php echo constant('URL'); ?>contacto/indexI">Contactos</a></li>
 			<li id="Adm"><a href="<?php echo constant('URL'); ?>Articulos">Administrar Articulos</a></li>
 		</ul>

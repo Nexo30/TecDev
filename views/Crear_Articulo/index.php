@@ -21,8 +21,6 @@
 
         <form action="<?php echo constant('URL'); ?>Crear_Articulo/ingresar_articulo" method="POST" enctype="multipart/form-data">
 
-            <label for="">Codigo de Articulo</label><br>
-            <input type="text" name="Cod_Art" id=""><br>
             <label for="">Codigo de Categoria</label><br>
             <input type="text" name="Cod_Cat" id=""><br>
             <label for="">Nombre</label><br>

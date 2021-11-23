@@ -147,8 +147,19 @@ nav li :hover {
   border: solid;
   padding: 25px;
 }
-.tablas {
-  border: 1px solid black;
+.tablaA {
+  border: 1px solid #2babe1;
+  padding: 4px;
+}
+.tablaB {
+  border: 1px solid gray;
+  padding: 4px;
+}
+.tablaA:hover {
+  background: gray;
+}
+.tablaB:hover {
+  background: #2babe1;
 }
 .crear {
   padding: 1px;
@@ -459,6 +470,9 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   border-radius: 5px;
   padding: 10px;
   color: #ffff;
+}
+.crear:hover {
+  background: gray;
 }
 li {
   list-style: none;

@@ -40,12 +40,12 @@ foreach ($this->articulos as $row) { // se recorre el array articulos con foreac
     $articulo = $row;?>
                 <tr class="tablas"id="filaart-<?php echo $articulo->Cod_Art; ?>">
 
-                    <td><?php echo $articulo->Nom_art; ?></td>
-                    <td><?php echo $articulo->Precio; ?></td>
-                    <td><?php echo $articulo->Descripcion; ?></td>
-                    <td><?php echo $articulo->Marca; ?></td>
-                    <td><?php echo $articulo->Modelo; ?></td>
-                    <td><?php echo $articulo->Stock; ?></td>
+                    <td class="tablaA"><?php echo $articulo->Nom_art; ?></td>
+                    <td class="tablaB"><?php echo $articulo->Precio; ?></td>
+                    <td class="tablaA"><?php echo $articulo->Descripcion; ?></td>
+                    <td class="tablaB"><?php echo $articulo->Marca; ?></td>
+                    <td class="tablaA"><?php echo $articulo->Modelo; ?></td>
+                    <td class="tablaB"class="tablas"><?php echo $articulo->Stock; ?></td>
                     <td><a class="actualizar" href="<?php echo constant('URL') . 'articulos/verArticulo/' . $articulo->Cod_Art; ?>">Actualizar</a></td>
                     <td><button class="eliminar" data-alumno="<?php echo $articulo->Cod_Art; ?>"
                     id="art<?php echo $articulo->Cod_Art; ?>">Eliminar</button></td>
