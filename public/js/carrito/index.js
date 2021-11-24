@@ -79,15 +79,13 @@
                         //'Authorization': `Bearer ${token}`}; 
 
         var data = {"lista": carrito,
-                    "usuario": 1 };
-                    console.log(data);                    
+                    "usuario": 1 };                    
               $.ajax({
                 url: urlReq,
                 headers: headers,
                 type: 'POST',
                 data: JSON.stringify(data),
                 dataType : 'json'
-                //dataType : 'text'
             })
             .done(function (data) {              
 

@@ -50,7 +50,7 @@ class Apicarrito_Controller extends Controller
         //convierto la respuesta a json
         $this->view->respuesta = json_encode($respuesta);
         //llamo al método render
-        $this->view->render('api/carrito/completarcarrito');
+        $this->view->render('apicarrito/completarcarrito');
     }
 
 }
