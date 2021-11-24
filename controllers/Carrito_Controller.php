@@ -34,7 +34,7 @@ class Carrito_Controller extends Controller
             $this->view->render('carrito/carritoI');
         } else {
             $this->view->resultadoLogin = "Usuario o contraseña incorrectos";
-            $this->view->render('carrito');
+            $this->view->render('carrito/index');
 
         }
 
@@ -60,19 +60,11 @@ class Carrito_Controller extends Controller
         $numero = $_POST['telefono'];
         if ($this->model->registrar(['usuario' => $nombre, 'apellido' => $apellido, 'contrasena' => $pass, 'calle' => $calle, 'ciudad' => $ciudad, 'telefono' => $numero])) {
             $this->view->mensaje = "Se ha registrado correctamente";
-            $articulos = $this->model->get();
-            $articulos = $this->model->get();
-            $respuesta = [
-                "datos" => $articulos,
-                "totalResultados" => count($articulos),
-            ];
-            $this->view->articulos = $articulos;
+
             $this->view->render('carrito/registrar');
         } else {
             $this->view->mensaje = "Error, intentelo de nuevo";
-            $articulos = $this->model->get();
-            $this->view->articulos = $articulos;
-            $this->view->render('carrito');
+            $this->view->render('carrito/index');
         }
     }
 }

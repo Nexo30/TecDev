@@ -49,12 +49,12 @@ class Carrito_Model extends Model
                     return true;
                 } else {
                     return false;
-                    $this->view->render('tienda/tienda');
+                    $this->view->render('carrito/index');
                     echo "Fallo el registro";
                 }
             } else {
                 return false;
-                $this->view->render('tienda/tienda');
+                $this->view->render('carrito/index');
                 echo "Fallo el registro";
             }
 

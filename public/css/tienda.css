@@ -229,6 +229,16 @@ div li {
   margin-right: 35px;
   cursor: default;
 }
+.btnEliminar {
+  margin-top: 8px;
+  padding: 8px;
+  background: gray;
+}
+.btnEliminar:hover {
+  cursor: pointer;
+  background: #2babe1;
+  color: white;
+}
 .fa-shopping-cart:hover {
   cursor: pointer;
   color: #2babe1;
@@ -476,7 +486,7 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   margin: auto;
   padding: 12px;
 }
-.completar:hover{
+.completar:hover {
   background: #2babe1;
   cursor: pointer;
 }
