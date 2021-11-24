@@ -15,7 +15,7 @@
 <li><i class="fas fa-map-marker-alt"></i> Dirección: Avenida Imaginaria, Las Piedras</li>
 <li><i class="fas fa-phone-alt"></i> Call Center: <a href="tel:+093823455">2369 5734</a></li>
 <li><i class="far fa-envelope"></i> Email: <a href="mailto:HTMConsultas@gmail.com">HTMConsultas@gmail.com</a></li>
-<li><i class="far fa-clock"></i> Horarios: Lunes a viernes: 08:30 a 13:00 – 13:30 – 18:00</li>
+<li><i class="far fa-clock"></i> Horarios: Lunes a viernes: 08:30 a 13:00 – 13:30 a 18:00</li>
 </ul></aside>
 
 </footer>
