@@ -20,13 +20,13 @@ use \SimpleTranslation\Translate;
 <?php require 'views/headerT.php';?>
  <main class="datos">
  <div class="dropdown">
-  <button class="mainmenubtn">Categorias</button>
+  <button class="mainmenubtn"><?php echo Translate::__('Cat'); ?></button>
   <div class="dropdown-child">
-    <a>Ofertas</a>
-    <a>Recomendados</a>
-    <a>Piezas de Recambio</a>
-    <a>Repuestos Originales</a>
-    <a>Repuestos Alternativos</a>
+    <a><?php echo Translate::__('Ofe'); ?></a>
+    <a><?php echo Translate::__('Rec'); ?></a>
+    <a><?php echo Translate::__('PiRe'); ?></a>
+    <a><?php echo Translate::__('ReOr'); ?></a>
+    <a><?php echo Translate::__('ReAl'); ?></a>
   </div>
 </div>
 <div class="row">

@@ -29,4 +29,11 @@ return [
     'ExamMen' => 'Mensaje...',
     'Send' => 'Enviar',
     'Add' => 'Agregar',
+    'Car' => 'Completar Carrito',
+    'Ofe' => 'Offers',
+    'Rec' => 'Recomendados',
+    'PiRe' => 'Piezas de Recambio',
+    'ReOr' => 'Repuestos originales',
+    'ReAl' => 'Repuestos alternativos',
+    'Cat' => 'Categorias',
 ];

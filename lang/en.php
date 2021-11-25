@@ -29,5 +29,12 @@ return [
     'ExamMen' => 'Message...',
     'Send' => 'Send',
     'Add' => 'Add',
+    'Car' => 'Complete Cart',
+    'Ofe' => 'Offers',
+    'Rec' => 'Recommended',
+    'PiRe' => 'Spare parts',
+    'ReOr' => 'Original parts',
+    'ReAl' => 'Alternative spare parts',
+    'Cat' => 'Categories',
 
 ];

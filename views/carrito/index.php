@@ -1,3 +1,9 @@
+<?php
+
+require_once 'traduccion/Translate.php';
+use \SimpleTranslation\Translate;
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -28,7 +34,7 @@
 
         </div>
         <div class="col">
-        <button class="completar" id="btnCompletarCarrito">Completar carrito</button>
+        <button class="completar" id="btnCompletarCarrito"><?php echo Translate::__('Car'); ?></button>
       </div>
       </div>
       <div class="low" id="resPedido" style="display:none">
