@@ -11,9 +11,11 @@
 </head>
 <body class="grid-container">
 <?php require 'views/headerT.php';?>
-  <aside class="sidebar2"></aside>
+  <aside class="sidebar2"> </aside>
   <aside name="sidebar" id="sidebar" class="sidebar3"></aside>
   <article class="main"></article>
   <?php require 'views/footerT.php';?>
 </body>
+<script src="<?php echo constant('URL'); ?>/public/js/jquery-3.6.0.min.js"></script>
+<script src="<?php echo constant('URL'); ?>public/js/main/main.js"></script>
 </html>

@@ -1,5 +1,10 @@
 <?php
+require_once 'traduccion/Translate.php';
+use \SimpleTranslation\Translate;
 
+//manejo de cookies
+$idioma = $_COOKIE['idioma'] ?? "es";
+Translate::init($idioma, "lang/" . $idioma . ".php");
 class Controller
 {
     public $model;

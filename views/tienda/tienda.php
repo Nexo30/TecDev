@@ -1,6 +1,11 @@
+<?php
 
+require_once 'traduccion/Translate.php';
+use \SimpleTranslation\Translate;
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +42,7 @@
           <p class=""> <?=$value->Descripcion;?></p>
           <p class="">$ <?=$value->Precio;?></p>
           <input class="val" id="art-<?=$articulo->Cod_Art;?>" value="1" type="number"></p>
-          <button class="btnAgregar" type="button" data-id="<?php echo $value->Cod_Art; ?>">Agregar</button>
+          <button class="btnAgregar" type="button" data-id="<?php echo $value->Cod_Art; ?>"><?php echo Translate::__('Add'); ?></button>
         </div>
       </div><?php }
 ;?>
