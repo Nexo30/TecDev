@@ -16,6 +16,10 @@ class Idioma_Controller extends Controller
     {
         $this->view->render('idioma/index');
     }
+    public function indexI()
+    {
+        $this->view->render('idioma/indexI');
+    }
 
     public function cambiarIdioma()
     {
@@ -25,5 +29,12 @@ class Idioma_Controller extends Controller
         $this->view->idioma = $idioma;
         $this->view->render('idioma/cambiarIdioma');
     }
-
+    public function cambiarIdiomaI()
+    {
+        $idioma = $_POST['idioma'] ?? "en";
+        setcookie("idioma", $idioma, time() + 60 * 60 * 24, "/");
+        //var_dump($_POST);
+        $this->view->idioma = $idioma;
+        $this->view->render('idioma/cambiarIdiomaI');
+    }
 }

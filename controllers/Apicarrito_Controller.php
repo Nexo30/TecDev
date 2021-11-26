@@ -1,5 +1,7 @@
 <?php
 require_once 'entidades/carrito.php';
+require_once 'jwt/vendor/autoload.php';
+require_once 'auth/Auth.php';
 class Apicarrito_Controller extends Controller
 {
 
@@ -10,47 +12,60 @@ class Apicarrito_Controller extends Controller
 
     public function completarCarrito()
     {
-        $json = file_get_contents('php://input');
-        $datos = json_decode($json);
-        $listaArticulos = $datos->lista;
-        $personas = $datos->ID;
-        $lista = [];
-        foreach ($listaArticulos as $key => $obj) {
-            $articulos = new Carrito();
-            $articulos->Cod_Art = $obj->$Cod_Art;
-            $articulos->Nom_Art = $obj->Nom_Art;
-            $articulos->Descripcion = $obj->Descripcion;
-            $articulos->Precio = $obj->Precio;
-            $articulos->Stock = $obj->Stock;
-            $articulos->Estado = $obj->Estado;
-            $articulos->Cod_Cat = $obj->Cod_Cat;
-            $articulos->Imagen = $obj->Imagen;
-            $lista[] = $articulos;
-        }
-        $respuesta = [];
-        $resultado = $this->model->completarCarrito($lista, $personas);
-        if ($resultado->res) {
-            http_response_code(201);
+        try {
+
+            $headers = apache_request_headers();
+            $tokenAux = @$headers['Authorization'];
+
+            $token = substr($tokenAux, 7, strlen($tokenAux));
+            Auth::Check($token);
+            $rol = Auth::GetData($token)->rol;
+            if ($rol != 'cliente') {
+                throw new Exception("no tiene autorizacion");
+            }
+
+            $json = file_get_contents('php://input');
+            //convierto en un array asociativo de php
+            $datos = json_decode($json);
+            $listaArticulos = $datos->lista;
+            $usuario = $datos->usuario;
+            //$lista = array();
+            $lista = [];
+            foreach ($listaArticulos as $key => $obj) {
+                $articulo = new Carrito();
+                $articulo->id = $obj->id;
+                $articulo->cantidad = $obj->cantidad;
+                $articulo->precio = $obj->precio;
+                $lista[] = $articulo;
+                //array_push($lista, $articulo);
+            }
+            $resultado = $this->model->completarCarrito($lista, $usuario);
+
             $respuesta = [
                 "datos" => $lista,
-                "IdPedidos" => $resultado->IdPedidos,
-                "Personas" => $personas,
-                "pedRes" => $resultado->res,
-                "respuesta" => "Pedido Completado con Éxito",
-            ];
-            $this->view->respuesta = $respuesta;
-        } else {
-            http_response_code(400);
-            $respuesta = json_encode([
+                "totalResultados" => count($lista),
+                "usuario" => $usuario,
                 "resultado" => $resultado,
-                "respuesta" => "Error al completar el pedido",
-            ]);
+                "token" => $token,
+            ];
+            $this->view->respuesta = json_encode($respuesta);
+            if ($resultado == false) {
+                http_response_code(400);
+                $this->view->respuesta = json_encode([
+                    "resultado" => $resultado,
+                    "respuesta" => "error al completar el pedido",
+                ]);
+            } else {
+                http_response_code(200);
+            }
+            $this->view->render('api/carrito/completarcarrito');
+            //code...
 
+        } catch (Exception $e) {
+            echo "<h1>" . $e->getMessage() . "</h1>";
+
+            http_response_code(401);
         }
-        //convierto la respuesta a json
-        $this->view->respuesta = json_encode($respuesta);
-        //llamo al método render
-        $this->view->render('apicarrito/completarcarrito');
     }
 
 }

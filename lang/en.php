@@ -10,7 +10,7 @@ return [
     'Change_lg' => 'Change language',
     'Change' => 'Change',
     'Select' => 'Select one',
-    'leng' => 'Lenguage',
+    'leng' => 'Language',
     'Dir' => 'Direction',
     'Ho' => 'Horary: Monday to Friday: 8:30 to 1:30 - Saturdays: 1:30 to 6:00 p.m.',
     'UserDa' => 'Enter your user data',
@@ -36,5 +36,7 @@ return [
     'ReOr' => 'Original parts',
     'ReAl' => 'Alternative spare parts',
     'Cat' => 'Categories',
+    'AdmA' => 'Manage items',
+    'AdmC' => 'Manage clients',
 
 ];

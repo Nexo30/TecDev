@@ -6,6 +6,7 @@ use \SimpleTranslation\Translate;
 ?>
 <header class="header">
 <img src="<?php echo constant('URL'); ?>public/imagenes/articulos/Logo2.png" width="280px">
+
 <a class="ingresar">
 <input type="checkbox" id="btn-up">
 	<label for="btn-up" class="up"><i id="icon"class="fas fa-user-circle"></i><?php echo Translate::__('Sing_up'); ?></label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->

@@ -47,7 +47,7 @@ foreach ($this->articulos as $row) { // se recorre el array articulos con foreac
                     <td class="tablaA"><?php echo $articulo->Modelo; ?></td>
                     <td class="tablaB"class="tablas"><?php echo $articulo->Stock; ?></td>
                     <td><a class="actualizar" href="<?php echo constant('URL') . 'articulos/verArticulo/' . $articulo->Cod_Art; ?>">Actualizar</a></td>
-                    <td><button class="eliminar" data-alumno="<?php echo $articulo->Cod_Art; ?>"
+                    <td><button class="eliminar" data-id="<?php echo $articulo->Cod_Art; ?>"
                     id="art<?php echo $articulo->Cod_Art; ?>">Eliminar</button></td>
                 </tr>
                 <?php }?>

@@ -1,5 +1,6 @@
 <?php
-
+require_once 'jwt/vendor/autoload.php';
+require_once 'auth/Auth.php';
 class Inicio_Controller extends Controller
 {
     public function __construct()
@@ -25,14 +26,27 @@ class Inicio_Controller extends Controller
         //$this->view->post = var_dump($_POST);
         $nombre = $_POST['nombre'];
         $pass = $_POST['pass'];
+        $_SESSION["tipo"] = "cliente";
         $exitoLogin = $this->model->ingresar($nombre, $pass);
+        $admin = $this->model->admin($nombre, $pass);
+        if ($admin) {
+            $_SESSION["tipo"] = "admin";
+            $exitoLogin = true;
+            $nombre = "Admin";
+        }
         if ($exitoLogin) {
             $_SESSION["estalogueado"] = true;
             $_SESSION["nombre"] = $nombre;
-            $_SESSION["tipo"] = "cliente";
+
+            $rol = $_SESSION["tipo"];
+            $token = Auth::SignIn([
+                'email' => $nombre,
+                'rol' => $rol,
+            ]);
             $this->view->render('inicio/ingresar');
         } else {
             $this->view->resultadoLogin = "Usuario o contraseña incorrectos";
+            unset($_SESSION["tipo"]);
             $this->view->render('inicio/index');
         }
 

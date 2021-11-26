@@ -1,6 +1,7 @@
 (function($) {
   $(document).ready(function() {
       let tokenStr = localStorage.getItem("token");
+      console.log(tokenStr)
       let token = "defecto  valor"; 
       let url= $("#url").val();
       if (tokenStr){
@@ -73,7 +74,8 @@
         //alert(token);
         let url= $("#url").val();
         let urlReq =url+"Apicarrito/completarCarrito";
-
+         console.log(url);
+         console.log(urlReq);
         //$token = localStorage.getItem('token');
         let headers = {'Content-Type':'application/json;charset=utf-8'};
                         //'Authorization': `Bearer ${token}`}; 

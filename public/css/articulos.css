@@ -128,6 +128,7 @@ li {
   text-decoration: none;
 }
 #Adm {
+  list-style: none;
   float: right;
 }
 nav li :hover {
@@ -448,6 +449,17 @@ LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
   margin-top: 30px;
   float: right;
   font-size: 20px;
+}
+.Clientes {
+  margin: 10px;
+  padding: 10px;
+}
+.dato {
+  padding: 8px;
+  border: solid 1px black;
+}
+.Btneliminar {
+  margin-left: 8px;
 }
 #cantidadElemCarrito {
   float: right;

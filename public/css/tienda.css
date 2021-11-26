@@ -125,6 +125,7 @@ nav ul li {
   padding: 1px;
 }
 #Adm {
+  list-style: none;
   float: right;
 }
 #Res {

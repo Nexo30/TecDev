@@ -1,5 +1,7 @@
 <?php
-require_once 'entidades/articulo.php';
+require_once 'entidades/carrito.php';
+require_once 'jwt/vendor/autoload.php';
+require_once 'auth/Auth.php';
 class Apicarrito_Model extends Model
 {
 
@@ -19,7 +21,6 @@ class Apicarrito_Model extends Model
             $query->bindParam(':ID', $personas);
             $query->bindParam(':Fecha', $Fecha);
             $lastInsertID = 0;
-
             if ($query->execute()) {
                 $lastInsertID = $pdo->lastInsertId();
             } else {

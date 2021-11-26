@@ -1,6 +1,8 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 
+require_once 'jwt/vendor/autoload.php';
+require_once 'auth/Auth.php';
 class Contacto_Controller extends Controller
 {
     public function __construct()
@@ -21,11 +23,21 @@ class Contacto_Controller extends Controller
         $nombre = $_POST['nombre'];
         $pass = $_POST['pass'];
         $exitoLogin = $this->model->ingresar($nombre, $pass);
+        $admin = $this->model->admin($nombre, $pass);
+        if ($admin) {
+            $rol = "admin";
+            $exitoLogin = true;
+            $nombre = "Admin";
+        }
         if ($exitoLogin) {
             $_SESSION["estalogueado"] = true;
             $_SESSION["nombre"] = $nombre;
             $_SESSION["tipo"] = "cliente";
-
+            $rol = $_SESSION["tipo"];
+            $token = Auth::SignIn([
+                'email' => $nombre,
+                'rol' => $rol,
+            ]);
             $this->view->render('contacto/ingresar');
         } else {
             $this->view->resultadoLogin = "Usuario o contraseña incorrectos";
@@ -67,6 +79,7 @@ class Contacto_Controller extends Controller
         require 'PHPMailer-master/PHPMailer-master/src/SMTP.php';
         $correo = $_POST['Email'];
         $nombre = $_POST['Nombre'];
+        $rol = $_SESSION['tipo'];
         $mensaje = $_POST['Mensaje'];
         $mail = new PHPMailer(true);
 
@@ -95,6 +108,7 @@ class Contacto_Controller extends Controller
             $mail->addAddress('HTMConsultas@gmail.com', 'Consultas');
             $mail->send();
             $this->mensajeC = "Mensaje Enviado Correctamente";
+
             $this->view->render('contacto/index');
         } catch (\Throwable $th) {
 
@@ -107,6 +121,50 @@ class Contacto_Controller extends Controller
 
         $this->view->render('contacto/indexI');
 
+    }
+    public function EmailEI()
+    {
+        require 'PHPMailer-master/PHPMailer-master/src/Exception.php';
+        require 'PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
+        require 'PHPMailer-master/PHPMailer-master/src/SMTP.php';
+        $correo = $_POST['Email'];
+        $nombre = $_POST['Nombre'];
+        $rol = $_SESSION['tipo'];
+        $mensaje = $_POST['Mensaje'];
+        $mail = new PHPMailer(true);
+
+        $mail->isSMTP();
+        $mail->CharSet = "utf-8";
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'tls';
+        $mail->Host = 'smtp.gmail.com';
+        $mail->Port = 25;
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true,
+            ),
+        );
+        try {
+            $mail->isHTML(true);
+
+            $mail->Username = ('HTMConsultas@gmail.com');
+            $mail->Password = ('Vaniersa2021');
+
+            $mail->setFrom($correo, $nombre);
+            $mail->Subject = "Correo de Pagina HTMotors";
+            $mail->MsgHTML($mensaje);
+            $mail->addAddress('HTMConsultas@gmail.com', 'Consultas');
+            $mail->send();
+            $this->mensajeC = "Mensaje Enviado Correctamente";
+
+            $this->view->render('contacto/indexI');
+        } catch (\Throwable $th) {
+
+            $this->mensajeC = "Error en envio de Mensaje";
+            $this->view->render('contacto/indexI');
+        }
     }
 
 }

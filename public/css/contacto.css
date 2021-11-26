@@ -89,6 +89,7 @@ nav a {
   text-align-last: center;
 }
 #Adm {
+  list-style: none;
   float: right;
 }
 nav li :hover {

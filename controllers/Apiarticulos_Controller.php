@@ -106,10 +106,10 @@ class Apiarticulos_Controller extends Controller
     public function borrar($param)
     {
         $id = $param[0];
-        $resultado = $this->model->borrar($Cod_Art);
+        $resultado = $this->model->borrar($id);
         $verboHTTP = $_SERVER['REQUEST_METHOD'];
         $respuesta = [
-            "Cod_Art" => $Cod_Art,
+            "Cod_Art" => $id,
             "resultado" => $resultado,
             "verboHTTP" => $verboHTTP,
         ];

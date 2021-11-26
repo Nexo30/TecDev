@@ -1,3 +1,9 @@
+<?php
+
+require_once 'traduccion/Translate.php';
+use \SimpleTranslation\Translate;
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,16 +21,16 @@
   <aside class="sidebar" >
 	<form action="<?php echo constant('URL'); ?>contacto/EmailE" method="post">
 			<div class="contacto__grupo" id="grupo__nombre">
-			<label for="Nombre" class="contacto__label">Nombre: </label>
-					<input type="text" class="contacto__input2" name="Nombre" id="Nombre" placeholder="Nombre..."></input>
+			<label for="Nombre" class="contacto__label"><?php echo Translate::__('Name'); ?>: </label>
+					<input type="text" class="contacto__input2" name="Nombre" id="Nombre" placeholder="<?php echo Translate::__('Name'); ?>..."></input>
 
-				  <label for="Email" class="contacto__label">Email: </label>
-					<input type="text" class="contacto__input2" name="Email" id="Email" placeholder="Ejemplo@.com"></input>
+				  <label for="Email" class="contacto__label"><?php echo Translate::__('Email'); ?>: </label>
+					<input type="text" class="contacto__input2" name="Email" id="Email" placeholder="<?php echo Translate::__('ExampEm'); ?>"></input>
 
-				  <label for="Mensaje" class="contacto__label">Mensaje: </label>
-					<textarea type="text" class="contacto__input" name="Mensaje" id="Mensaje" placeholder="Mensaje..." rows="10" cols="45"></textarea>
+				  <label for="Mensaje" class="contacto__label"><?php echo Translate::__('Men'); ?>: </label>
+					<textarea type="text" class="contacto__input" name="Mensaje" id="Mensaje" placeholder="<?php echo Translate::__('ExamMen'); ?>" rows="10" cols="45"></textarea>
 
-				<button type="submit" class="contacto__btn">Enviar</button>
+				<button type="submit" class="contacto__btn"><?php echo Translate::__('Send'); ?></button>
 </form>
 		</div>
 

@@ -1,4 +1,6 @@
 <?php
+require_once 'jwt/vendor/autoload.php';
+require_once 'auth/Auth.php';
 
 class Tienda_Controller extends Controller
 {
@@ -27,13 +29,25 @@ class Tienda_Controller extends Controller
         $nombre = $_POST['nombre'];
         $pass = $_POST['pass'];
         $exitoLogin = $this->model->ingresar($nombre, $pass);
+        $admin = $this->model->admin($nombre, $pass);
+        if ($admin) {
+            $rol = "admin";
+            $exitoLogin = true;
+            $nombre = "Admin";
+        }
         if ($exitoLogin) {
             $_SESSION["estalogueado"] = true;
             $_SESSION["nombre"] = $nombre;
             $_SESSION["tipo"] = "cliente";
+            $rol = $_SESSION["tipo"];
             $this->view->resultadoLogin = "Ingreso Exitoso";
             $articulos = $this->model->get();
-            $articulos = $this->model->get();
+            $token = Auth::SignIn([
+                'email' => $nombre,
+                'rol' => $rol,
+            ]);
+            $_SESSION["token"] = $token;
+            $this->view->token = $token;
             $respuesta = [
                 "datos" => $articulos,
                 "totalResultados" => count($articulos),
@@ -55,6 +69,7 @@ class Tienda_Controller extends Controller
         $_SESSION["estalogueado"] = false;
         unset($_SESSION["nombre"]);
         unset($_SESSION["tipo"]);
+        $_SESSION["token"] = null;
         $this->view->render('tienda/tienda');
     }
     public function registrar()

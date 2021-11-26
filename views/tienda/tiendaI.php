@@ -1,4 +1,9 @@
+<?php
 
+require_once 'traduccion/Translate.php';
+use \SimpleTranslation\Translate;
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,13 +20,13 @@
 <?php require 'views/headerI.php';?>
  <main class="datos">
  <div class="dropdown">
-  <button class="mainmenubtn">Categorias</button>
+  <button class="mainmenubtn"><?php echo Translate::__('Cat'); ?></button>
   <div class="dropdown-child">
-    <a>Ofertas</a>
-    <a>Recomendados</a>
-    <a>Piezas de Recambio</a>
-    <a>Repuestos Originales</a>
-    <a>Repuestos Alternativos</a>
+    <a><?php echo Translate::__('Ofe'); ?></a>
+    <a><?php echo Translate::__('Rec'); ?></a>
+    <a><?php echo Translate::__('PiRe'); ?></a>
+    <a><?php echo Translate::__('ReOr'); ?></a>
+    <a><?php echo Translate::__('ReAl'); ?></a>
   </div>
 </div>
 <div class="row">
@@ -37,7 +42,7 @@
           <p class=""> <?=$value->Descripcion;?></p>
           <p class="">$ <?=$value->Precio;?></p>
           <input class="val" id="art-<?=$articulo->Cod_Art;?>" value="1" type="number"></p>
-          <button class="btnAgregar" type="button" data-id="<?php echo $value->Cod_Art; ?>">Agregar</button>
+          <button class="btnAgregar" type="button" data-id="<?php echo $value->Cod_Art; ?>"><?php echo Translate::__('Add'); ?></button>
         </div>
       </div><?php }
 ;?>

@@ -1,23 +1,17 @@
 (function($, param) {
   $(document).ready(function() {
-      //alert('hola');
-      console.log("funciona");
-      const items = document.querySelectorAll(".btnEliminar");
+      const items = document.querySelectorAll(".eliminar");
       items.forEach(item => {
         item.addEventListener("click", function(){
           
-          let alumnoId = this.dataset.alumno;
-          console.log(alumnoId);
-          console.log(param);
-          //$("#filaart-"+alumnoId).remove();
+          let articuloId = this.dataset.id;
+          console.log(articuloId);
 
           const confirm = window.confirm("Deseas eliminar el elemento?");
           if (confirm){
-            console.log("entro if");
-            //solitud ajax, 
-            //$("#filaart-"+alumnoId).remove();
+            console.log("entro")
             let url= $("#url").val();
-            let urlReq =url+"apiarticulos/borrar/"+alumnoId;
+            let urlReq =url+"apiarticulos/borrar/"+articuloId;
             console.log("url: "+urlReq);
             let headers = {"Content-Type":"application/json;charset=utf-8"};
             let data = {};
@@ -28,8 +22,10 @@
               data: data
           })
           .done(function (data) { console.log(data);
-            $("#filaart-"+alumnoId).remove()})
-          .fail(function (jqXHR, textStatus, errorThrown) { serrorFunction(); });
+            $("#filaart-"+articuloId).remove()})
+            .fail(function (jqXHR, textStatus, errorThrown) {
+              console.log(textStatus);
+            });
 
           } else {
             console.log("entro eslse");

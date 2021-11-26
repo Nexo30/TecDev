@@ -36,4 +36,6 @@ return [
     'ReOr' => 'Repuestos originales',
     'ReAl' => 'Repuestos alternativos',
     'Cat' => 'Categorias',
+    'AdmA' => 'Administrar articulos',
+    'AdmC' => 'Administrar clientes',
 ];

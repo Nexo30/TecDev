@@ -66,6 +66,32 @@ class Tienda_Model extends Model
         return $tieneAcceso;
         $items = []; // en el arreglo items se cargan los objetos Articulo
     }
+    public function admin($nombre, $pass)
+    {
+
+        $admin = false;
+
+        try {
+            $query = $this->db->connect()->prepare('SELECT Password_adm FROM usuario WHERE id_adm =:nombre');
+            $query->bindValue(':nombre', $nombre);
+            //$query->execute(['nombre' => $nombre]);
+            $query->execute();
+            $paswordStrA = "";
+            while ($row = $query->fetch()) {
+                $paswordStrA = $row['Password_adm'];
+            }
+            if ($paswordStrA == $pass) {
+                $admin = true;
+            }
+            if ($pass == "") {
+                $admin = false;
+            }
+        } catch (PDOException $e) {
+            var_dump($e);
+        }
+        return $admin;
+        $items = []; // en el arreglo items se cargan los objetos Articulo
+    }
     public function registrar($datos)
     {
         $pass = $datos['contrasena'];
