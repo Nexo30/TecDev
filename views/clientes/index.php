@@ -1,3 +1,10 @@
+<head>
+  <?php
+
+require_once 'traduccion/Translate.php';
+use \SimpleTranslation\Translate;
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,7 +25,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm">
-        <h1>Sección de Clientes</h1>
+        <h1><?php echo Translate::__('Clin_Secc'); ?></h1>
     </div>
     <div class="row">
         <div class="col-sm">
@@ -26,8 +33,8 @@
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nom_Cliente</th>
-                    <th scope="col">Contraseña</th>
+                    <th scope="col"><?php echo Translate::__('Nom_Clien'); ?></th>
+                    <th scope="col"><?php echo Translate::__('Pass'); ?></th>
                 </tr>
                 </thead>
                 <tbody>

@@ -38,5 +38,7 @@ return [
     'Cat' => 'Categories',
     'AdmA' => 'Manage items',
     'AdmC' => 'Manage clients',
+    'Nom_Clien' => 'Nom_Client',
+    'Clin_Secc' => 'Client Seccion',
 
 ];

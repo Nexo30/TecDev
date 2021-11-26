@@ -37,5 +37,7 @@ return [
     'ReAl' => 'Repuestos alternativos',
     'Cat' => 'Categorias',
     'AdmA' => 'Administrar articulos',
+    'Clin_Secc' => 'Seccion de Cliente',
     'AdmC' => 'Administrar clientes',
+    'Nom_Clien' => 'Nom_Cliente',
 ];
