@@ -42,4 +42,5 @@ return [
     'Nom_Clien' => 'Nom_Cliente',
     'Lengcha' => 'Se ha cambiado el idioma a ',
     'List' => 'Lista del Carrito',
+    'Ex' => 'Salir',
 ];

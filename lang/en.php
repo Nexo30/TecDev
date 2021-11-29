@@ -42,5 +42,6 @@ return [
     'Clin_Secc' => 'Client Section',
     'Lengcha' => 'Language has been changed to ',
     'List' => 'List of Cart',
+    'Ex' => 'Exit',
 
 ];
