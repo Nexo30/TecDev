@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+  background-image: url("../imagenes/fondo/13416.jpg");
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+
+  grid-template-rows: 100px 70px 100% 100px;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #c7d2d8;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #2babe1;
+}
+
+.main {
+  grid-area: main;
+  background-color: #414445;
+}
+.row {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.col {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  border: solid 2px;
+  border-spacing: 10px 5px;
+  width: 300px;
+  background: white;
+  margin: 20px;
+  padding: 5px;
+}
+.btnAgregar {
+  margin-top: 10px;
+  padding: 5px;
+  background: #8c96a0;
+  color: white;
+  font-size: 18px;
+}
+.btnAgregar:hover {
+  background: #2babe1;
+  cursor: pointer;
+}
+.val {
+  padding: 2px;
+  border: solid 2px;
+}
+.datos {
+  background-color: #ffffff;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #8c96a0;
+}
+.header {
+  background-color: #74787a;
+  text-align: left;
+}
+.ingresar {
+  float: right;
+  font-size: 20px;
+  color: black;
+  margin-right: 8px;
+  margin-top: 25px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header" 100px
+    "navbar" 70px
+    "datos" 100px
+    "footer" 195px;
+  grid-template-rows: 100px 70px 85% 100px;
+}
+@media (min-width: 600px) {
+}
+
+@media (min-width: 900px) {
+}
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(0, 0, 0);
+}
+/*Para que sea flotante a izquierda */
+nav ul li {
+  float: left;
+  margin: 0em auto;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 1px;
+}
+#Adm {
+  list-style: none;
+  float: right;
+}
+#Res {
+  color: #2babe1;
+  margin-top: 30px;
+  float: right;
+  font-size: 20px;
+}
+#icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+nav li :hover {
+  border-bottom: solid;
+  border-bottom-color: #2babe1;
+}
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+  padding: 12px;
+  text-align-last: center;
+}
+.search-wrapper span {
+  display: inline-flexbox;
+  padding: 0rem 1rem;
+  font-size: 1.6rem;
+}
+.search-wrapper {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 30px;
+  height: 50px;
+  align-items: center;
+  overflow-x: hidden;
+  width: 400px;
+  display: inline-flex;
+}
+.las la-submit {
+  background-color: red;
+}
+.search-wrapper input {
+  height: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 20px;
+}
+.titulo {
+  font-family: "Shippori Antique B1", sans-serif;
+}
+.Resultado {
+  margin: auto;
+}
+div li {
+  list-style: none;
+  display: inline;
+  float: right;
+  font-size: 30px;
+  margin: 15px;
+  padding: 10px;
+  width: 50px;
+  align-content: center;
+  background: gray;
+  color: white;
+  border-radius: 25px;
+}
+.mainmenubtn {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 20px;
+  margin-top: 20px;
+}
+.mainmenubtn:hover {
+  background-color: gray;
+}
+.dropdown {
+  position: relative;
+  display: table;
+}
+.dropdown-child {
+  display: none;
+  background-color: gray;
+  min-width: 200px;
+}
+.dropdown-child a {
+  color: #2babe1;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.dropdown:hover .dropdown-child {
+  display: block;
+}
+.dropdown-child a:hover {
+  background-color: gainsboro;
+}
+.Carrito {
+  float: right;
+  font-size: 37px;
+  color: black;
+  margin: 15px;
+  margin-right: 35px;
+  cursor: default;
+}
+.btnEliminar {
+  font-size: 16px;
+  margin-top: 8px;
+  padding: 8px;
+  background: gray;
+}
+.btnEliminar:hover {
+  cursor: pointer;
+  background: #2babe1;
+  color: white;
+}
+.fa-shopping-cart:hover {
+  cursor: pointer;
+  color: #2babe1;
+}
+body .ventana {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ventana {
+  z-index: 2;
+  position: fixed; /*define una posición relativa*/
+  top: 0;
+  left: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*colores que se determian como rgb y al final la opacidad para que sea transparente*/
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden; /*oculta la ventana ya que necesitamos que se abra al hacer click en el boton*/
+}
+
+/*ACLARACIÓN COMO EL BOTON Y LA X TIENEN EL MISMO ID, CUANDO SE DE CLIC EN EL BOTÓN EL CHECK SE ACTIVARA Y MOSTRARÁ 
+LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
+
+#btn-up:checked ~ .ventana {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contenedor {
+  width: 400px;
+  height: 460px;
+  margin: auto; /*para que se centre el elemetno de forma automatica*/
+  background: #ffff;
+  box-shadow: 1px 7px 25px black; /*efecto sombra*/
+  transition: all 500ms ease;
+  position: relative;
+  transform: translateY(-30%);
+}
+
+#btn-up:checked ~ .ventana .contenedor {
+  transform: translateY(
+    0
+  ); /*da efecto de traslacion en el eje de las y, por ende en el sentido vertical*/
+}
+
+.contenedor header {
+  padding: 20px;
+  background: #8c96a0;
+  color: #ffff;
+}
+
+.X {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ffff;
+  cursor: pointer;
+}
+#btn-up {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  display: none; /*para que no muestre el cuadrito del check*/
+}
+
+.up {
+  background: #2babe1;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffff;
+}
+.up:hover {
+  background: black;
+}
+
+.contenido {
+  margin: auto;
+  /* VER VARIACIONES DE FORMULARIOS EN EL MATERIAL DE FORMULARIOS */
+}
+.Contenido {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 120px;
+  background: #2babe1;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffff;
+}
+input[type="submit"]:hover {
+  background: gray;
+}
+body .ventana2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ventana2 {
+  z-index: 2;
+  position: fixed; /*define una posición relativa*/
+  top: 0;
+  left: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*colores que se determian como rgb y al final la opacidad para que sea transparente*/
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden; /*oculta la ventana ya que necesitamos que se abra al hacer click en el boton*/
+}
+
+/*ACLARACIÓN COMO EL BOTON Y LA X TIENEN EL MISMO ID, CUANDO SE DE CLIC EN EL BOTÓN EL CHECK SE ACTIVARA Y MOSTRARÁ 
+LA VENTANA, AL DAR EN X SE DESACTIVA CHECK POR ENDE SE CIERRA*/
+
+#btn-up2:checked ~ .ventana2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contenedor2 {
+  width: 400px;
+  height: 400px;
+  margin: auto; /*para que se centre el elemetno de forma automatica*/
+  background: #ffff;
+  box-shadow: 1px 7px 25px black; /*efecto sombra*/
+  transition: all 500ms ease;
+  position: relative;
+  transform: translateY(-30%);
+}
+
+#btn-up2:checked ~ .ventana2 .contenedor2 {
+  transform: translateY(
+    0
+  ); /*da efecto de traslacion en el eje de las y, por ende en el sentido vertical*/
+}
+
+.contenedor2 header {
+  padding: 20px;
+  background: #8c96a0;
+  color: #ffff;
+}
+
+.X2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ffff;
+  cursor: pointer;
+}
+#btn-up2 {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  display: none; /*para que no muestre el cuadrito del check*/
+}
+
+.up2 {
+  background: #2babe1;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffff;
+}
+.up2:hover {
+  background: black;
+}
+
+.contenido2 {
+  margin: auto;
+  /* VER VARIACIONES DE FORMULARIOS EN EL MATERIAL DE FORMULARIOS */
+}
+.Contenido2 {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  outline: none;
+}
+
+.Contenido {
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoU {
+  margin: auto;
+  margin-left: 4px;
+  margin-top: 75px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoT {
+  float: right;
+  margin: auto;
+  margin-top: 75px;
+  margin-right: 4px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoC {
+  float: right;
+  display: block;
+  margin-top: 25px;
+  margin-right: 4px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoE {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px;
+  outline: none;
+}
+.ContenidoR {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px;
+  outline: none;
+}
+.completar {
+  color: white;
+  font-size: 14px;
+  background: grey;
+  margin: auto;
+  padding: 12px;
+}
+.completar:hover {
+  background: #2babe1;
+  cursor: pointer;
+}
+#cantidadElemCarrito {
+  float: right;
+  box-shadow: 0 0 1px 1px black;
+  border: solid 1px black;
+  border-radius: 100%;
+  background: red;
+  color: white;
+  padding: 2px;
+  font-size: 15px;
+  margin-right: -50px;
+  margin-top: 5px;
+}
+.Idioma {
+  float: right;
+}

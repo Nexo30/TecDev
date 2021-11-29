@@ -1,0 +1,48 @@
+.logo {
+  float: left;
+}
+.informacion {
+  float: right;
+  list-style: none;
+  font-size: 14px;
+  padding: 13px;
+}
+.informacion ul {
+  float: right;
+  list-style: none;
+}
+i {
+  margin-left: 40px;
+}
+
+.fa-facebook {
+  margin-top: 25px;
+  font-size: 40px;
+  color: grey;
+  cursor: pointer;
+}
+.fa-instagram {
+  font-size: 40px;
+  color: grey;
+  cursor: pointer;
+}
+.fa-twitter {
+  font-size: 40px;
+  color: grey;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: #2babe1;
+}
+.fa-instagram:hover {
+  color: #2babe1;
+}
+.fa-twitter:hover {
+  color: #2babe1;
+}
+.no {
+  visibility: hidden;
+}
+i {
+  visibility: visible;
+}

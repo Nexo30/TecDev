@@ -1,0 +1,40 @@
+.contacto__grupo {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.contacto__grupo input {
+  width: 90%;
+  padding: 5px;
+  height: 50px;
+  border: 1px solid black;
+  font-size: 15px;
+}
+
+.contacto__grupo textarea {
+  width: 90%;
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 15px;
+}
+
+.contacto__grupo label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contacto__grupo button {
+  display: block;
+  width: 100px;
+  margin: auto;
+  align-items: center;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 1px;
+}
