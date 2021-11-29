@@ -35,16 +35,20 @@ use \SimpleTranslation\Translate;
         </div>
         <div class="col">
         <button class="completar" id="btnCompletarCarrito"><?php echo Translate::__('Car'); ?></button>
-      </div>
+
       </div>
       <div class="low" id="resPedido" style="display:none">
-        <div class="col">
+        <div class="Resultado">
           <h1>Resultado del pedido</h1>
           <div class="alerta" role="alert">
-            pedido completado con exito <span id="numPedido"></span>
+            Pedido completado con exito
+            <div class="alerta" role="alert">
+            Numero del pedido:<span id="numPedido"></span>
+            </div>
           </div>
         </div>
-        </div><!-- end row-->
+      </div>
+        </div>
 
 
 

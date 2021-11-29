@@ -55,8 +55,7 @@
 
             if (carrito==null){
               
-              //inicilizo el carrito
-              //agrego el elememto al carrito
+
               
               let cantidadAux= $("#art-"+articuloId).val();
               //console.log(cantidadAux);
@@ -64,7 +63,7 @@
               if (cantidadAux>=1){
                 cantidad = cantidadAux;
               }
-              //console.log("cantidad:" + cantidad);
+              console.log("cantidad:" + cantidad + cantidadAux);
               
               carrito=[];
               
@@ -73,6 +72,7 @@
                      "Nom_art" : articulo.Nom_art,
                       "Cantidad": cantidad,
                        "url": articulo.url}
+
               carrito.push(item);
               localStorage.setItem("carrito", JSON.stringify(carrito));
               $("#cantidadElemCarrito").text(carrito.length);
@@ -80,15 +80,11 @@
               
                 let cantidadAux= $("#art-"+articuloId).val();
                 console.log(cantidadAux);
-                
-
                 let cantidad=1; 
                 if (cantidadAux>=1){
                   cantidad = cantidadAux;
                 }
-        
-                console.log("cantidad:" + cantidad);              
-                console.log();
+
                 item={"Cod_Art" : articulo.Cod_Art,
                       "Nom_art" : articulo.Nom_art,
                      "Precio": articulo.Precio,
@@ -107,14 +103,11 @@
               
             }
             console.log("carrito: "+JSON.stringify(carrito));
-            //localStorage.setItem("carrito", )
-            //$("#filaart-"+alumnoId).remove();
-          });//end item click
-      });//end item click items foreach
-
+          });
+      });
           
 
 
     
-  });//end ready
+  });
 })(jQuery);

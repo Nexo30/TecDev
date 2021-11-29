@@ -22,7 +22,7 @@ use \SimpleTranslation\Translate;
   <input type="hidden" value="<?php echo constant('URL'); ?>" id="url">
   <input type="hidden" value="<?=$this->idioma;?>" id="idioma">
   <div id="ResultadoIdioma">
-  <h1>Se ha cambiado el idioma a <?=$this->idioma;?> </h1>
+  <h1><?php echo Translate::__('Lengcha'); ?><?=$this->idioma;?> </h1>
   </div>
   <?php require 'views/footerT.php';?>
 

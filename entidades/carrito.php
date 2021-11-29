@@ -2,7 +2,7 @@
 
 class Carrito
 {
-    public $id;
-    public $cantidad;
-    public $precio;
+    public $Cod_Art;
+    public $Cantidad;
+    public $Stock;
 }

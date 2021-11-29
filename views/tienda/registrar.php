@@ -12,7 +12,7 @@
 </head>
 <input type="hidden" value="<?php echo constant('URL'); ?>" id="url">
 <body class="grid-container">
-<?php require 'views/headerI.php';?>
+<?php require 'views/headerT.php';?>
  <main class="datos">
  <div class="dropdown">
   <button class="mainmenubtn">Categorias</button>

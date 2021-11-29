@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 22-11-2021 a las 16:49:19
+-- Tiempo de generación: 29-11-2021 a las 02:36:00
 -- Versión del servidor: 8.0.21
 -- Versión de PHP: 7.3.21
 
@@ -71,21 +71,21 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   `Estado` enum('activo','inactivo') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`Cod_Art`),
   KEY `Cod_Cat` (`Cod_Cat`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `articulo`
 --
 
 INSERT INTO `articulo` (`Cod_Art`, `Cod_Cat`, `Nom_art`, `Marca`, `Modelo`, `Descripcion`, `Precio`, `Imagen`, `Stock`, `Estado`) VALUES
-(1, 1, 'Lampara Led', 'Peugeot', '308', 'Carolina', 1500, 'public/imagenes/articulos/lampara.png', 15, NULL),
-(2, 2, 'Mordaza', 'Volkswagen', 'Gol', 'asdasdasd', 2500, 'public/imagenes/articulos/lampara.png', 8, NULL),
-(3, 3, 'Amortiguador', 'Volkswagen', 'Saveiro', 'asdasdasd', 1100, 'public/imagenes/articulos/amortiguador.png', 25, NULL),
-(4, 4, 'Alfombra', 'Chevrolet', 'C 10', 'asdasdasd', 3500, 'public/imagenes/articulos/lampara.png', 14, NULL),
-(5, 5, 'Radiador', 'Fiat', 'Palio', 'asdasdasd', 4300, 'public/imagenes/articulos/radiador.png', 6, NULL),
-(6, 6, 'Caño de Escape', 'Nissan', 'Tida', 'asdasdasd', 2700, 'public/imagenes/articulos/lampara.png', 3, NULL),
-(7, 7, 'Nombre Prueba', 'MarcaP', 'ModeloP', 'Buena Descripcion', 1000, 'public/imagenes/articulos/lampara.png', 1, 'activo'),
-(8, 8, 'Nombre Prueba', 'MarcaP', 'ModeloP', 'Buena Descripcion', 1000, 'public/imagenes/articulos/lampara.png', 1, 'activo');
+(5, 5, 'Radiador', 'Fiat', 'Palio', 'Radiador Fiat', 4300, 'public/imagenes/articulos/radiador.png', 6, 'activo'),
+(6, 6, 'Caño de Escape', 'Nissan', 'Tida', 'Caño de Escape Marca Nissan', 2700, 'public/imagenes/articulos/cañoEscape.png', 3, 'activo'),
+(7, 7, 'Repuesto', 'ProLine', 'A.123', 'Repuesto Proline', 250, 'public/imagenes/articulos/repuestoProLine.png', 1, 'activo'),
+(8, 8, 'Palanca Cambios', 'Generica', 'Generico', 'Palanca de Cambios Generica', 1000, 'public/imagenes/articulos/palancaCambios.png', 1, 'activo'),
+(9, 3, 'Volante', 'Audi', 'A4', 'Volante Audi', 550, 'public/imagenes/articulos/volante.png', 1, 'activo'),
+(10, 3, 'Carburador', 'Generica', 'Generico', 'Carburador Generico', 1250, 'public/imagenes/articulos/carburador.png', 1, 'activo'),
+(11, 4, 'Llanta', 'Generica', 'Generico', 'Llanta Generica', 400, 'public/imagenes/articulos/llanta.png', 2, 'activo'),
+(12, 4, 'Llanta Audi', 'Audi', 'A3', 'Llanta Marca Audi', 400, 'public/imagenes/articulos/llanta2.png', 2, 'activo');
 
 -- --------------------------------------------------------
 
@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `Password_cli` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`Id_P`),
   UNIQUE KEY `Nom_usuario` (`Nom_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `cliente`
@@ -136,7 +136,11 @@ INSERT INTO `cliente` (`Id_P`, `Nom_usuario`, `Password_cli`) VALUES
 (2, 'Danilo542', 'Gallero1578'),
 (3, 'Alfredo582', 'Retamoza5487'),
 (4, 'Gregorio896', 'Pergolini2147'),
-(6, 'Santiago', '26042004');
+(6, 'Santiago', '26042004'),
+(8, 'General', '1234'),
+(10, 'Pepe', '122331'),
+(20, 'Ejemplo123', 'Santiago'),
+(33, 'UsuarioP', '123456');
 
 -- --------------------------------------------------------
 
@@ -159,7 +163,6 @@ CREATE TABLE IF NOT EXISTS `compra` (
 --
 
 INSERT INTO `compra` (`Id_C`, `Cod_art`, `Cantidad`, `Fecha`) VALUES
-(1, 1, 2, '2020-11-05'),
 (2, 3, 4, '2021-08-15'),
 (3, 4, 4, '2021-08-09'),
 (4, 5, 1, '2021-09-05');
@@ -206,14 +209,13 @@ CREATE TABLE IF NOT EXISTS `pedido` (
   `Numero` int NOT NULL,
   `Fecha` date NOT NULL,
   PRIMARY KEY (`Num_Pedido`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `pedido`
 --
 
 INSERT INTO `pedido` (`Num_Pedido`, `Calle`, `Ciudad`, `Numero`, `Fecha`) VALUES
-(1, '18 de Julio', 'Montevideo', 2365, '2021-09-05'),
 (2, 'Durazno', 'Progreso', 6854, '2021-08-15'),
 (3, 'Dr. Poey', 'Las Piedras', 2879, '2021-08-24'),
 (4, 'Aldabalde', 'La Paz', 1245, '2021-09-14');
@@ -233,7 +235,7 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `Ciudad` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `Numero` int DEFAULT NULL,
   PRIMARY KEY (`Id_P`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `persona`
@@ -293,7 +295,8 @@ INSERT INTO `usuario` (`Id_adm`, `Password_adm`) VALUES
 (5, 'Pombo2698'),
 (6, 'Manovelcro236'),
 (7, 'Lugano1548'),
-(8, 'Gaston3587');
+(8, 'Gaston3587'),
+(1234, 'Admin');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

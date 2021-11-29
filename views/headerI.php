@@ -41,7 +41,14 @@ if ($tipo == "admin") {
 ;?>
     <a class="Idioma" href="<?php echo constant('URL'); ?>idioma/indexI"><?php echo Translate::__('leng'); ?></a>
     <div class="search-wrapper">
-        <span class="las la-search"></span>
-        <input type="search" name="" id="" placeholder="<?php echo Translate::__('Search'); ?>">
-      </div>
+		<span class="las la-search"></span>
+    <input type="search" id="buscadortexto" placeholder="<?php echo Translate::__('Search'); ?>">
+    <div class="btn_buscar" id="clickBuscar">
+
+    </div>
+  </div>
+<form action="<?php echo constant('URL'); ?>tienda/buscarI" method="post" id="searchForm" style="display: none;">
+<input type="hidden" name="textoBuscador" value="" id="textoculto">
+  <input type="submit" value="enviar" id="btnSend">
+</form>
 </nav>

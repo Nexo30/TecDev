@@ -1,4 +1,4 @@
-<?php setcookie("idioma", "en", time() + 60 * 60 * 24, "/");?>
+<?php setcookie("idioma", "en", time() + 60 * 60 * 60 * 24, "/");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

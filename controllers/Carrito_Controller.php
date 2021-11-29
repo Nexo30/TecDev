@@ -1,5 +1,6 @@
 <?php
-
+require_once 'jwt/vendor/autoload.php';
+require_once 'auth/Auth.php';
 class Carrito_Controller extends Controller
 {
     public function __construct()
@@ -24,13 +25,30 @@ class Carrito_Controller extends Controller
     }
     public function ingresar()
     {
+        if (strlen($_POST['nombre']) == 0) {
+            throw new Exception("Ingrese su correo electrónico");
+        }
+        if (strlen($_POST['pass']) == 0) {
+            throw new Exception("Ingrese su contraseña");
+        }
         $nombre = $_POST['nombre'];
         $pass = $_POST['pass'];
         $exitoLogin = $this->model->ingresar($nombre, $pass);
+        $admin = $this->model->admin($nombre, $pass);
+        if ($admin) {
+            $_SESSION["tipo"] = "admin";
+            $exitoLogin = true;
+            $nombre = "Admin";
+        }
         if ($exitoLogin) {
             $_SESSION["estalogueado"] = true;
             $_SESSION["nombre"] = $nombre;
-            $_SESSION["tipo"] = "cliente";
+
+            $rol = $_SESSION["tipo"];
+            $token = Auth::SignIn([
+                'email' => $nombre,
+                'rol' => $rol,
+            ]);
             $this->view->render('carrito/carritoI');
         } else {
             $this->view->resultadoLogin = "Usuario o contraseña incorrectos";

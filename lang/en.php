@@ -29,7 +29,7 @@ return [
     'ExamMen' => 'Message...',
     'Send' => 'Send',
     'Add' => 'Add',
-    'Car' => 'Complete Cart',
+    'Car' => 'Proceed to Checkout',
     'Ofe' => 'Offers',
     'Rec' => 'Recommended',
     'PiRe' => 'Spare parts',
@@ -39,6 +39,8 @@ return [
     'AdmA' => 'Manage items',
     'AdmC' => 'Manage clients',
     'Nom_Clien' => 'Nom_Client',
-    'Clin_Secc' => 'Client Seccion',
+    'Clin_Secc' => 'Client Section',
+    'Lengcha' => 'Language has been changed to ',
+    'List' => 'List of Cart',
 
 ];

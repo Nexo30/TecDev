@@ -84,4 +84,5 @@ class Articulos_Model extends Model
             $pdo = null;
         }
     }
+
 }

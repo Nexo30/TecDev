@@ -4,12 +4,27 @@ require_once 'traduccion/Translate.php';
 use \SimpleTranslation\Translate;
 
 ?>
-<header class="header">
-<img src="<?php echo constant('URL'); ?>public/imagenes/articulos/Logo2.png" width="280px">
-
-<a class="ingresar">
-<input type="checkbox" id="btn-up">
-	<label for="btn-up" class="up"><i id="icon"class="fas fa-user-circle"></i><?php echo Translate::__('Sing_up'); ?></label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
+<?php
+$url1 = $_SERVER["REQUEST_URI"];
+$url2 = basename("$url1");
+if ($url2 == "TecDev") {
+    $url = "$url1" . "inicio/ingresar";
+} else {
+    $url = "$url2" . "/" . "ingresar";
+}
+if ($url == "registrar" . "/" . "ingresar") {
+    $url = "ingresar";
+}
+if ("$url2" . "/" . "$url2" == $url) {
+    $url = $url2;
+}
+if ("$url" == "inicio/ingresar") {
+    $url = "ingresar";
+}
+if ($url == "EmailE" . "/" . "ingresar") {
+    $url = "ingresar";
+}
+;?>
 	<?php
 $urlS = $_SERVER["REQUEST_URI"];
 $urlB = basename("$urlS");
@@ -32,6 +47,12 @@ if ("$urlF" == "inicio/registrar") {
 }
 
 ;?>
+<header class="header">
+<img src="<?php echo constant('URL'); ?>public/imagenes/articulos/Logo2.png" width="280px">
+
+<a class="ingresar">
+<input type="checkbox" id="btn-up">
+	<label for="btn-up" class="up"><i id="icon"class="fas fa-user-circle"></i><?php echo Translate::__('Sing_up'); ?></label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
 	<div class="ventana">
 	<form action="<?php echo ($urlF); ?>" method="post">
 		<div class="contenedor">
@@ -57,32 +78,12 @@ if ("$urlF" == "inicio/registrar") {
 <a class="ingresar">
 <input type="checkbox" id="btn-up2">
 <label for="btn-up2" class="up2"><i id="icon"class="fas fa-sign-in-alt"></i><?php echo Translate::__('Sing_in'); ?></label> <!-- para vincular un input con label usar el mismo id en este caso btn-up, el nombre de los id generalmente lo relacionamos con el contenido para guiarnos, pero es la palabra que queremos -->
-<?php
-$url1 = $_SERVER["REQUEST_URI"];
-$url2 = basename("$url1");
-if ($url2 == "TecDev") {
-    $url = "$url1" . "inicio/ingresar";
-} else {
-    $url = "$url2" . "/" . "ingresar";
-}
-if ($url == "registrar" . "/" . "ingresar") {
-    $url = "ingresar";
-}
-if ("$url2" . "/" . "$url2" == $url) {
-    $url = $url2;
-}
-if ("$url" == "inicio/ingresar") {
-    $url = "ingresar";
-}
-if ($url == "EmailE" . "/" . "ingresar") {
-    $url = "ingresar";
-}
-;?>
+
 <div class="ventana2">
 	<form action="<?php echo ($url); ?>" method="post">
 		<div class="contenedor2">
 			<header><?php echo Translate::__('UserDa'); ?></header>
-			<label  class="X2" for="btn-up2">X</label> <!-- utilizamos el mismo id del checkbox para que funcione -->
+			<label  class="X2" for="btn-up2">X</label>
 			<div class="contenido2">
 
 
@@ -114,8 +115,16 @@ if ($url == "EmailE" . "/" . "ingresar") {
 			<li><a href="<?php echo constant('URL'); ?>contacto"><?php echo Translate::__('Contacts'); ?></a></li>
 		</ul>
 		<a class="Idioma" href="<?php echo constant('URL'); ?>idioma"><?php echo Translate::__('leng'); ?></a>
-    <div class="search-wrapper">
-        <span class="las la-search"></span>
-        <input type="search" name="" id="" placeholder="<?php echo Translate::__('Search'); ?>">
-      </div>
+		<div class="search-wrapper">
+		<span class="las la-search"></span>
+    <input type="search" id="buscadortexto" placeholder="<?php echo Translate::__('Search'); ?>">
+    <div class="btn_buscar" id="clickBuscar">
+
+    </div>
+  </div>
+<form action="<?php echo constant('URL'); ?>tienda/buscar" method="post" id="searchForm" style="display: none;">
+<input type="hidden" name="textoBuscador" value="" id="textoculto">
+  <input type="submit" value="enviar" id="btnSend">
+</form>
+
 </nav>

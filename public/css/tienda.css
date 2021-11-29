@@ -163,7 +163,7 @@ nav a {
   width: 400px;
   display: inline-flex;
 }
-.las la-search {
+.las la-submit {
   background-color: red;
 }
 .search-wrapper input {
@@ -176,6 +176,9 @@ nav a {
 }
 .titulo {
   font-family: "Shippori Antique B1", sans-serif;
+}
+.Resultado {
+  margin: auto;
 }
 div li {
   list-style: none;

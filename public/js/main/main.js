@@ -18,7 +18,27 @@
       }else {
         idiomaAux = idioma;
       }
-      document.documentElement.setAttribute("lang", idiomaAux);    
+      document.documentElement.setAttribute("lang", idiomaAux);
+
+      function buscar() {
+        let texto = $("#buscadortexto").val();
+        console.log(texto);
+        $("#textoculto").val(texto);
+        if (texto) {
+          console.log("entro");
+          $("#btnSend").click();
+        }
+      }
+  
+      $("#buscadortexto").keypress(function (e) {
+        console.log(e.which);
+        if (e.which == 13) {
+          buscar();
+        }
+      });
+      $("#clickBuscar").click(function name(e) {
+        buscar();
+      });    
       
-  });//end ready
+  });
 })(jQuery);

@@ -1,7 +1,6 @@
 <?php
 require_once 'entidades/carrito.php';
-require_once 'jwt/vendor/autoload.php';
-require_once 'auth/Auth.php';
+require_once 'entidades/articulo.php';
 class Apicarrito_Controller extends Controller
 {
 
@@ -13,16 +12,16 @@ class Apicarrito_Controller extends Controller
     public function completarCarrito()
     {
         try {
+/*
+$headers = apache_request_headers();
+$tokenAux = @$headers['Authorization'];
 
-            $headers = apache_request_headers();
-            $tokenAux = @$headers['Authorization'];
-
-            $token = substr($tokenAux, 7, strlen($tokenAux));
-            Auth::Check($token);
-            $rol = Auth::GetData($token)->rol;
-            if ($rol != 'cliente') {
-                throw new Exception("no tiene autorizacion");
-            }
+$token = substr($tokenAux, 7, strlen($tokenAux));
+Auth::Check($token);
+$rol = Auth::GetData($token)->rol;
+if ($rol != 'cliente') {
+throw new Exception("no tiene autorizacion");
+}*/
 
             $json = file_get_contents('php://input');
             //convierto en un array asociativo de php
@@ -33,20 +32,21 @@ class Apicarrito_Controller extends Controller
             $lista = [];
             foreach ($listaArticulos as $key => $obj) {
                 $articulo = new Carrito();
-                $articulo->id = $obj->id;
-                $articulo->cantidad = $obj->cantidad;
-                $articulo->precio = $obj->precio;
+                $articulo->Cod_Art = $obj->Cod_Art;
+                $articulo->Stock = $obj->Cantidad;
+                $articulo->precio = $obj->Precio;
                 $lista[] = $articulo;
-                //array_push($lista, $articulo);
             }
-            $resultado = $this->model->completarCarrito($lista, $usuario);
-
+            if ($listaArticulos !== []) {
+                $resultado = $this->model->completarCarrito($lista, $usuario);
+            } else {
+                $resultado == false;
+            }
             $respuesta = [
                 "datos" => $lista,
                 "totalResultados" => count($lista),
                 "usuario" => $usuario,
                 "resultado" => $resultado,
-                "token" => $token,
             ];
             $this->view->respuesta = json_encode($respuesta);
             if ($resultado == false) {
@@ -57,6 +57,7 @@ class Apicarrito_Controller extends Controller
                 ]);
             } else {
                 http_response_code(200);
+
             }
             $this->view->render('api/carrito/completarcarrito');
             //code...

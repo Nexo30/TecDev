@@ -29,7 +29,7 @@ return [
     'ExamMen' => 'Mensaje...',
     'Send' => 'Enviar',
     'Add' => 'Agregar',
-    'Car' => 'Completar Carrito',
+    'Car' => 'Finalizar Compra',
     'Ofe' => 'Offers',
     'Rec' => 'Recomendados',
     'PiRe' => 'Piezas de Recambio',
@@ -40,4 +40,6 @@ return [
     'Clin_Secc' => 'Seccion de Cliente',
     'AdmC' => 'Administrar clientes',
     'Nom_Clien' => 'Nom_Cliente',
+    'Lengcha' => 'Se ha cambiado el idioma a ',
+    'List' => 'Lista del Carrito',
 ];
